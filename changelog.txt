@@ -1,0 +1,137 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 2025-06-20
+  Balances:
+    - Set cupcakes (basic, chocolate, and advanced) to give 2 rather than 1 from batter
+  Bugfixes:
+    - chicken meat name
+    - Fixed some foods set as items rather than capsules
+---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 2025-06-17
+  Bugfixes:
+    - Fixed the cow breeding giving mature cows
+---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 2025-06-09
+  Changes:
+    - Changed purple science ingredient from blueberry pie to strawberry pie, so that it just focusses on strawberries
+    - Removed yellow/pastry science from ice cream and pie techs
+    - Set advanced chocolate processing to follow yellow and purple sciences (already required them to research)
+    - Set ice cream mixing to follow purple science (already required it to research) and removed yellow science
+    - Set Pie to just follow strawberries and blueberries
+    - Removed yellow from advanced baking and chocolate chips as well
+    - Moved neapolitan ice cream from ice cream sundae to ice cream mixing
+    - Removed yellow science from pumkpin, pumpkin cookies, nuts, and advanced nut sorting
+    - Added yellow science as a prerequesite for baklava
+    - Added yellow science to lemons and fruit baking science
+    - Moved milk recipes and other fluid ingredients from intermediate to food
+    - Set advanced nut sorting recipes to give 2-3 of each of the less desired nuts
+  Bugfixes:
+    - Added bin recipe to meat processing tech so it can be used before ice cream is unlocked
+    - Added wood category
+    - Fixed some of the categorizations
+    - Fixed gravy name
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2025-06-07
+  Balances:
+    - Significantly lowered fertilized water per shell fragment
+  Bugfixes:
+    - Added wood pulp name
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2025-06-06
+  Bugfixes:
+    - Wrapped boar and bull meat recipes in spoilage flag check
+    - Changed name of chicken meat recipe so it didn't overwrite chicken recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2025-06-05
+  Features:
+    - Added pigs
+    - Added apples, peaches, and lemons, as well as foods for each
+    - Added animal processing, butcher, beef, pork, and chicken, and gravy
+    - Added meat based foods
+    - Added Meat Baking science pack
+    - Added Fruit Baking science pack
+    - Added supporting techs
+    - Added following upgrade techs from Meat and Fruit science packs
+  Changes:
+    - Changed fertilized water icons so that they are easier to differentiate
+    - Butterizer technology moved to after Utility Science Pack
+    - Slightly Buttered Dough recipe moved to Butterizer technology
+    - Gave fried foods a light oil output (0 -> 5) and slightly increased light oil input (5 -> 8)
+    - Changed "pumpkin-cookie-frosted" to "pumpkin-cookie-glazed"
+  Balances:
+    - Halved filter nuts time (10 -> 5)
+    - Properly set the tastiness values for foods
+    - Fixed baskets on fertilizer recipes of strawberries and blueberries
+    - Set nuts to only require 1 rather than 2 nutrients in the greenhouse
+    - Set pumpkins to only require 2 rather than 3 nutrients in the greenhouse
+    - Set pumpkin seed recipe to only require 10 rather than 20 nutrients in the synthesizer
+  Bugfixes:
+    - Fixed Rocket Part recipe from needing Raw Baklava and Raw Pecan Pie to (Cooked) Baklava and Pecan Pie
+    - Fixed Calf graphic
+    - Fixed pumpkin and nut recipes having level 5 and 6 nutrients backwards
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2025-05-22
+  Balances:
+    - Moved Fertilized Water tech to after Wood Processing (for Chem Plant)
+    - Added Wood with fertilized water from Wood tech to Fertilized Water tech
+  Bugfixes:
+    - Fixed a few fluid recipes having broken names
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2025-05-22
+  Balances:
+    - Changed fertilized water plant recipes from 1/2 time & 3x product -> 1/3 time & 2x product
+    - Changed animal product recipes with food from 2/3 time & 2x product -> 1x time & 2x nutrient (3x grain) input & 3x product
+    - Changed fertilized water recipe from 100 -> 50 as a result
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2025-05-21
+  Changes:
+    - Updated version due to big animal aging feature (should have done that last update)
+  Bugfixes:
+    - Changed quality module addition to mod check rather than flag check to remove error
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2025-05-20
+  Features:
+    - Changed breeding recipes to infant and juvenile animals if spoilage is enabled
+    - Added spoilage to animals for them to be able to age
+    - Added bulls for breeding, at a 10% chance to get as a result
+  Balances:
+    - Balanced cheese recipe to require 5 wrappers as input
+    - Made animals non-stackable
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2025-05-18
+  Features:
+    - Made paper/wood products burnable
+  Bugfixes:
+    - Fixed Vegetable Oil (nuts) recipe ingredient and sprite
+    - Fixed hidden nutrient recipe duplicates that were still messing with things
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2025-05-18
+  Bugfixes:
+    - Fixed issue with some nutrient recipes showing up from the start
+    - Fixed issue with duplicate nutrient recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2025-05-17
+  Balances:
+    - Tweaked some balances
+  Bugfixes:
+    - Most recipe names not being properly set
+    - Vegetable oil from seeds sprite issue
+    - Code fixes and compatibility with Baketorio
+    - And other small fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2025-05-17
+  Features:
+    - Starting alpha version

@@ -1,0 +1,37 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2025-05-20
+  Changes:
+    - Balanced cheese recipe to require 5 wrappers as input
+    - Changed breeding recipes to infant and juvenile animals if spoilage is enabled
+    - Added spoilage to animals for them to be able to age
+    - Made animals non-stackable
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2025-05-18
+  Changes:
+    - Made paper/wood products burnable
+  Bugfixes:
+    - Fixed Vegetable Oil (nuts) recipe ingredient and sprite
+    - Fixed hidden nutrient recipe duplicates that were still messing with things
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2025-05-18
+  Bugfixes:
+    - Fixed issue with some nutrient recipes showing up from the start
+    - Fixed issue with duplicate nutrient recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2025-05-17
+  Bugfixes:
+    - Most recipe names not being properly set
+    - Vegetable oil from seeds sprite issue
+    - Code fixes and compatibility with Baketorio
+    - And other small fixes
+  Changes:
+    - Tweaked some balances
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2025-05-17
+  Features:
+    - Starting alpha version
