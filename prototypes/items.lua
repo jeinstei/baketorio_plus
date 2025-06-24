@@ -70,6 +70,54 @@ data:extend(
 		
         {
             type = "item",
+            name = "wool",
+			localised_name = {"item-name.wool"},
+            icon = "__baketorio_plus__/graphics/wool.png",
+            icon_size = 32,
+			subgroup = "intermediate-product",
+            stack_size = 200
+        },
+        {
+            type = "item",
+            name = "yarn",
+			localised_name = {"item-name.yarn"},
+            icon = "__baketorio_plus__/graphics/yarn.png",
+            icon_size = 32,
+			subgroup = "intermediate-product",
+            stack_size = 100
+        },
+        {
+            type = "item",
+            name = "fabric",
+			localised_name = {"item-name.fabric"},
+            icon = "__baketorio_plus__/graphics/fabric.png",
+            icon_size = 32,
+			subgroup = "intermediate-product",
+            stack_size = 100
+        },
+        {
+            type = "item",
+            name = "bag",
+			localised_name = {"item-name.bag"},
+            icon = "__baketorio_plus__/graphics/bag.png",
+            icon_size = 32,
+			subgroup = "intermediate-product",
+            stack_size = 100
+        },
+		
+		
+        {
+            type = "item",
+            name = "flour-box",
+			localised_name = {"item-name.flour-box"},
+            icon = "__baketorio_plus__/graphics/flour-box.png",
+            icon_size = 32,
+			subgroup = "ingredient",
+            stack_size = 100
+        },
+		
+        {
+            type = "item",
             name = "nuts",
 			localised_name = {"item-name.nuts"},
             tastiness=1,
@@ -559,6 +607,15 @@ data:extend(
             subgroup = "seeds",
             stack_size = 50
         },
+        {
+            type = "item",
+            name = "sheep",
+			localised_name = {"item-name.sheep"},
+            icon = "__baketorio_plus__/graphics/sheep.png",
+            icon_size = 32,
+            subgroup = "seeds",
+            stack_size = 50,
+        },
 		
         {
             type = "item",
@@ -574,6 +631,15 @@ data:extend(
             name = "pork",
 			localised_name = {"item-name.pork"},
             icon = "__baketorio_plus__/graphics/pork.png",
+            icon_size = 32,
+            subgroup = "ingredient",
+            stack_size = 100,
+        },
+        {
+            type = "item",
+            name = "mutton",
+			localised_name = {"item-name.mutton"},
+            icon = "__baketorio_plus__/graphics/mutton.png",
             icon_size = 32,
             subgroup = "ingredient",
             stack_size = 100,

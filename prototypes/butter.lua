@@ -19,6 +19,26 @@ butterizer_entity.minable = {mining_time = 0.2, result = "butterizer"}
 butterizer_entity.crafting_speed = 1
 butterizer_entity.energy_source = { type = "burner", fuel_categories = {"butter"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = { pollution = 0 } }
 butterizer_entity.localised_name = {"item-name.butterizer"}
+butterizer_entity.graphics_set.animation.layers =
+		{
+          {
+            filename = "__baketorio_plus__/graphics/butterizer.png",
+            priority = "high",
+            width = 239,
+            height = 219,
+            shift = util.by_pixel(0.75, 5.75),
+            scale = 0.5
+          },
+          {
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
+            priority = "high",
+            width = 227,
+            height = 171,
+            draw_as_shadow = true,
+            shift = util.by_pixel(11.25, 7.75),
+            scale = 0.5
+          }
+        }
     --[[
 	{
       type = "electric",

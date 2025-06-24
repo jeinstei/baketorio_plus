@@ -5,6 +5,18 @@ butcher_entity.name = "butcher"
 butcher_entity.minable = {mining_time = 0.2, result = "butcher"}
 butcher_entity.crafting_speed = 1
 butcher_entity.localised_name = {"item-name.butcher"}
+butcher_entity.graphics_set =
+    {
+      animation =
+      {
+        filename = "__baketorio_plus__/graphics/butcher.png",
+        width = 208,
+        height = 208,
+        frame_count = 1,
+        scale=0.4,
+        shift={0,-0.1}
+      },
+    }
     --[[
 	{
       type = "electric",

@@ -168,7 +168,7 @@ data:extend(
         {
             type = "recipe",
             name = "chocolate-sauce-recipe",
-			localised_name = {"item-name.chocolate-sauce"},
+			localised_name = {"fluid-name.chocolate-sauce"},
             category = "chemistry",
             subgroup = "fluid-ingredient",
             energy_required = 60,
@@ -179,7 +179,7 @@ data:extend(
                 {type="item",name="cocoa-powder",amount=30},
             },
             results = {
-                {type="fluid", name="chocolate-sauce", amount=45},
+                {type="fluid", name="chocolate-sauce", amount=60},
             },
         },
         {
@@ -207,7 +207,7 @@ data:extend(
         {
             type = "recipe",
             name = "gravy-beef-recipe",
-			localised_name = {"fluid-name.gravy"},
+			localised_name = {"recipe-name.gravy-beef-recipe"},
             category = "chemistry",
             subgroup = "fluid-ingredient",
             energy_required = 20,
@@ -227,7 +227,7 @@ data:extend(
         {
             type = "recipe",
             name = "gravy-pork-recipe",
-			localised_name = {"fluid-name.gravy"},
+			localised_name = {"recipe-name.gravy-pork-recipe"},
             category = "chemistry",
             subgroup = "fluid-ingredient",
             energy_required = 20,
@@ -247,7 +247,7 @@ data:extend(
         {
             type = "recipe",
             name = "gravy-chicken-recipe",
-			localised_name = {"fluid-name.gravy"},
+			localised_name = {"recipe-name.gravy-chicken-recipe"},
             category = "chemistry",
             subgroup = "fluid-ingredient",
             energy_required = 20,
@@ -255,7 +255,27 @@ data:extend(
             ingredients ={
                 {type="fluid",name="water",amount=150},
                 {type="item",name="flour",amount=1},
-                {type="item",name="chicken",amount=1},
+                {type="item",name="chicken-meat",amount=1},
+            },
+            results = {
+                {type="fluid", name="gravy", amount=100},
+				{type = "item", name = "plastic-bin", amount = 1, probability=0.9}
+            },
+            icon = "__baketorio_plus__/graphics/gravy.png",
+            icon_size = 32,
+        },
+        {
+            type = "recipe",
+            name = "gravy-mutton-recipe",
+			localised_name = {"recipe-name.gravy-mutton-recipe"},
+            category = "chemistry",
+            subgroup = "fluid-ingredient",
+            energy_required = 20,
+            enabled = false,
+            ingredients ={
+                {type="fluid",name="water",amount=150},
+                {type="item",name="flour",amount=1},
+                {type="item",name="mutton",amount=1},
             },
             results = {
                 {type="fluid", name="gravy", amount=100},

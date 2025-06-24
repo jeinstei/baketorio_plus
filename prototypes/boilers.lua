@@ -60,14 +60,7 @@ data:extend({
       production_type = "output",
     }
   },
-  energy_usage = "1.7MW",
-  energy_source =
-  {
-    type = "electric",
-    emissions_per_minute = {pollution = 5},
-    usage_priority = "secondary-input",
-    drain = "100kW"
-  },
+    energy_usage = "90kW",
 		energy_consumption = "1.8MW",
 		energy_source =
 		{
@@ -117,7 +110,7 @@ data:extend({
         layers =
         {
           {
-            filename = "__base__/graphics/entity/boiler/boiler-N-idle.png",
+            filename = "__baketorio_plus__/graphics/boiler-1-N-idle.png",
             priority = "extra-high",
             width = 269,
             height = 221,
@@ -140,7 +133,7 @@ data:extend({
         layers =
         {
           {
-            filename = "__base__/graphics/entity/boiler/boiler-E-idle.png",
+            filename = "__baketorio_plus__/graphics/boiler-1-E-idle.png",
             priority = "extra-high",
             width = 216,
             height = 301,
@@ -171,7 +164,7 @@ data:extend({
         layers =
         {
           {
-            filename = "__base__/graphics/entity/boiler/boiler-S-idle.png",
+            filename = "__baketorio_plus__/graphics/boiler-1-S-idle.png",
             priority = "extra-high",
             width = 260,
             height = 192,
@@ -194,7 +187,7 @@ data:extend({
         layers =
         {
           {
-            filename = "__base__/graphics/entity/boiler/boiler-W-idle.png",
+            filename = "__baketorio_plus__/graphics/boiler-1-W-idle.png",
             priority = "extra-high",
             width = 196,
             height = 273,
@@ -312,7 +305,7 @@ data:extend({
         layers =
         {
           {
-            filename = "__base__/graphics/entity/boiler/boiler-N-idle.png",
+            filename = "__baketorio_plus__/graphics/boiler-2-N-idle.png",
             priority = "extra-high",
             width = 269,
             height = 221,
@@ -335,7 +328,7 @@ data:extend({
         layers =
         {
           {
-            filename = "__base__/graphics/entity/boiler/boiler-E-idle.png",
+            filename = "__baketorio_plus__/graphics/boiler-2-E-idle.png",
             priority = "extra-high",
             width = 216,
             height = 301,
@@ -366,7 +359,7 @@ data:extend({
         layers =
         {
           {
-            filename = "__base__/graphics/entity/boiler/boiler-S-idle.png",
+            filename = "__baketorio_plus__/graphics/boiler-2-S-idle.png",
             priority = "extra-high",
             width = 260,
             height = 192,
@@ -389,7 +382,7 @@ data:extend({
         layers =
         {
           {
-            filename = "__base__/graphics/entity/boiler/boiler-W-idle.png",
+            filename = "__baketorio_plus__/graphics/boiler-2-W-idle.png",
             priority = "extra-high",
             width = 196,
             height = 273,

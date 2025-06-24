@@ -9,8 +9,8 @@ require("prototypes.fluids")
 require("prototypes.boilers")
 require("prototypes.butcher")
 require("prototypes.items")
+require("prototypes.fluid-recipes")  --  must be after items but before item-recipes because of bag stuff at the end
 require("prototypes.item-recipes")
-require("prototypes.fluid-recipes")  --  must be after items
 require("prototypes.wood")
 require("prototypes.greenhouse")
 require("prototypes.plants")

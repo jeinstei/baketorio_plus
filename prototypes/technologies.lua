@@ -471,7 +471,7 @@ data:extend {
 	localised_name = {"technology-name.wood"},
     icon_size = 128,
     icon = "__baketorio_plus__/graphics/wood_tech.png",
-    prerequisites = {"automation"},
+    prerequisites = {"automation", "nutrient1"},
     effects =
     {
       {type = "unlock-recipe",recipe = "wood-recipe"},
@@ -495,12 +495,12 @@ data:extend {
     prerequisites = {"wood", "steel-processing"},
     effects =
     {
+	  {type = "unlock-recipe",recipe = "chemical-plant"},
       {type = "unlock-recipe",recipe = "wood-frame-recipe"},
       {type = "unlock-recipe",recipe = "wood-ground-recipe"},
       {type = "unlock-recipe",recipe = "wood-pulp-recipe"},
       {type = "unlock-recipe",recipe = "wood-paper-recipe"},
-      {type = "unlock-recipe",recipe = "paper-wrapper-recipe"},
-	  {type = "unlock-recipe",recipe = "chemical-plant"}
+      {type = "unlock-recipe",recipe = "paper-wrapper-recipe"}
     },
     unit =
     {
@@ -565,10 +565,11 @@ data:extend {
 	localised_name = {"technology-name.vegetable-oil"},
     icon_size = 128,
     icon = "__baketorio_plus__/graphics/vegetable-oil_tech.png",
-    prerequisites = {"automation-science-pack"},
+    prerequisites = {"sugar"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "vegetable-oil-wheat-recipe"}
+      {type = "unlock-recipe", recipe = "vegetable-oil-wheat-recipe"},
+	  {type = "unlock-recipe", recipe = "vegetable-oil-sugarcane-recipe"}
     },
     unit =
     {
@@ -958,7 +959,8 @@ data:extend {
 	  {type = "unlock-recipe",recipe = "plastic-bin-recipe"},
       {type = "unlock-recipe",recipe = "beef-recipe"},
       {type = "unlock-recipe",recipe = "pork-recipe"},
-      {type = "unlock-recipe",recipe = "chicken-meat-recipe"}
+      {type = "unlock-recipe",recipe = "chicken-meat-recipe"},
+      {type = "unlock-recipe",recipe = "mutton-recipe"}
     },
     unit =
     {
@@ -982,7 +984,8 @@ data:extend {
     {
       {type = "unlock-recipe",recipe = "gravy-beef-recipe"},
       {type = "unlock-recipe",recipe = "gravy-pork-recipe"},
-      {type = "unlock-recipe",recipe = "gravy-chicken-recipe"}
+      {type = "unlock-recipe",recipe = "gravy-chicken-recipe"},
+      {type = "unlock-recipe",recipe = "gravy-mutton-recipe"}
     },
     unit =
     {
@@ -1004,7 +1007,8 @@ data:extend {
     prerequisites = {"gravy", "pie", "butterizer"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "meat-pie-recipe"},
+      {type = "unlock-recipe",recipe = "meat-pie-beef-recipe"},
+      {type = "unlock-recipe",recipe = "meat-pie-mutton-recipe"},
       {type = "unlock-recipe",recipe = "meat-pie-cooked-recipe"},
       {type = "unlock-recipe",recipe = "chicken-pot-pie-recipe"},
       {type = "unlock-recipe",recipe = "chicken-pot-pie-cooked-recipe"},
@@ -1424,25 +1428,104 @@ data:extend {
     max_level = "infinite",
     upgrade = true
   },
+  
+  {
+    type = "technology",
+    name = "milk-processing",
+	localised_name = {"technology-name.milk-processing"},
+    icon_size = 128,
+    icon = "__baketorio_plus__/graphics/milk-processing_tech.png",
+    prerequisites = {"animal-husbandry", "wood-processing"},
+    effects =
+    {
+      {type = "unlock-recipe",recipe = "milk-filtering"},
+      {type = "unlock-recipe",recipe = "frosting-recipe"},
+      {type = "unlock-recipe",recipe = "butter-churning"},
+      {type = "unlock-recipe",recipe = "butter-solidification"},
+    },
+    unit =
+    {
+      count = 100,
+      ingredients = {
+        {"automation-science-pack", 1}
+      },
+      time = 30
+    },
+  },
+  
+  {
+    type = "technology",
+    name = "wool-processing",
+	localised_name = {"technology-name.wool-processing"},
+    icon_size = 128,
+    icon = "__baketorio_plus__/graphics/wool-processing_tech.png",
+    prerequisites = {"animal-husbandry"},
+    effects =
+    {
+      {type = "unlock-recipe",recipe = "yarn-recipe"},
+      {type = "unlock-recipe",recipe = "fabric-recipe"},
+      {type = "unlock-recipe",recipe = "bag-recipe"},
+    },
+    unit =
+    {
+      count = 75,
+      ingredients = {
+        {"automation-science-pack", 1}
+      },
+      time = 30
+    },
+  },
+  {
+    type = "technology",
+    name = "leavening-2",
+	localised_name = {"technology-name.leavening-2"},
+    icon_size = 128,
+    icon = "__baketorio_plus__/graphics/leavening-2_tech.png",
+    prerequisites = {"wool-processing", "leavening"},
+    effects =
+    {
+      {type = "unlock-recipe",recipe = "flour-recipe"},
+      {type = "unlock-recipe",recipe = "hardtack-recipe"},
+      {type = "unlock-recipe",recipe = "basic-dough-recipe"},
+    },
+    unit =
+    {
+      count = 75,
+      ingredients = {
+        {"automation-science-pack", 1}
+      },
+      time = 30
+    },
+  },
 }
 
 
 
 
 data.raw["recipe"]["chemical-plant"].enabled = false;
---  now add it to the animal husbandry
--- table.insert(data.raw["technology"]["animal-husbandry"].effects, {type="unlock-recipe", recipe="chemical-plant"})
--- nevermind, adding to wood processing as it needs to come before (paper for butter)
---  animal husbandry add wood as a prerequisite
-data.raw["technology"]["animal-husbandry"].prerequisites = {"wood-processing"}
+
+data.raw["recipe"]["hardtack-recipe"].enabled = false;  --  start with the box flour and unlock this later
+data.raw["recipe"]["flour-recipe"].enabled = false;
+--  remove dough recipe add new recipe in place to leavening
+for key,value in pairs(data.raw["technology"]["leavening"].effects) do
+	if value.recipe == "basic-dough-recipe" then
+		table.remove(data.raw["technology"]["leavening"].effects, key)
+		break
+	end
+end
+table.insert(data.raw["technology"]["leavening"].effects, 1, {type="unlock-recipe", recipe="basic-dough-box-recipe"})
+--  add leavening 2 as prereq for sugar (bags)
+table.insert(data.raw["technology"]["sugar"].prerequisites, "leavening-2")
 
 
 --  insert lvl 3 nutrients in between lvl 2 and animal husbandry (insert rather than set because it is set above for wood-processing and don't want to overwrite that)
 table.insert(data.raw["technology"]["animal-husbandry"].prerequisites, "nutrient3")
 data.raw["technology"]["nutrient3"].prerequisites = {"nutrient2"}
 
---  frying add vegetable oil as a prerequisite
-table.insert(data.raw["technology"]["frying"].prerequisites, "vegetable-oil")
+--  frying set milk processing and sugar as a prerequisite
+data.raw["technology"]["frying"].prerequisites = {"milk-processing", "vegetable-oil"}
+--  baking set milk processing and vegetable oil as a prerequisite
+data.raw["technology"]["frying"].prerequisites = {"milk-processing", "sugar"}
 
 --  add syrup as a prereq for advanced-material-processing-2 (electric furnace/boiler)
 table.insert(data.raw["technology"]["advanced-material-processing-2"].prerequisites, "syrup")
@@ -1475,18 +1558,6 @@ table.insert(data.raw["technology"]["pie"].effects, {type="unlock-recipe", recip
 table.insert(data.raw["technology"]["pie"].prerequisites, "ice-cream")
 table.insert(data.raw["technology"]["pie"].prerequisites, "apples")
 
-
---  add pigs to animal husbandry
-table.insert(data.raw["technology"]["animal-husbandry"].effects, {type="unlock-recipe", recipe="pig-recipe"})
-table.insert(data.raw["technology"]["animal-husbandry"].effects, {type="unlock-recipe", recipe="breed-pig-recipe"})
-
-
---  add boar and bull meat processing recipes if they are here (spoilage is enabled)
-if feature_flags["spoiling"] then
-	table.insert(data.raw["technology"]["animal-processing"].effects, 2, {type="unlock-recipe", recipe="beef-bull-recipe"})
-	table.insert(data.raw["technology"]["animal-processing"].effects, 4, {type="unlock-recipe", recipe="pork-boar-recipe"})
-end
-
 			
 --  add additional plant recipes
 table.insert(data.raw["technology"]["sugar"].effects, 2, {type="unlock-recipe", recipe="sugarcane-recipe-water"})
@@ -1518,16 +1589,58 @@ for key,value in pairs(data.raw["technology"]["animal-husbandry"].effects) do
 end
 --table.remove(data.raw["technology"]["animal-husbandry"].effects, 1)  --  remove chem lab
 --  add animal recipes to animal husbandry
-table.insert(data.raw["technology"]["animal-husbandry"].effects, 2, {type="unlock-recipe", recipe="egg-water-recipe"})
-table.insert(data.raw["technology"]["animal-husbandry"].effects, 3, {type="unlock-recipe", recipe="egg-water-food-recipe"})
-table.insert(data.raw["technology"]["animal-husbandry"].effects, 8, {type="unlock-recipe", recipe="u-milk-water-recipe"})
-table.insert(data.raw["technology"]["animal-husbandry"].effects, 9, {type="unlock-recipe", recipe="u-milk-water-food-recipe"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 2, {type="unlock-recipe", recipe="egg-water-recipe"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 3, {type="unlock-recipe", recipe="egg-water-food-recipe"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 8, {type="unlock-recipe", recipe="u-milk-water-recipe"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 9, {type="unlock-recipe", recipe="u-milk-water-food-recipe"})
+data.raw["technology"]["animal-husbandry"].effects =
+    {
+      {type = "unlock-recipe",recipe = "egg-recipe"},
+		{type = "unlock-recipe",recipe = "egg-water-recipe"},
+		{type = "unlock-recipe",recipe = "egg-water-food-recipe"},
+      {type = "unlock-recipe",recipe = "chicken-recipe"},
+      {type = "unlock-recipe",recipe = "chicken-recipe-egg"},
+      {type = "unlock-recipe",recipe = "cow-recipe"},
+      {type = "unlock-recipe",recipe = "u-milk-recipe"},
+		{type = "unlock-recipe",recipe = "u-milk-water-recipe"},
+		{type = "unlock-recipe",recipe = "u-milk-water-food-recipe"},
+      {type = "unlock-recipe",recipe = "milk-pasteurization"},
+      --{type = "unlock-recipe",recipe = "milk-filtering"},
+      --{type = "unlock-recipe",recipe = "frosting-recipe"},
+      --{type = "unlock-recipe",recipe = "butter-churning"},
+      --{type = "unlock-recipe",recipe = "butter-solidification"},
+      {type = "unlock-recipe",recipe = "breed-cow-recipe"},
+		{type = "unlock-recipe",recipe = "pig-recipe"},
+		{type = "unlock-recipe",recipe = "breed-pig-recipe"},
+		
+		{type = "unlock-recipe",recipe = "sheep-recipe"},
+		{type = "unlock-recipe",recipe = "breed-sheep-recipe"},
+		{type = "unlock-recipe",recipe = "wool-recipe"},
+		{type = "unlock-recipe",recipe = "wool-water-recipe"},
+		{type = "unlock-recipe",recipe = "wool-water-food-recipe"},
+      {type = "unlock-recipe",recipe = "egg-dough-recipe"},
+      {type = "unlock-recipe",recipe = "egg-bread-recipe"}
+	}
+--  add pigs to animal husbandry
+table.insert(data.raw["technology"]["animal-husbandry"].effects, {type="unlock-recipe", recipe="pig-recipe"})
+table.insert(data.raw["technology"]["animal-husbandry"].effects, {type="unlock-recipe", recipe="breed-pig-recipe"})
+
+
+--  add boar and bull meat processing recipes if they are here as well as ram shearing (spoilage is enabled)
+if feature_flags["spoiling"] then
+	table.insert(data.raw["technology"]["animal-processing"].effects, 4, {type="unlock-recipe", recipe="beef-bull-recipe"})
+	table.insert(data.raw["technology"]["animal-processing"].effects, 6, {type="unlock-recipe", recipe="pork-boar-recipe"})
+	table.insert(data.raw["technology"]["animal-processing"].effects, 9, {type="unlock-recipe", recipe="mutton-ram-recipe"})
+	table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water-food-recipe"})
+	table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water-recipe"})
+	table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-recipe"})
+end
+
 
 --  add electric boiler to the electric furnace tech (already made syrup a prereq for it above)
 table.insert(data.raw["technology"]["advanced-material-processing-2"].effects, {type="unlock-recipe", recipe="bake-electric-boiler-recipe"})
 
 --  add respective vegetable oil recipes
-table.insert(data.raw["technology"]["sugar"].effects, {type="unlock-recipe", recipe="vegetable-oil-sugarcane-recipe"})
 table.insert(data.raw["technology"]["cocoa"].effects, {type="unlock-recipe", recipe="vegetable-oil-cocoa-bean-recipe"})
 
 --  add plastic basket to both berries (as they are now simultaneous) and plastic bin to ice cream

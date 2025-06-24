@@ -1,4 +1,30 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2025-06-24
+  Features:
+    - Sheep, and the appropriate juvenile states and breeding
+    - Mutton from sheep, added to Animal Processing, as well as gravy recipe
+    - Wool and Wool Processing to get bags
+    - New Box of Flour (with the wooden chest) as an inefficient way to use flour for just hardtack and dough
+    - New Meat Pie recipe that uses mutton rather than beef
+  Changes:
+    - Removed milk processing recipes (milk filtering, frosting recipe, butter churning, butter solidification) from Animal Husbandry tech and moved them to new Milk Processing tech
+    - Set Wood Processing as a prerequisite to the new Milk Processing rather than Animal Husbandry
+    - Flour, sugar, cocoa powder, and cinnamon sugar powder now require bags
+    - Any recipes that required bagged ingredients now have a 80% chance (per bag) to return an empty bag
+    - Vegetable Oil from sugarcane seeds moved to Vegetable Oil tech
+    - Sugar tech set as prerequesite for Vegetable Oil tech
+  Balances:
+    - Set Chocolate Sauce recipe to give 60 rather than 45
+    - Pig recipe and breeding now has a 50/50 chance for male or female pig
+  Graphics:
+    - Added sprites for the Butterizer, Butcher, and Boilers
+  Bugfixes:
+    - Setting Nutrients 1 as prerequisite for Wood
+    - Fixed missing Chocolate Sauce recipe name
+    - Fixed Gravy recipe names
+    - Fixed Chicken Pot Pie and Gravy (Chicken) taking Chicken/Hen animals rather than Chicken meat
+---------------------------------------------------------------------------------------------------
 Version: 0.2.5
 Date: 2025-06-20
   Balances:

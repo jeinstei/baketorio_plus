@@ -30,6 +30,9 @@ local prod_recipes = {
   "egg-water-food-recipe",
   "u-milk-water-recipe",
   "u-milk-water-food-recipe",
+  "wool-recipe",
+  "wool-water-recipe",
+  "wool-water-food-recipe",
   
   "apple-seeds",
   "apple-recipe",
@@ -59,6 +62,7 @@ local strawberryEnergy = data.raw["recipe"]["strawberries-recipe"].energy_requir
 
 local eggEnergy = data.raw["recipe"]["egg-recipe"].energy_required
 local milkEnergy = data.raw["recipe"]["u-milk-recipe"].energy_required
+local woolEnergy = 20;
 
 local nutsEnergy = 120
 local pumpkinEnergy = 60
@@ -630,6 +634,67 @@ data:extend (
             results = {
                 {type="item",name="cow",amount=1},
                 {type="fluid", name="unpasteurized-milk", amount=450},
+            },
+            icon = "__baketorio__/graphics/unpasteurized_milk.png",
+            icon_size = 32,
+        },
+		
+        {
+            type = "recipe",
+            name = "wool-recipe",
+            localised_name = {"item-name.wool"},
+            category = "greenhouse-recipes",
+            subgroup = "ingredient",
+            energy_required = woolEnergy*3,
+            enabled = false,
+            ingredients ={
+                {type="item",name="sheep",amount=1},
+                {type="item",name="nutrient1",amount=1}
+            },
+            results = {
+                {type="item",name="sheep",amount=1},
+                {type="item", name="wool", amount=1},
+            },
+            icon = "__baketorio__/graphics/unpasteurized_milk.png",
+            icon_size = 32,
+        },
+        {
+            type = "recipe",
+            name = "wool-water-recipe",
+            localised_name = {"item-name.wool"},
+            category = "greenhouse-recipes",
+            subgroup = "ingredient",
+            energy_required = woolEnergy,
+            enabled = false,
+            ingredients ={
+                {type="item",name="sheep",amount=1},
+                {type="item",name="nutrient1",amount=1},
+                {type="fluid",name="water",amount=20}
+            },
+            results = {
+                {type="item",name="sheep",amount=1},
+                {type="item", name="wool", amount=1},
+            },
+            icon = "__baketorio__/graphics/unpasteurized_milk.png",
+            icon_size = 32,
+        },
+        {
+            type = "recipe",
+            name = "wool-water-food-recipe",
+            localised_name = {"item-name.wool"},
+            category = "greenhouse-recipes",
+            subgroup = "ingredient",
+            energy_required = woolEnergy,
+            enabled = false,
+            ingredients ={
+                {type="item",name="sheep",amount=1},
+                {type="item",name="nutrient1",amount=2},
+                {type="item",name="wheat",amount=5},
+                {type="fluid",name="water",amount=20}
+            },
+            results = {
+                {type="item",name="sheep",amount=1},
+                {type="item", name="wool", amount=3},
             },
             icon = "__baketorio__/graphics/unpasteurized_milk.png",
             icon_size = 32,

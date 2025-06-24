@@ -908,12 +908,25 @@ data:extend(
 			},
 			results = {{type="item", name="chicken-meat", amount=2}}
 		},
+		{
+			type = "recipe",
+			name = "mutton-recipe",
+			localised_name = {"item-name.mutton"},
+			category = "butcher",
+			enabled = false,
+			energy_required = 30,
+			ingredients = {
+                {type="item",name="sheep",amount=1},
+                {type="item",name="plastic-bin",amount=3}
+			},
+			results = {{type="item", name="mutton", amount=3}}
+		},
 		
 			
 		{
 			type = "recipe",
-			name = "meat-pie-recipe",
-			localised_name = {"item-name.meat-pie"},
+			name = "meat-pie-beef-recipe",
+			localised_name = {"recipe-name.meat-pie-beef"},
 			category = "crafting-with-fluid",
 			enabled = false,
 			energy_required = 15,
@@ -926,6 +939,28 @@ data:extend(
 			results = {
 				{type="item", name="meat-pie", amount=1},
                 {type="item",name="plastic-bin",amount_min=2,amount_max=3}
+			},
+            icon="__baketorio_plus__/graphics/meat-pie.png",
+            icon_size = 32,
+            group = "food",
+            subgroup = "ingredient",
+		},
+		{
+			type = "recipe",
+			name = "meat-pie-mutton-recipe",
+			localised_name = {"recipe-name.meat-pie-mutton"},
+			category = "crafting-with-fluid",
+			enabled = false,
+			energy_required = 15,
+			ingredients = {
+                {type="item",name="fryer-dough",amount=1},
+                {type="item",name="mutton",amount=4},
+				{type="fluid", name="gravy", amount=25},
+                {type="item",name="pie-tin",amount=1}
+			},
+			results = {
+				{type="item", name="meat-pie", amount=1},
+                {type="item",name="plastic-bin",amount_min=3,amount_max=4}
 			},
             icon="__baketorio_plus__/graphics/meat-pie.png",
             icon_size = 32,
@@ -951,7 +986,7 @@ data:extend(
 			energy_required = 15,
 			ingredients = {
                 {type="item",name="fryer-dough",amount=1},
-                {type="item",name="chicken",amount=1},
+                {type="item",name="chicken-meat",amount=1},
 				{type="fluid", name="gravy", amount=75},
                 {type="item",name="pie-tin",amount=1}
 			},
@@ -1322,6 +1357,146 @@ data:extend(
 				{type="item", name="meat-baking-science-pack", amount=1}
 			},
 		},
+		
+		
+		--  sheep stuff
+        {
+            type = "recipe",
+            name = "sheep-recipe",
+            localised_name = {"item-name.sheep"},
+            order = "e",
+            category = "organic-synth-recipes",
+            subgroup = "seeds",
+            energy_required = 20,
+            enabled = false,
+            ingredients ={
+                {type="item",name="nutrient1",amount=50},
+            },
+            results = {
+                {type="item",name="sheep",amount=1}
+            },
+            icon="__baketorio_plus__/graphics/sheep.png",
+            icon_size = 32,
+        },
+        {
+            type = "recipe",
+            name = "breed-sheep-recipe",
+            order = "f",
+            category = "organic-synth-recipes",
+            subgroup = "seeds",
+            energy_required = 100,
+            enabled = false,
+            ingredients ={
+                {type="item",name="sheep",amount=2},
+                {type="item",name="nutrient1",amount=10},
+            },
+            results = {
+                {type="item",name="sheep",amount=3}
+            },
+            icon="__baketorio_plus__/graphics/sheep.png",
+            icon_size = 32,
+        },
+		
+		--  flour/bag stuff
+		{
+			type = "recipe",
+			name = "flour-box-recipe",
+			localised_name = {"item-name.flour-box"},
+			category = "crafting",
+			enabled = true,
+			energy_required = 2,
+			ingredients = {
+                {type="item",name="wooden-chest",amount=1},
+                {type="item",name="wheat",amount=10},
+			},
+			results = {
+				{type="item", name="flour-box", amount=1}
+			},
+		},
+        {
+            type = "recipe",
+            name = "hardtack-box-recipe",
+            localised_name = {"recipe-name.hardtack-box"},
+            category = "smelting",
+            subgroup = "bread",
+            energy_required = 2,
+            enabled = true,
+            ingredients ={
+                {type="item",name="flour-box",amount=1}
+            },
+            results = {
+                {type="item",name="hardtack",amount=2},
+				{type="item", name="wooden-chest", amount=1, probability=0.75}
+            },
+            icon = "__baketorio__/graphics/hardtack.png",
+            icon_size = 32,
+            group = "food",
+            subgroup = "ingredient",
+        },
+		{
+			type = "recipe",
+			name = "basic-dough-box-recipe",
+			localised_name = {"recipe-name.dough-box"},
+			category = "crafting-with-fluid",
+			enabled = false,
+			energy_required = 2,
+			ingredients = {
+                {type="item",name="flour-box",amount=1},
+                {type="fluid",name="water",amount=5},
+			},
+			results = {
+				{type="item", name="basic-dough", amount=1},
+				{type="item", name="wooden-chest", amount=1, probability=0.75}
+			},
+            icon="__baketorio__/graphics/dough.png",
+            icon_size = 32,
+            group = "food",
+            subgroup = "ingredient",
+		},
+		
+		{
+			type = "recipe",
+			name = "yarn-recipe",
+			localised_name = {"item-name.yarn"},
+			category = "crafting",
+			enabled = true,
+			energy_required = 12,
+			ingredients = {
+                {type="item",name="wool",amount=1},
+			},
+			results = {
+				{type="item", name="yarn", amount=20}
+			},
+		},
+		{
+			type = "recipe",
+			name = "fabric-recipe",
+			localised_name = {"item-name.fabric"},
+			category = "crafting",
+			enabled = true,
+			energy_required = 8,
+			ingredients = {
+                {type="item",name="yarn",amount=4},
+			},
+			results = {
+				{type="item", name="fabric", amount=1}
+			},
+		},
+		{
+			type = "recipe",
+			name = "bag-recipe",
+			localised_name = {"item-name.bag"},
+			category = "crafting",
+			enabled = true,
+			energy_required = 8,
+			ingredients = {
+                {type="item",name="yarn",amount=1},
+				{type="item", name="fabric", amount=1}
+			},
+			results = {
+				{type="item", name="bag", amount=1}
+			},
+		},
 	}
 )
 
@@ -1437,9 +1612,110 @@ data.raw["recipe"]["rocket-part"].results =
 --  spaceship part (2,3?) built with baklava, peacan pie, pumpkin cookie(s), ice cream sundae, pancakes with syrup, and chocolate croissant with white chocolate drizzle
 
 		
+--  add bags to recipes
+table.insert(data.raw["recipe"]["flour-recipe"].ingredients, {type="item",name="bag",amount=1} )
+table.insert(data.raw["recipe"]["sugar-recipe"].ingredients, {type="item",name="bag",amount=1} )
+table.insert(data.raw["recipe"]["cinnamon-sugar-recipe"].ingredients, {type="item",name="bag",amount=1} )
+table.insert(data.raw["recipe"]["cocoa-powder-recipe"].ingredients, {type="item",name="bag",amount=2} )
+--  add bags to recipe results
+table.insert(data.raw["recipe"]["hardtack-recipe"].results, {type="item",name="bag",amount=1} )
+table.insert(data.raw["recipe"]["hardtack-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
+table.insert(data.raw["recipe"]["cobbler-mixture-recipe"].results, {type="item",name="bag",amount_min=4,amount_max=5} )
+table.insert(data.raw["recipe"]["gravy-beef-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["gravy-pork-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["gravy-chicken-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["gravy-mutton-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["filo-dough-recipe"].results, {type="item",name="bag",amount=2} )
+table.insert(data.raw["recipe"]["filo-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
+table.insert(data.raw["recipe"]["pumpkin-batter-recipe"].results, {type="item",name="bag",amount_min=4,amount_max=5} )
+table.insert(data.raw["recipe"]["basic-batter-recipe"].results, {type="item",name="bag",amount=3} )
+table.insert(data.raw["recipe"]["basic-batter-recipe"].results, {type="item",name="bag",amount=1,probability=0.2} )
+table.insert(data.raw["recipe"]["basic-dough-recipe"].results, {type="item",name="bag",amount=1} )
+table.insert(data.raw["recipe"]["basic-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
+table.insert(data.raw["recipe"]["sugar-dough-recipe"].results, {type="item",name="bag",amount=2} )
+table.insert(data.raw["recipe"]["sugar-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
+table.insert(data.raw["recipe"]["egg-dough-recipe"].results, {type="item",name="bag",amount=1} )
+table.insert(data.raw["recipe"]["egg-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
+table.insert(data.raw["recipe"]["fryer-dough-recipe"].results, {type="item",name="bag",amount=2} )
+table.insert(data.raw["recipe"]["fryer-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
+table.insert(data.raw["recipe"]["cinnamon-dough-recipe"].results, {type="item",name="bag",amount=2} )
+table.insert(data.raw["recipe"]["cinnamon-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
+table.insert(data.raw["recipe"]["pancake-batter-recipe"].results, {type="item",name="bag",amount=3} )
+table.insert(data.raw["recipe"]["pancake-batter-recipe"].results, {type="item",name="bag",amount=1,probability=0.2} )
+table.insert(data.raw["recipe"]["sugar-water-recipe"].results, {type="item",name="bag",amount=2} )
+table.insert(data.raw["recipe"]["sugar-water-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
+table.insert(data.raw["recipe"]["white-chocolate-sauce-recipe"].results, {type="item",name="bag",amount=1} )
+table.insert(data.raw["recipe"]["white-chocolate-sauce-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
+table.insert(data.raw["recipe"]["meringue-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["frosting-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["plain-ice-cream"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["apple-fritter-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["pumpkin-pie-recipe"].results, {type="item",name="bag",amount=1} )
+table.insert(data.raw["recipe"]["pumpkin-pie-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
+table.insert(data.raw["recipe"]["fryer-dough-bun-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["cinnamon-sugar-doughnut-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["chocolate-sauce-recipe"].results, {type="item",name="bag",amount_min=24,amount_max=30} )
+table.insert(data.raw["recipe"]["chocolate-batter-recipe"].results, {type="item",name="bag",amount=1} )
+table.insert(data.raw["recipe"]["chocolate-batter-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
+table.insert(data.raw["recipe"]["chocolate-ice-cream-recipe"].results, {type="item",name="bag",amount=2} )
+table.insert(data.raw["recipe"]["chocolate-ice-cream-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
+table.insert(data.raw["recipe"]["chocolate-chips-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
 		
-		
-		
+
+data.raw["recipe"]["cobbler-mixture-recipe"].icon="__baketorio_plus__/graphics/cobbler-mixture.png"
+data.raw["recipe"]["gravy-beef-recipe"].icon="__baketorio_plus__/graphics/gravy.png"
+data.raw["recipe"]["gravy-pork-recipe"].icon="__baketorio_plus__/graphics/gravy.png"
+
+data.raw["recipe"]["gravy-chicken-recipe"].icon="__baketorio_plus__/graphics/gravy.png"
+data.raw["recipe"]["gravy-mutton-recipe"].icon="__baketorio_plus__/graphics/gravy.png"
+data.raw["recipe"]["filo-dough-recipe"].icon="__baketorio_plus__/graphics/filo-dough.png"
+
+data.raw["recipe"]["pumpkin-batter-recipe"].icon="__baketorio_plus__/graphics/pumpkin-batter.png"
+data.raw["recipe"]["basic-batter-recipe"].icon="__baketorio__/graphics/cakebatter.png"
+data.raw["recipe"]["basic-dough-recipe"].icon="__baketorio__/graphics/basic-dough.png"
+data.raw["recipe"]["sugar-dough-recipe"].icons=data.raw["item"]["sugar-dough"].icons
+
+data.raw["recipe"]["egg-dough-recipe"].icons=data.raw["item"]["egg-dough"].icons
+data.raw["recipe"]["fryer-dough-recipe"].icon="__baketorio__/graphics/fryer-dough.png"
+data.raw["recipe"]["cinnamon-dough-recipe"].icons=data.raw["item"]["cinnamon-dough"].icons
+data.raw["recipe"]["pancake-batter-recipe"].icon="__baketorio_plus__/graphics/pancake-batter.png"
+
+data.raw["recipe"]["sugar-water-recipe"].icon="__baketorio_plus__/graphics/sugar-water.png"
+data.raw["recipe"]["white-chocolate-sauce-recipe"].icon="__baketorio_plus__/graphics/white-chocolate-sauce.png"
+data.raw["recipe"]["meringue-recipe"].icon="__baketorio_plus__/graphics/meringue.png"
+data.raw["recipe"]["frosting-recipe"].icon="__baketorio__/graphics/frosting.png"
+
+data.raw["recipe"]["plain-ice-cream"].icon="__baketorio__/graphics/plain-ice-cream.png"
+data.raw["recipe"]["apple-fritter-recipe"].icon="__baketorio_plus__/graphics/apple-fritter.png"
+data.raw["recipe"]["pumpkin-pie-recipe"].icon="__baketorio_plus__/graphics/pumpkin-pie.png"
+data.raw["recipe"]["fryer-dough-bun-recipe"].icon="__baketorio__/graphics/fryer-dough-bun.png"
+
+data.raw["recipe"]["cinnamon-sugar-doughnut-recipe"].icon="__baketorio__/graphics/cinnamon-sugar-doughnut.png"
+data.raw["recipe"]["chocolate-sauce-recipe"].icon="__baketorio_plus__/graphics/chocolate-sauce.png"
+data.raw["recipe"]["chocolate-batter-recipe"].icon="__baketorio__/graphics/chocolate-batter.png"
+
+data.raw["recipe"]["chocolate-ice-cream-recipe"].icon="__baketorio_plus__/graphics/chocolate-ice-cream.png"
+data.raw["recipe"]["chocolate-chips-recipe"].icon="__baketorio_plus__/graphics/chocolate-chips.png"
+data.raw["recipe"]["hardtack-recipe"].icon="__baketorio__/graphics/hardtack.png"
+
+
+local list = {"cobbler-mixture-recipe", "gravy-beef-recipe", "gravy-pork-recipe",
+	"gravy-chicken-recipe", "gravy-mutton-recipe", "filo-dough-recipe",
+	"pumpkin-batter-recipe", "basic-batter-recipe", "basic-dough-recipe", "sugar-dough-recipe",
+	"egg-dough-recipe", "fryer-dough-recipe", "cinnamon-dough-recipe", "pancake-batter-recipe",
+	"sugar-water-recipe", "white-chocolate-sauce-recipe", "meringue-recipe", "frosting-recipe",
+	"plain-ice-cream", "apple-fritter-recipe", "pumpkin-pie-recipe", "fryer-dough-bun-recipe",
+	"cinnamon-sugar-doughnut-recipe", "chocolate-sauce-recipe", "chocolate-batter-recipe",
+	"chocolate-ice-cream-recipe", "chocolate-chips-recipe", "hardtack-recipe"}
+
+for key,value in pairs(list) do
+	data.raw["recipe"][value].icon_size = 32
+	data.raw["recipe"][value].group = "food"
+	data.raw["recipe"][value].subgroup = "ingredient"
+end
+
+
+
 
 
 
