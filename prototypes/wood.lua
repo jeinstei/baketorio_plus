@@ -16,6 +16,7 @@ data:extend(
         {
             type = "item",
             name = "wood-frame",
+			localised_name = {"item-name.wood-frame"},
             icon = "__baketorio_plus__/graphics/wood-frame.png",
             icon_size = 32,
 			group = "wood",
@@ -25,6 +26,7 @@ data:extend(
         {
             type = "item",
             name = "wood-ground",
+			localised_name = {"item-name.wood-ground"},
             icon = "__baketorio_plus__/graphics/wood-ground.png",
             icon_size = 32,
 			group = "wood",
@@ -36,6 +38,7 @@ data:extend(
         {
             type = "fluid",
             name = "wood-pulp",
+			localised_name = {"item-name.wood-pulp"},
             icon = "__baketorio_plus__/graphics/wood-pulp.png",
             icon_size = 32,
 			group = "wood",
@@ -49,6 +52,7 @@ data:extend(
         {
             type = "item",
             name = "paper",
+			localised_name = {"item-name.paper"},
             icon = "__baketorio_plus__/graphics/paper.png",
             icon_size = 32,
 			group = "wood",
@@ -60,6 +64,7 @@ data:extend(
         {
             type = "item",
             name = "paper-wrapper",
+			localised_name = {"item-name.paper-wrapper"},
             icon = "__baketorio_plus__/graphics/paper-wrapper.png",
             icon_size = 32,
 			group = "wood",
@@ -107,11 +112,11 @@ data:extend(
             energy_required = 4,
             enabled = false,
             ingredients = {
-                {type="fluid",name="water",amount=30},
+                {type="fluid",name="water",amount=35},
                 {type="item",name="wood-ground",amount=4},
             },
             results = {
-                {type="fluid", name="wood-pulp", amount=35},
+                {type="fluid", name="wood-pulp", amount=40},
             }
         },
         {

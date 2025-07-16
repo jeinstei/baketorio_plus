@@ -13,7 +13,15 @@ local overlayOffsets = {upperLeft, upperRight, lowerLeft, lowerRight}
 
 
 data.raw["technology"]["nutrient1"].prerequisites = {"automation-science-pack"}
-data.raw["technology"]["nutrient1"].unit.ingredients[1][2] = 20
+data.raw["technology"]["nutrient1"].unit =
+        {
+          count = 10,
+          ingredients = {
+            {"automation-science-pack", 1}
+          },
+          time = 30
+        }
+data.raw["technology"]["nutrient2"].unit.count = 20
 
 
 -- Remove recipe unlocks from nutrient recipes for clean slate

@@ -15,13 +15,13 @@ local prod_recipes = {
   "filter-nuts-for-peanuts",
   "peanut-butter-recipe",
   "pumpkin-pulp-recipe",
-  "slightly-buttered-dough-recipe",
-  "pretty-buttered-dough-recipe",
-  "fairly-buttered-dough-recipe",
-  "very-buttered-dough-recipe",
-  "incredibly-buttered-dough-recipe",
-  "extremely-buttered-dough-recipe",
-  "fully-buttered-dough-recipe",
+  "buttered-dough-1-recipe",
+  "buttered-dough-2-recipe",
+  "buttered-dough-3-recipe",
+  "buttered-dough-4-recipe",
+  "buttered-dough-5-recipe",
+  "buttered-dough-6-recipe",
+  "buttered-dough-7-recipe",
   "cocoa-butter-recipe",
   "croissant-cooked-recipe",
   "chocolate-chip-croissant-cooked-recipe",
@@ -313,73 +313,73 @@ data:extend(
 		
 		{
 			type = "recipe",
-			name = "slightly-buttered-dough-recipe",
+			name = "buttered-dough-1-recipe",
 			localised_name = {"item-name.slightly-buttered-dough"},
 			category = "butterize",
 			enabled = false,
 			energy_required = 15,
 			ingredients = {{type = "item", name = "basic-dough", amount = 1}},
-			results = {{type="item", name="slightly-buttered-dough", amount=1}}
+			results = {{type="item", name="buttered-dough-1", amount=1}}
 		},
 		{
 			type = "recipe",
-			name = "pretty-buttered-dough-recipe",
+			name = "buttered-dough-2-recipe",
 			localised_name = {"item-name.pretty-buttered-dough"},
 			category = "butterize",
 			enabled = false,
 			energy_required = 15,
-			ingredients = {{type = "item", name = "slightly-buttered-dough", amount = 1}},
-			results = {{type="item", name="pretty-buttered-dough", amount=1}}
+			ingredients = {{type = "item", name = "buttered-dough-1", amount = 1}},
+			results = {{type="item", name="buttered-dough-2", amount=1}}
 		},
 		{
 			type = "recipe",
-			name = "fairly-buttered-dough-recipe",
+			name = "buttered-dough-3-recipe",
 			localised_name = {"item-name.fairly-buttered-dough"},
 			category = "butterize",
 			enabled = false,
 			energy_required = 15,
-			ingredients = {{type = "item", name = "pretty-buttered-dough", amount = 1}},
-			results = {{type="item", name="fairly-buttered-dough", amount=1}}
+			ingredients = {{type = "item", name = "buttered-dough-2", amount = 1}},
+			results = {{type="item", name="buttered-dough-3", amount=1}}
 		},
 		{
 			type = "recipe",
-			name = "very-buttered-dough-recipe",
+			name = "buttered-dough-4-recipe",
 			localised_name = {"item-name.very-buttered-dough"},
 			category = "butterize",
 			enabled = false,
 			energy_required = 15,
-			ingredients = {{type = "item", name = "fairly-buttered-dough", amount = 1}},
-			results = {{type="item", name="very-buttered-dough", amount=1}}
+			ingredients = {{type = "item", name = "buttered-dough-3", amount = 1}},
+			results = {{type="item", name="buttered-dough-4", amount=1}}
 		},
 		{
 			type = "recipe",
-			name = "incredibly-buttered-dough-recipe",
+			name = "buttered-dough-5-recipe",
 			localised_name = {"item-name.incredibly-buttered-dough"},
 			category = "butterize",
 			enabled = false,
 			energy_required = 15,
-			ingredients = {{type = "item", name = "very-buttered-dough", amount = 1}},
-			results = {{type="item", name="incredibly-buttered-dough", amount=1}}
+			ingredients = {{type = "item", name = "buttered-dough-4", amount = 1}},
+			results = {{type="item", name="buttered-dough-5", amount=1}}
 		},
 		{
 			type = "recipe",
-			name = "extremely-buttered-dough-recipe",
+			name = "buttered-dough-6-recipe",
 			localised_name = {"item-name.extremely-buttered-dough"},
 			category = "butterize",
 			enabled = false,
 			energy_required = 15,
-			ingredients = {{type = "item", name = "incredibly-buttered-dough", amount = 1}},
-			results = {{type="item", name="extremely-buttered-dough", amount=1}}
+			ingredients = {{type = "item", name = "buttered-dough-5", amount = 1}},
+			results = {{type="item", name="buttered-dough-6", amount=1}}
 		},
 		{
 			type = "recipe",
-			name = "fully-buttered-dough-recipe",
+			name = "buttered-dough-7-recipe",
 			localised_name = {"item-name.fully-buttered-dough"},
 			category = "butterize",
 			enabled = false,
 			energy_required = 15,
-			ingredients = {{type = "item", name = "extremely-buttered-dough", amount = 1}},
-			results = {{type="item", name="fully-buttered-dough", amount=1}}
+			ingredients = {{type = "item", name = "buttered-dough-6", amount = 1}},
+			results = {{type="item", name="buttered-dough-7", amount=1}}
 		},
 		
 		
@@ -412,7 +412,7 @@ data:extend(
             energy_required = 5,
             enabled = false,
             ingredients ={
-                {type="item",name="fully-buttered-dough",amount=1},
+                {type="item",name="buttered-dough-7",amount=1},
             },
             results = {
                 {type="item",name="croissant",amount=1}
@@ -442,7 +442,7 @@ data:extend(
             energy_required = 10,
             enabled = false,
             ingredients ={
-                {type="item",name="fully-buttered-dough",amount=1},
+                {type="item",name="buttered-dough-7",amount=1},
                 {type="item",name="chocolate-chips",amount=1},
             },
             results = {
@@ -1017,7 +1017,7 @@ data:extend(
 			enabled = false,
 			energy_required = 15,
 			ingredients = {
-                {type="item",name="slightly-buttered-dough",amount=1},
+                {type="item",name="buttered-dough-1",amount=1},
                 {type="item",name="pork",amount=5},
 			},
 			results = {
@@ -1251,7 +1251,7 @@ data:extend(
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
-                {type="item",name="slightly-buttered-dough",amount=1},
+                {type="item",name="buttered-dough-1",amount=1},
                 {type="item",name="lemon-curd",amount=1},
 			},
 			results = {
@@ -1459,8 +1459,9 @@ data:extend(
 			name = "yarn-recipe",
 			localised_name = {"item-name.yarn"},
 			category = "crafting",
-			enabled = true,
-			energy_required = 12,
+			enabled = false,
+			allow_productivity = true,
+			energy_required = 3,
 			ingredients = {
                 {type="item",name="wool",amount=1},
 			},
@@ -1473,8 +1474,9 @@ data:extend(
 			name = "fabric-recipe",
 			localised_name = {"item-name.fabric"},
 			category = "crafting",
-			enabled = true,
-			energy_required = 8,
+			enabled = false,
+			allow_productivity = true,
+			energy_required = 2,
 			ingredients = {
                 {type="item",name="yarn",amount=4},
 			},
@@ -1487,8 +1489,9 @@ data:extend(
 			name = "bag-recipe",
 			localised_name = {"item-name.bag"},
 			category = "crafting",
-			enabled = true,
-			energy_required = 8,
+			enabled = false,
+			allow_productivity = true,
+			energy_required = 2,
 			ingredients = {
                 {type="item",name="yarn",amount=1},
 				{type="item", name="fabric", amount=1}
@@ -1528,8 +1531,8 @@ table.insert(data.raw["recipe"]["plain-ice-cream"].ingredients, {type="item",nam
 
 --  double cupcake outputs
 data.raw["recipe"]["basic-batter-cupcake-recipe"].results = {{type="item",name="basic-batter-cupcake",amount=2}}
-data.raw["recipe"]["chocolate-batter-cupcake-recipe"].ingredients = {{type="item",name="chocolate-batter-cupcake",amount=2}}
-data.raw["recipe"]["advanced-cake-batter-cupcake-recipe"].ingredients = {{type="item",name="advanced-cake-batter-cupcake",amount=2}}
+data.raw["recipe"]["chocolate-batter-cupcake-recipe"].results = {{type="item",name="chocolate-batter-cupcake",amount=2}}
+data.raw["recipe"]["advanced-cake-batter-cupcake-recipe"].results = {{type="item",name="advanced-cake-batter-cupcake",amount=2}}
 
 --  fry donuts now
 table.insert(data.raw["recipe"]["fryer-dough-doughnut-cooked-recipe"].ingredients, {type="fluid",name="light-oil",amount=8} )
@@ -1618,47 +1621,33 @@ table.insert(data.raw["recipe"]["sugar-recipe"].ingredients, {type="item",name="
 table.insert(data.raw["recipe"]["cinnamon-sugar-recipe"].ingredients, {type="item",name="bag",amount=1} )
 table.insert(data.raw["recipe"]["cocoa-powder-recipe"].ingredients, {type="item",name="bag",amount=2} )
 --  add bags to recipe results
-table.insert(data.raw["recipe"]["hardtack-recipe"].results, {type="item",name="bag",amount=1} )
-table.insert(data.raw["recipe"]["hardtack-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
+table.insert(data.raw["recipe"]["hardtack-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
 table.insert(data.raw["recipe"]["cobbler-mixture-recipe"].results, {type="item",name="bag",amount_min=4,amount_max=5} )
 table.insert(data.raw["recipe"]["gravy-beef-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
 table.insert(data.raw["recipe"]["gravy-pork-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
 table.insert(data.raw["recipe"]["gravy-chicken-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
 table.insert(data.raw["recipe"]["gravy-mutton-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["filo-dough-recipe"].results, {type="item",name="bag",amount=2} )
-table.insert(data.raw["recipe"]["filo-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
-table.insert(data.raw["recipe"]["pumpkin-batter-recipe"].results, {type="item",name="bag",amount_min=4,amount_max=5} )
-table.insert(data.raw["recipe"]["basic-batter-recipe"].results, {type="item",name="bag",amount=3} )
-table.insert(data.raw["recipe"]["basic-batter-recipe"].results, {type="item",name="bag",amount=1,probability=0.2} )
-table.insert(data.raw["recipe"]["basic-dough-recipe"].results, {type="item",name="bag",amount=1} )
-table.insert(data.raw["recipe"]["basic-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
-table.insert(data.raw["recipe"]["sugar-dough-recipe"].results, {type="item",name="bag",amount=2} )
-table.insert(data.raw["recipe"]["sugar-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
-table.insert(data.raw["recipe"]["egg-dough-recipe"].results, {type="item",name="bag",amount=1} )
-table.insert(data.raw["recipe"]["egg-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
-table.insert(data.raw["recipe"]["fryer-dough-recipe"].results, {type="item",name="bag",amount=2} )
-table.insert(data.raw["recipe"]["fryer-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
-table.insert(data.raw["recipe"]["cinnamon-dough-recipe"].results, {type="item",name="bag",amount=2} )
-table.insert(data.raw["recipe"]["cinnamon-dough-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
-table.insert(data.raw["recipe"]["pancake-batter-recipe"].results, {type="item",name="bag",amount=3} )
-table.insert(data.raw["recipe"]["pancake-batter-recipe"].results, {type="item",name="bag",amount=1,probability=0.2} )
-table.insert(data.raw["recipe"]["sugar-water-recipe"].results, {type="item",name="bag",amount=2} )
-table.insert(data.raw["recipe"]["sugar-water-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
-table.insert(data.raw["recipe"]["white-chocolate-sauce-recipe"].results, {type="item",name="bag",amount=1} )
-table.insert(data.raw["recipe"]["white-chocolate-sauce-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
+table.insert(data.raw["recipe"]["filo-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
+table.insert(data.raw["recipe"]["pumpkin-batter-recipe"].results, {type="item",name="bag",amount_min=3,amount_max=5} )
+table.insert(data.raw["recipe"]["basic-batter-recipe"].results, {type="item",name="bag",amount=3,extra_count_fraction=0.2} )
+table.insert(data.raw["recipe"]["basic-dough-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
+table.insert(data.raw["recipe"]["sugar-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
+table.insert(data.raw["recipe"]["egg-dough-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
+table.insert(data.raw["recipe"]["fryer-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
+table.insert(data.raw["recipe"]["cinnamon-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
+table.insert(data.raw["recipe"]["pancake-batter-recipe"].results, {type="item",name="bag",amount=3,extra_count_fraction=0.2} )
+table.insert(data.raw["recipe"]["sugar-water-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
+table.insert(data.raw["recipe"]["white-chocolate-sauce-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
 table.insert(data.raw["recipe"]["meringue-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
 table.insert(data.raw["recipe"]["frosting-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
 table.insert(data.raw["recipe"]["plain-ice-cream"].results, {type="item",name="bag",amount=1,probability=0.8} )
 table.insert(data.raw["recipe"]["apple-fritter-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["pumpkin-pie-recipe"].results, {type="item",name="bag",amount=1} )
-table.insert(data.raw["recipe"]["pumpkin-pie-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
+table.insert(data.raw["recipe"]["pumpkin-pie-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
 table.insert(data.raw["recipe"]["fryer-dough-bun-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
 table.insert(data.raw["recipe"]["cinnamon-sugar-doughnut-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["chocolate-sauce-recipe"].results, {type="item",name="bag",amount_min=24,amount_max=30} )
-table.insert(data.raw["recipe"]["chocolate-batter-recipe"].results, {type="item",name="bag",amount=1} )
-table.insert(data.raw["recipe"]["chocolate-batter-recipe"].results, {type="item",name="bag",amount=1,probability=0.6} )
-table.insert(data.raw["recipe"]["chocolate-ice-cream-recipe"].results, {type="item",name="bag",amount=2} )
-table.insert(data.raw["recipe"]["chocolate-ice-cream-recipe"].results, {type="item",name="bag",amount=1,probability=0.4} )
+table.insert(data.raw["recipe"]["chocolate-sauce-recipe"].results, {type="item",name="bag",amount_min=18,amount_max=30} )
+table.insert(data.raw["recipe"]["chocolate-batter-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
+table.insert(data.raw["recipe"]["chocolate-ice-cream-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
 table.insert(data.raw["recipe"]["chocolate-chips-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
 		
 
@@ -1716,6 +1705,8 @@ end
 
 
 
+--  double speed for milk filtering
+data.raw["recipe"]["milk-filtering"].energy_required = data.raw["recipe"]["milk-filtering"].energy_required/2
 
 
 

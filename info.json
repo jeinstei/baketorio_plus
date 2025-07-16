@@ -1,10 +1,10 @@
 {
 	"name": "baketorio_plus", 
-	"version": "0.3.0",
+	"version": "0.4.1",
 	"title": "Baketorio+",
 	"author": "Edenstudent",
 	"factorio_version": "2.0", 
 	"contact": "Edenstudent", 
 	"description": "An expansion to the Baketorio overhaul mod. \n\nEnable \"Enable all Feature Flags\" mod if you own the DLC for full features of this mod.",
-	"dependencies": ["baketorio >= 2.0.14", "? quality", "? enable-all-feature-flags >= 1.0.2", "! space-age"]
+	"dependencies": ["base >= 2.0.0", "baketorio >= 2.0.14", "? quality", "? enable-all-feature-flags >= 1.0.2", "! space-age"]
 }

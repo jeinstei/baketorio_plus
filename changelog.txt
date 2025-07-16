@@ -1,4 +1,83 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 2025-07-15
+  Changes:
+    - Animal breeding (and hatching) recipes are now in the barn
+    - Added productivity to yarn, fabric, and bag recipes
+  Bug Fixes:
+    - Barn is now producing the right pollution level (10 instead of 4)
+    - Fixed name for yeast propagation recipe
+    - Cupcake (advanced and chocolate) recipes set as 2 of itself for the ingredients
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 2025-07-10
+  Features:
+    - Animal recipes are now in the new Barn building, which does not require energy but produced 2.5x the pollution of a basic assmebly machine (or 10x an elextric furnace)
+    - Yeast modules and their respective techs and recipes
+  Changes:
+    - Greenhouses now remove pollution rather than add to it
+  Balances:
+    - Changed sugar water to only take 1 sugar and give 50 sugar water
+  Bug Fixes:
+    - Added chem plant back into Animal Husbandry
+---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 2025-07-07
+  Balances:
+    - Doubled speed for milk filtering
+    - Quadrupled speed for yarn, fabric, and bags
+  Bug Fixes:
+    - Set localized name for "Wood" category
+---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 2025-07-04
+  Balances:
+    - Upped wood pulp recipe to give 40 instead of 35 wood pulp to balance ratios better
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 2025-07-04
+  Bug Fixes:
+    - Added Green Science as a prerequesite for Meringue
+    - Added Milk Processing as a prerequesite for Baking
+    - Added Vegtable Oil as a prerequesite for Frying
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 2025-07-03
+  Balances:
+    - Set Level 2 Nutrients to require 20 red science to unlock rather than just 10
+  Bug Fixes:
+    - Fixed Level 1 Nutrients to only require 10 x 1 red science to unlock, not 10 x 20
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 2025-07-03
+  Bug Fixes:
+    - Set level 1 Nutrients to only cost 1 x 10
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 2025-07-03
+  Changes:
+    - Used the extra_count_fraction to control extra bag returns rather than having an additional spot for them
+    - Changed from ensuring 3 slots in furnaces to only 2 minimum in furnaces
+    - Moved the above change to data-updates so it affects furnaces from other mods that are loaded after this one
+  Balances:
+    - Fixed Chocolate Sauce and Pumpkin Batter bag return to average 80% rather than 90% (now both return 60-100% as opposed to previous 80-100%)
+  Bug Fixes:
+    - Plastics added as prerequesite for animal processing and ice cream due to needing to be unlocked for plastic bins
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 2025-06-26
+  Bugfixes:
+    - Changed all furnaces (stone, steel, and electric) to have 3 output slots (for hardtack)
+    - Fixed icons for shearing sheep/harvesting wool
+    - Fixed names for breeding pigs and sheep
+    - Fixed name for baby lamb
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 2025-06-25
+  Changes:
+    - Changed names of buttered doughs in system so that they present in order
+    - Cleaned up some redundancies in the localized naming
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2025-06-24
   Features:

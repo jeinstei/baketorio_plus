@@ -139,6 +139,13 @@ data.raw["assembling-machine"],["greenhouse"].graphics_set =
     },
 ]]--
 
+--  make greenhouses absorb pollution
+    data.raw["assembling-machine"]["greenhouse"].energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = { pollution = -5 },
+    }
+
 --  add quality modules to greenhouses
 if mods["quality"] then
   table.insert(data.raw["assembling-machine"]["greenhouse"].allowed_effects, "quality")

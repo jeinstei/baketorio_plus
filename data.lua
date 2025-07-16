@@ -18,14 +18,18 @@ require("prototypes.butter")
 
 require("prototypes.nutrients")  --  must be before tech so that the nutrient 1 tech exists for technologies to use
 
+
+if feature_flags["spoiling"] then
+	require("prototypes.animal-aging")
+end
+
+
+require("prototypes.barn")  --  must be after plants and animal aging so it can overwrite the recipes
+require("prototypes.yeast")
+
 require("prototypes.technologies")
 
 
-if feature_flags["spoiling"] then
-
-	require("prototypes.animal-aging")
-	
-end
 
 
 

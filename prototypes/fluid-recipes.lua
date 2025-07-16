@@ -45,10 +45,10 @@ data:extend(
             enabled = false,
             ingredients ={
                 {type="fluid",name="water",amount=50},
-                {type="item",name="sugar",amount=3},
+                {type="item",name="sugar",amount=1},
             },
             results = {
-                {type="fluid", name="sugar-water", amount=20},
+                {type="fluid", name="sugar-water", amount=50},
             }
         },
         {
@@ -185,7 +185,7 @@ data:extend(
         {
             type = "recipe",
             name = "white-chocolate-sauce-recipe",
-			localised_name = {"recipe-name.white-chocolate-sauce-recipe"},
+			localised_name = {"fluid-name.white-chocolate-sauce"},
             category = "chemistry",
             subgroup = "fluid-ingredient",
             energy_required = 60,

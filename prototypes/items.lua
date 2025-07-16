@@ -239,7 +239,7 @@ data:extend(
 		
         {
             type = "item",
-            name = "slightly-buttered-dough",
+            name = "buttered-dough-1",
 			localised_name = {"item-name.slightly-buttered-dough"},
             icon = "__baketorio_plus__/graphics/buttered-dough.png",
             icon_size = 32,
@@ -248,7 +248,7 @@ data:extend(
         },
         {
             type = "item",
-            name = "pretty-buttered-dough",
+            name = "buttered-dough-2",
 			localised_name = {"item-name.pretty-buttered-dough"},
             icon = "__baketorio_plus__/graphics/buttered-dough.png",
             icon_size = 32,
@@ -257,7 +257,7 @@ data:extend(
         },
         {
             type = "item",
-            name = "fairly-buttered-dough",
+            name = "buttered-dough-3",
 			localised_name = {"item-name.fairly-buttered-dough"},
             icon = "__baketorio_plus__/graphics/buttered-dough.png",
             icon_size = 32,
@@ -266,7 +266,7 @@ data:extend(
         },
         {
             type = "item",
-            name = "very-buttered-dough",
+            name = "buttered-dough-4",
 			localised_name = {"item-name.very-buttered-dough"},
             icon = "__baketorio_plus__/graphics/buttered-dough.png",
             icon_size = 32,
@@ -275,7 +275,7 @@ data:extend(
         },
         {
             type = "item",
-            name = "incredibly-buttered-dough",
+            name = "buttered-dough-5",
 			localised_name = {"item-name.incredibly-buttered-dough"},
             icon = "__baketorio_plus__/graphics/buttered-dough.png",
             icon_size = 32,
@@ -284,7 +284,7 @@ data:extend(
         },
         {
             type = "item",
-            name = "extremely-buttered-dough",
+            name = "buttered-dough-6",
 			localised_name = {"item-name.extremely-buttered-dough"},
             icon = "__baketorio_plus__/graphics/buttered-dough.png",
             icon_size = 32,
@@ -293,7 +293,7 @@ data:extend(
         },
         {
             type = "item",
-            name = "fully-buttered-dough",
+            name = "buttered-dough-7",
 			localised_name = {"item-name.fully-buttered-dough"},
             icon = "__baketorio_plus__/graphics/buttered-dough.png",
             icon_size = 32,

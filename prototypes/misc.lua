@@ -1,13 +1,18 @@
 
 
-
-
-
 data:extend(
     {
 		{
+			type = "module-category",
+			name = "yeast"
+		},
+		{
 			type = "recipe-category",
 			name = "bake-boiling"
+		},
+		{
+			type = "recipe-category",
+			name = "barn"
 		},
 		{
 			type = "recipe-category",
@@ -43,6 +48,7 @@ data:extend(
 		{
 			type="item-group",
 			name="wood",
+			localised_name = {"technology-name.wood"},
 			order="zzzz",
 			icon = "__baketorio_plus__/graphics/wood_tech.png",
 			icon_size = 128,

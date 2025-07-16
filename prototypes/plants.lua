@@ -655,7 +655,7 @@ data:extend (
                 {type="item",name="sheep",amount=1},
                 {type="item", name="wool", amount=1},
             },
-            icon = "__baketorio__/graphics/unpasteurized_milk.png",
+            icon = "__baketorio_plus__/graphics/wool.png",
             icon_size = 32,
         },
         {
@@ -675,7 +675,7 @@ data:extend (
                 {type="item",name="sheep",amount=1},
                 {type="item", name="wool", amount=1},
             },
-            icon = "__baketorio__/graphics/unpasteurized_milk.png",
+            icon = "__baketorio_plus__/graphics/wool.png",
             icon_size = 32,
         },
         {
@@ -696,7 +696,7 @@ data:extend (
                 {type="item",name="sheep",amount=1},
                 {type="item", name="wool", amount=3},
             },
-            icon = "__baketorio__/graphics/unpasteurized_milk.png",
+            icon = "__baketorio_plus__/graphics/wool.png",
             icon_size = 32,
         },
 		

@@ -762,7 +762,7 @@ data:extend {
     prerequisites = {"utility-science-pack"},
     effects = {
 	  {type = "unlock-recipe",recipe = "butterizer-recipe"},
-      {type = "unlock-recipe",recipe = "slightly-buttered-dough-recipe"}
+      {type = "unlock-recipe",recipe = "buttered-dough-1-recipe"}
 	},
     unit =
     {
@@ -917,12 +917,12 @@ data:extend {
     prerequisites = {"butterizer", "advanced-chocolate-processing"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "pretty-buttered-dough-recipe"},
-      {type = "unlock-recipe",recipe = "fairly-buttered-dough-recipe"},
-      {type = "unlock-recipe",recipe = "very-buttered-dough-recipe"},
-      {type = "unlock-recipe",recipe = "incredibly-buttered-dough-recipe"},
-      {type = "unlock-recipe",recipe = "extremely-buttered-dough-recipe"},
-      {type = "unlock-recipe",recipe = "fully-buttered-dough-recipe"},
+      {type = "unlock-recipe",recipe = "buttered-dough-2-recipe"},
+      {type = "unlock-recipe",recipe = "buttered-dough-3-recipe"},
+      {type = "unlock-recipe",recipe = "buttered-dough-4-recipe"},
+      {type = "unlock-recipe",recipe = "buttered-dough-5-recipe"},
+      {type = "unlock-recipe",recipe = "buttered-dough-6-recipe"},
+      {type = "unlock-recipe",recipe = "buttered-dough-7-recipe"},
       {type = "unlock-recipe",recipe = "croissant-recipe"},
       {type = "unlock-recipe",recipe = "croissant-cooked-recipe"},
       {type = "unlock-recipe",recipe = "chocolate-chip-buttered-dough-recipe"},
@@ -1069,7 +1069,7 @@ data:extend {
 	localised_name = {"technology-name.meringue"},
     icon_size = 128,
     icon = "__baketorio_plus__/graphics/meringue_tech.png",
-    prerequisites = {"animal-husbandry"},
+    prerequisites = {"animal-husbandry", "logistic-science-pack"},
     effects =
     {
       {type = "unlock-recipe",recipe = "meringue-recipe"},
@@ -1497,6 +1497,91 @@ data:extend {
       time = 30
     },
   },
+  
+  
+  
+  --  yeast tech that follows "syrup" and unlocks yeast growth
+  {
+    type = "technology",
+    name = "yeast",
+	localised_name = {"item-name.yeast"},
+    icon_size = 128,
+    icon = "__baketorio_plus__/graphics/yeast_tech.png",
+    prerequisites = {"syrup", "chemical-science-pack"},
+    effects =
+    {
+      {type = "unlock-recipe",recipe = "yeast-propagation-recipe"},
+      {type = "unlock-recipe",recipe = "yeast-module-2-recipe"},
+      {type = "unlock-recipe",recipe = "yeast-module-3-recipe"},
+      {type = "unlock-recipe",recipe = "yeast-module-3-recipe-2"},
+    },
+    unit =
+    {
+      count = 100,
+      ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+      },
+      time = 30
+    },
+  },
+  
+  --  3 fruit scrubbing recipes that unlock after yeast and their respective fruit (even if the 1 fruit is crafting, it won't unlock until both parents are researched)
+  {
+    type = "technology",
+    name = "yeast-apple",
+	localised_name = {"technology-name.yeast-apple"},
+    icon_size = 128,
+    icon = "__baketorio_plus__/graphics/yeast-apple_tech.png",
+    prerequisites = {"yeast", "apples"},
+    effects =
+    {
+      {type = "unlock-recipe",recipe = "yeast-apple-recipe"},
+    },
+    research_trigger =
+    {
+      type = "craft-item",
+      item = "apples",
+      count = 1
+    }
+  },
+  {
+    type = "technology",
+    name = "yeast-lemon",
+	localised_name = {"technology-name.yeast-lemon"},
+    icon_size = 128,
+    icon = "__baketorio_plus__/graphics/yeast-lemon_tech.png",
+    prerequisites = {"yeast", "lemons"},
+    effects =
+    {
+      {type = "unlock-recipe",recipe = "yeast-lemon-recipe"},
+    },
+    research_trigger =
+    {
+      type = "craft-item",
+      item = "lemons",
+      count = 1
+    }
+  },
+  {
+    type = "technology",
+    name = "yeast-peach",
+	localised_name = {"technology-name.yeast-peach"},
+    icon_size = 128,
+    icon = "__baketorio_plus__/graphics/yeast-peach_tech.png",
+    prerequisites = {"yeast", "peaches"},
+    effects =
+    {
+      {type = "unlock-recipe",recipe = "yeast-peach-recipe"},
+    },
+    research_trigger =
+    {
+      type = "craft-item",
+      item = "peaches",
+      count = 1
+    }
+  },
 }
 
 
@@ -1518,14 +1603,18 @@ table.insert(data.raw["technology"]["leavening"].effects, 1, {type="unlock-recip
 table.insert(data.raw["technology"]["sugar"].prerequisites, "leavening-2")
 
 
+--  add plastic as prereq due to bins
+table.insert(data.raw["technology"]["ice-cream"].prerequisites, "plastics")
+table.insert(data.raw["technology"]["animal-processing"].prerequisites, "plastics")
+
 --  insert lvl 3 nutrients in between lvl 2 and animal husbandry (insert rather than set because it is set above for wood-processing and don't want to overwrite that)
 table.insert(data.raw["technology"]["animal-husbandry"].prerequisites, "nutrient3")
 data.raw["technology"]["nutrient3"].prerequisites = {"nutrient2"}
 
---  frying set milk processing and sugar as a prerequisite
-data.raw["technology"]["frying"].prerequisites = {"milk-processing", "vegetable-oil"}
---  baking set milk processing and vegetable oil as a prerequisite
-data.raw["technology"]["frying"].prerequisites = {"milk-processing", "sugar"}
+--  frying set milk processing and sugar and vegetable oil as a prerequisite
+data.raw["technology"]["frying"].prerequisites = {"milk-processing", "sugar", "vegetable-oil"}
+--  baking set milk processing and sugar as a prerequisite
+data.raw["technology"]["baking"].prerequisites = {"milk-processing", "sugar"}
 
 --  add syrup as a prereq for advanced-material-processing-2 (electric furnace/boiler)
 table.insert(data.raw["technology"]["advanced-material-processing-2"].prerequisites, "syrup")
@@ -1581,12 +1670,14 @@ table.insert(data.raw["technology"]["pie"].effects, 1, {type="unlock-recipe", re
 --		break
 --	end
 --end
+--[[  never mind, keep enabled
 for key,value in pairs(data.raw["technology"]["animal-husbandry"].effects) do
 	if value.recipe == "chemical-plant" then
 		table.remove(data.raw["technology"]["animal-husbandry"].effects, key)
 		break
 	end
 end
+]]
 --table.remove(data.raw["technology"]["animal-husbandry"].effects, 1)  --  remove chem lab
 --  add animal recipes to animal husbandry
 --table.insert(data.raw["technology"]["animal-husbandry"].effects, 2, {type="unlock-recipe", recipe="egg-water-recipe"})
@@ -1595,6 +1686,8 @@ end
 --table.insert(data.raw["technology"]["animal-husbandry"].effects, 9, {type="unlock-recipe", recipe="u-milk-water-food-recipe"})
 data.raw["technology"]["animal-husbandry"].effects =
     {
+	    {type="unlock-recipe", recipe= "chemical-plant"},
+	    {type="unlock-recipe", recipe= "barn-recipe"},
       {type = "unlock-recipe",recipe = "egg-recipe"},
 		{type = "unlock-recipe",recipe = "egg-water-recipe"},
 		{type = "unlock-recipe",recipe = "egg-water-food-recipe"},
@@ -1621,9 +1714,6 @@ data.raw["technology"]["animal-husbandry"].effects =
       {type = "unlock-recipe",recipe = "egg-dough-recipe"},
       {type = "unlock-recipe",recipe = "egg-bread-recipe"}
 	}
---  add pigs to animal husbandry
-table.insert(data.raw["technology"]["animal-husbandry"].effects, {type="unlock-recipe", recipe="pig-recipe"})
-table.insert(data.raw["technology"]["animal-husbandry"].effects, {type="unlock-recipe", recipe="breed-pig-recipe"})
 
 
 --  add boar and bull meat processing recipes if they are here as well as ram shearing (spoilage is enabled)
@@ -1682,7 +1772,6 @@ data.raw["technology"]["chocolate-chips"].prerequisites = {"chemical-science-pac
 	
 	
 	
-
 
 
 
