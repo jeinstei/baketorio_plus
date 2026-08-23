@@ -47,6 +47,8 @@ function westPipePicture()
 end
 ]]--
 
+
+--[[
 function assembler2pipepictures()
   return
   {
@@ -88,16 +90,20 @@ function assembler2pipepictures()
     }
   }
 end
+]]--
 
 
+
+local a2p = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures
+local pcp = require("__base__.prototypes.entity.assembler-pictures").pipecoverspictures
 
 
 data.raw["assembling-machine"]["greenhouse"].fluid_boxes =
   {
     {
       volume = 500,
-      pipe_covers = pipecoverspictures(),
-      pipe_picture = assembler2pipepictures(),
+      pipe_picture = a2p,
+      pipe_covers = pcp,
       pipe_connections =
       {
         { flow_direction="input-output", direction = defines.direction.west, position = {-1, 0}},
@@ -108,8 +114,8 @@ data.raw["assembling-machine"]["greenhouse"].fluid_boxes =
     },
     {
       volume = 500,
-      pipe_covers = pipecoverspictures(),
-      pipe_picture = assembler2pipepictures(),
+      pipe_picture = a2p,
+      pipe_covers = pcp,
       pipe_connections =
       {
         { flow_direction="output", direction = defines.direction.north, position = {0, -1}}

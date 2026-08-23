@@ -1,11 +1,19 @@
 
+
+data.raw["item"]["wheat"].fuel_category = "wheat"
+data.raw["item"]["wheat"].fuel_value = "1MJ"  -- 1/4 as coal
+
+
+
 local barn_entity = table.deepcopy(data.raw["assembling-machine"]["greenhouse"])
 barn_entity.name = "barn"
 barn_entity.icon = "__baketorio_plus__/graphics/barn-icon.png"
 barn_entity.icon_size = 32
 barn_entity.minable = {mining_time = 0.2, result = "barn"}
 barn_entity.crafting_speed = 1
-barn_entity.energy_source = {type = "void", usage_priority = "secondary-input", emissions_per_minute = { pollution = 10 }}
+--barn_entity.energy_source = {type = "void", usage_priority = "secondary-input", emissions_per_minute = { pollution = 10 }}
+barn_entity.energy_source = { type = "burner", fuel_categories = {"wheat"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = { pollution = 10 } }
+
 barn_entity.localised_name = {"item-name.barn"}
 
 barn_entity.allowed_effects = {"consumption", "speed", "pollution"}
@@ -59,7 +67,7 @@ data:extend(
         type = "recipe",
         name = "barn-recipe",
         localised_name = {"item-name.barn"},
-        category = "crafting",
+        categories = {"crafting"},
         subgroup = "production-machine",
         energy_required = 10,
         enabled = true,
@@ -84,25 +92,25 @@ end
 
 
 --  change to barn recipes
-data.raw["recipe"]["egg-recipe"].category = "barn"
-data.raw["recipe"]["egg-water-recipe"].category = "barn"
-data.raw["recipe"]["egg-water-food-recipe"].category = "barn"
-data.raw["recipe"]["u-milk-recipe"].category = "barn"
-data.raw["recipe"]["u-milk-water-recipe"].category = "barn"
-data.raw["recipe"]["u-milk-water-food-recipe"].category = "barn"
-data.raw["recipe"]["wool-recipe"].category = "barn"
-data.raw["recipe"]["wool-water-recipe"].category = "barn"
-data.raw["recipe"]["wool-water-food-recipe"].category = "barn"
+data.raw["recipe"]["egg-recipe"].categories = {"barn"}
+--data.raw["recipe"]["egg-water-recipe"].category = "barn"
+--data.raw["recipe"]["egg-water-food-recipe"].category = "barn"
+data.raw["recipe"]["u-milk-recipe"].categories = {"barn"}
+--data.raw["recipe"]["u-milk-water-recipe"].category = "barn"
+--data.raw["recipe"]["u-milk-water-food-recipe"].category = "barn"
+data.raw["recipe"]["wool-recipe"].categories = {"barn"}
+--data.raw["recipe"]["wool-water-recipe"].category = "barn"
+--data.raw["recipe"]["wool-water-food-recipe"].category = "barn"
 if feature_flags["spoiling"] then
-	data.raw["recipe"]["wool-ram-recipe"].category = "barn"
-	data.raw["recipe"]["wool-ram-water-recipe"].category = "barn"
-	data.raw["recipe"]["wool-ram-water-food-recipe"].category = "barn"
+	data.raw["recipe"]["wool-ram-recipe"].categories = {"barn"}
+--	data.raw["recipe"]["wool-ram-water-recipe"].category = "barn"
+--	data.raw["recipe"]["wool-ram-water-food-recipe"].category = "barn"
 end
 
-data.raw["recipe"]["chicken-recipe-egg"].category = "barn"
-data.raw["recipe"]["breed-cow-recipe"].category = "barn"
-data.raw["recipe"]["breed-pig-recipe"].category = "barn"
-data.raw["recipe"]["breed-sheep-recipe"].category = "barn"
+data.raw["recipe"]["chicken-recipe-egg"].categories = {"barn"}
+data.raw["recipe"]["breed-cow-recipe"].categories = {"barn"}
+data.raw["recipe"]["breed-pig-recipe"].categories = {"barn"}
+data.raw["recipe"]["breed-sheep-recipe"].categories = {"barn"}
 
 
 

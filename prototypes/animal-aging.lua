@@ -2,6 +2,10 @@
 --  adds infant and juvenile animal variations, spoiling to animals, sets stack limits to 1, and mods breeding recipes
 
 
+local woolEnergy = data.raw["recipe"]["wool-recipe"].energy_required
+
+
+
 data:extend(
     {
         {
@@ -41,30 +45,6 @@ data:extend(
 			spoil_ticks = 30*minute,
 			spoil_result = "cow",
 		},
-        {
-            type = "item",
-            name = "baby-calf-bull",
-			localised_name = {"item-name.baby-calf"},
-            icon = "__baketorio_plus__/graphics/calf.png",
-            icon_size = 32,
-            subgroup = "seeds",
-            stack_size = 1,
-			flags = {"not-stackable"},
-			spoil_ticks = 2,
-			spoil_result = "calf-bull",
-        },
-        {
-            type = "item",
-            name = "baby-calf-cow",
-			localised_name = {"item-name.baby-calf"},
-            icon = "__baketorio_plus__/graphics/calf.png",
-            icon_size = 32,
-            subgroup = "seeds",
-            stack_size = 1,
-			flags = {"not-stackable"},
-			spoil_ticks = 2,
-			spoil_result = "calf-cow",
-        },
         {
             type = "item",
             name = "chick",
@@ -116,30 +96,6 @@ data:extend(
 			spoil_ticks = 0.75*hour,
 			spoil_result = "pig"
         },
-        {
-            type = "item",
-            name = "baby-piglet-pig",
-			localised_name = {"item-name.baby-piglet"},
-            icon = "__baketorio_plus__/graphics/piglet.png",
-            icon_size = 32,
-            subgroup = "seeds",
-            stack_size = 1,
-			flags = {"not-stackable"},
-			spoil_ticks = 1,
-			spoil_result = "piglet-pig",
-        },
-        {
-            type = "item",
-            name = "baby-piglet-boar",
-			localised_name = {"item-name.baby-piglet"},
-            icon = "__baketorio_plus__/graphics/piglet.png",
-            icon_size = 32,
-            subgroup = "seeds",
-            stack_size = 1,
-			flags = {"not-stackable"},
-			spoil_ticks = 1,
-			spoil_result = "piglet-boar",
-        },
 		
 		
 		--  sheep
@@ -178,30 +134,6 @@ data:extend(
 			flags = {"not-stackable"},
 			spoil_ticks = 0.75*hour,
 			spoil_result = "sheep"
-        },
-        {
-            type = "item",
-            name = "baby-lamb-sheep",
-			localised_name = {"item-name.baby-lamb"},
-            icon = "__baketorio_plus__/graphics/lamb.png",
-            icon_size = 32,
-            subgroup = "seeds",
-            stack_size = 1,
-			flags = {"not-stackable"},
-			spoil_ticks = 1,
-			spoil_result = "lamb-sheep",
-        },
-        {
-            type = "item",
-            name = "baby-lamb-ram",
-			localised_name = {"item-name.baby-lamb"},
-            icon = "__baketorio_plus__/graphics/lamb.png",
-            icon_size = 32,
-            subgroup = "seeds",
-            stack_size = 1,
-			flags = {"not-stackable"},
-			spoil_ticks = 1,
-			spoil_result = "lamb-ram",
         },
 		
 		--  not used due to the fact it would reset the lifespan
@@ -255,11 +187,11 @@ data.raw["recipe"]["breed-cow-recipe"].ingredients = {
 data.raw["recipe"]["breed-cow-recipe"].results = {
                 {type="item",name="cow",amount=1},
                 {type="item",name="bull",amount=1},
-                {type="item",name="baby-calf-cow",amount=1,probability=0.9},
-                {type="item",name="baby-calf-bull",amount=1,probability=0.1}
+                {type="item",name="calf-cow",amount=1, always_fresh = true, shared_probability = {min = 0, max = 0.9}},
+                {type="item",name="calf-bull",amount=1, always_fresh = true, shared_probability = {min = 0.85, max = 1}}  --  5% overlap of both
 			}
 data.raw["recipe"]["chicken-recipe-egg"].results = {
-                {type="item",name="chick",amount=1,probability=0.25}  --  no need for baby-chick because eggs don't have spoilage (will need to add back if that is added)
+                {type="item",name="chick",amount=1,independent_probability=0.25}  --  no need for baby-chick because eggs don't have spoilage (will need to add back if that is added)
 			}
 
 --  set initial creation recipes to give children (needed so that calf can become a bull possibly), but half spoiled (so the wait isn't as long)
@@ -267,8 +199,8 @@ data.raw["recipe"]["chicken-recipe"].results = {
                 {type="item",name="chick",amount=1,percent_spoiled=0.5}
 			}
 data.raw["recipe"]["cow-recipe"].results = {
-                {type="item",name="calf-cow",amount=1,percent_spoiled=0.5,probability=0.9},
-                {type="item",name="calf-bull",amount=1,percent_spoiled=0.5,probability=0.1}
+                {type="item",name="calf-cow",amount=1,percent_spoiled=0.5,shared_probability = {min = 0, max = 0.9}},
+                {type="item",name="calf-bull",amount=1,percent_spoiled=0.5,shared_probability = {min = 0.9, max = 1}}
 			}
 		
 		
@@ -288,13 +220,13 @@ data.raw["recipe"]["breed-pig-recipe"].ingredients = {
 data.raw["recipe"]["breed-pig-recipe"].results = {
                 {type="item",name="pig",amount=1},
                 {type="item",name="boar",amount=1},
-                {type="item",name="baby-piglet-pig",amount=1,probability=0.5},
-                {type="item",name="baby-piglet-boar",amount=1,probability=0.5}
+                {type="item",name="piglet-pig",amount=1, always_fresh = true, shared_probability = {min = 0, max = 0.53}},
+                {type="item",name="piglet-boar",amount=1, always_fresh = true, shared_probability = {min = 0.48, max = 1}}   --  5% overlap of both
 			}
 			
 data.raw["recipe"]["pig-recipe"].results = {
-                {type="item",name="piglet-pig",amount=1,percent_spoiled=2/3,probability=0.5},
-                {type="item",name="piglet-boar",amount=1,percent_spoiled=2/3,probability=0.5}
+                {type="item",name="piglet-pig",amount=1,percent_spoiled=2/3,shared_probability = {min = 0, max = 0.5}},
+                {type="item",name="piglet-boar",amount=1,percent_spoiled=2/3,shared_probability = {min = 0.5, max = 1}}
 			}
 		
 		
@@ -314,17 +246,15 @@ data.raw["recipe"]["breed-sheep-recipe"].ingredients = {
 data.raw["recipe"]["breed-sheep-recipe"].results = {
                 {type="item",name="sheep",amount=1},
                 {type="item",name="ram",amount=1},
-                {type="item",name="baby-lamb-sheep",amount=1,probability=0.5},
-                {type="item",name="baby-lamb-ram",amount=1,probability=0.5}
+                {type="item",name="lamb-sheep",amount=1, always_fresh = true, shared_probability = {min = 0, max = 0.53}},
+                {type="item",name="lamb-ram",amount=1, always_fresh = true, shared_probability = {min = 0.48, max = 1}}   --  5% overlap of both
 			}
 			
 data.raw["recipe"]["sheep-recipe"].results = {
-                {type="item",name="lamb-sheep",amount=1,percent_spoiled=2/3,probability=0.5},
-                {type="item",name="lamb-ram",amount=1,percent_spoiled=2/3,probability=0.5}
+                {type="item",name="lamb-sheep",amount=1,percent_spoiled=2/3,shared_probability = {min = 0, max = 0.5}},
+                {type="item",name="lamb-ram",amount=1,percent_spoiled=2/3,shared_probability = {min = 0.5, max = 1}}
 			}
 			
-		
-local woolEnergy = data.raw["recipe"]["wool-water-recipe"].energy_required;
 
 		--  Add male versions for recipes (will need to add to techs as well, after the tech and wrapped in a spoilage check)
 data:extend(
@@ -333,7 +263,7 @@ data:extend(
 			type = "recipe",
 			name = "beef-bull-recipe",
 			localised_name = {"item-name.beef"},
-			category = "butcher",
+			categories = {"butcher"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {
@@ -346,7 +276,7 @@ data:extend(
 			type = "recipe",
 			name = "pork-boar-recipe",
 			localised_name = {"item-name.pork"},
-			category = "butcher",
+			categories = {"butcher"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {
@@ -366,7 +296,7 @@ data:extend(
 			type = "recipe",
 			name = "mutton-ram-recipe",
 			localised_name = {"item-name.mutton"},
-			category = "butcher",
+			categories = {"butcher"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {
@@ -378,65 +308,23 @@ data:extend(
 			},
 		},
 		
-	--  ram shearing recipes
+	--  ram shearing recipe
         {
             type = "recipe",
             name = "wool-ram-recipe",
             localised_name = {"item-name.wool"},
-            category = "greenhouse-recipes",
+            categories = {"greenhouse-recipes"},
             subgroup = "ingredient",
-            energy_required = woolEnergy*3,
-            enabled = false,
-            ingredients ={
-                {type="item",name="ram",amount=1},
-                {type="item",name="nutrient1",amount=1}
-            },
-            results = {
-                {type="item",name="ram",amount=1},
-                --{type="item",name="ram-shaved",amount=1},
-                {type="item", name="wool", amount=1},
-            },
-            icon = "__baketorio_plus__/graphics/wool.png",
-            icon_size = 32,
-        },
-        {
-            type = "recipe",
-            name = "wool-ram-water-recipe",
-            localised_name = {"item-name.wool"},
-            category = "greenhouse-recipes",
-            subgroup = "ingredient",
-            energy_required = woolEnergy,
-            enabled = false,
-            ingredients ={
-                {type="item",name="ram",amount=1},
-                {type="item",name="nutrient1",amount=1},
-                {type="fluid",name="water",amount=20}
-            },
-            results = {
-                {type="item",name="ram",amount=1},
-                --{type="item",name="ram-shaved",amount=1},
-                {type="item", name="wool", amount=1},
-            },
-            icon = "__baketorio_plus__/graphics/wool.png",
-            icon_size = 32,
-        },
-        {
-            type = "recipe",
-            name = "wool-ram-water-food-recipe",
-            localised_name = {"item-name.wool"},
-            category = "greenhouse-recipes",
-            subgroup = "ingredient",
-            energy_required = woolEnergy,
+            --  energy_required = woolEnergy,
+            energy_required = 20,  --  setting manually because it's not working for some reason
             enabled = false,
             ingredients ={
                 {type="item",name="ram",amount=1},
                 {type="item",name="nutrient1",amount=2},
-                {type="item",name="wheat",amount=5},
                 {type="fluid",name="water",amount=20}
             },
             results = {
                 {type="item",name="ram",amount=1},
-                --{type="item",name="ram-shaved",amount=1},
                 {type="item", name="wool", amount=3},
             },
             icon = "__baketorio_plus__/graphics/wool.png",

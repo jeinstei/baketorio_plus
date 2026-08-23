@@ -19,7 +19,7 @@ data:extend(
 		--drop_sound = item_sounds.module_inventory_move,
 		stack_size = 50,
 		weight = 1 * kg,
-		effect = {speed = 0.1, quality = -0.2},
+		effect = {speed = 0.1},
 	  },
 	  {  --  yeast, salt, wrapper; 2 hours
 		type = "module",
@@ -60,7 +60,7 @@ data:extend(
 			type = "recipe",
 			name = "yeast-propagation-recipe",
 			localised_name = {"recipe-name.yeast-propagation"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 60,
 			ingredients = {
@@ -75,7 +75,7 @@ data:extend(
 			type = "recipe",
 			name = "yeast-module-2-recipe",
 			localised_name = {"item-name.yeast-packet"},
-            category = "crafting",
+            categories = {"crafting"},
 			enabled = false,
 			energy_required = 5,
 			ingredients = {
@@ -91,7 +91,7 @@ data:extend(
 			type = "recipe",
 			name = "yeast-module-3-recipe",
 			localised_name = {"item-name.bakers-flour"},
-            category = "crafting",
+            categories = {"crafting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
@@ -108,7 +108,7 @@ data:extend(
 			type = "recipe",
 			name = "yeast-module-3-recipe-2",
 			localised_name = {"item-name.bakers-flour"},
-            category = "crafting",
+            categories = {"crafting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
@@ -129,15 +129,15 @@ data:extend(
 			type = "recipe",
 			name = "yeast-apple-recipe",
 			localised_name = {"recipe-name.yeast-apple"},
-            category = "crafting",
+            categories = {"crafting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
 				{type="item", name="apples", amount=1}
 			},
 			results = {
-				{type="item", name="yeast-module", amount=1, probability=0.5},
-				{type="item", name="apples", amount=1, probability=0.9}
+				{type="item", name="yeast-module", amount=1, independent_probability=0.5},
+				{type="item", name="apples", amount=1, independent_probability=0.9}
 			},
 			main_product = "yeast-module",
 			--icon = "__baketorio_plus__/graphics/yeast-icon.png",
@@ -147,15 +147,15 @@ data:extend(
 			type = "recipe",
 			name = "yeast-peach-recipe",
 			localised_name = {"recipe-name.yeast-peach"},
-            category = "crafting",
+            categories = {"crafting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
 				{type="item", name="peaches", amount=1}
 			},
 			results = {
-				{type="item", name="yeast-module", amount=1, probability=0.5},
-				{type="item", name="peaches", amount=1, probability=0.9}
+				{type="item", name="yeast-module", amount=1, independent_probability=0.5},
+				{type="item", name="peaches", amount=1, independent_probability=0.9}
 			},
 			main_product = "yeast-module",
 			--icon = "__baketorio_plus__/graphics/yeast-icon.png",
@@ -165,29 +165,31 @@ data:extend(
 			type = "recipe",
 			name = "yeast-lemon-recipe",
 			localised_name = {"recipe-name.yeast-lemon"},
-            category = "crafting",
+            categories = {"crafting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
 				{type="item", name="lemons", amount=1}
 			},
 			results = {
-				{type="item", name="yeast-module", amount=1, probability=0.5},
-				{type="item", name="lemons", amount=1, probability=0.9}
+				{type="item", name="yeast-module", amount=1, independent_probability=0.5},
+				{type="item", name="lemons", amount=1, independent_probability=0.9}
 			},
 			main_product = "yeast-module",
 			--icon = "__baketorio_plus__/graphics/yeast-icon.png",
 			--icon_size = 32,
 		},
-  }
+	}
 )
 
 if feature_flags["spoiling"] then
-    data.raw["recipe"]["yeast-propagation-recipe"].reset_freshness_on_craft = true
+	for key,value in pairs(data.raw["recipe"]["yeast-propagation-recipe"].results) do
+		value.reset_freshness_on_craft = true
+	end
 	data.raw["module"]["yeast-module"].spoil_ticks = 30*minute
 	data.raw["module"]["yeast-module"].spoil_result = nil
 	data.raw["module"]["yeast-module-2"].spoil_ticks = 2*hour
-	data.raw["module"]["yeast-module-2"].spoil_result = nil
+	data.raw["module"]["yeast-module-2"].spoil_result = "salt"
 	data.raw["module"]["yeast-module-3"].spoil_ticks = 10*hour
 	data.raw["module"]["yeast-module-3"].spoil_result = "flour"
 end
@@ -207,6 +209,7 @@ end
 local yeast_mod_categories = {"speed", "efficiency", "yeast"}
 if feature_flags["quality"] then
     table.insert(yeast_mod_categories, "quality")
+	data.raw["module"]["yeast-module"].effect = {speed = 0.1, quality = -0.2}
 end
 
 --  add to furnaces and assemblers (and butterizer) (check if they already have a list so as not to overwrite)

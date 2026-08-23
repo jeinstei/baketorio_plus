@@ -79,7 +79,7 @@ data:extend(
             type = "recipe",
             name = "wood-frame-recipe",
 			localised_name = {"item-name.wood-frame"},
-            category = "crafting",
+            categories = {"crafting"},
             energy_required = 3,
             enabled = false,
             ingredients = {
@@ -94,7 +94,7 @@ data:extend(
             type = "recipe",
             name = "wood-ground-recipe",
 			localised_name = {"item-name.wood-ground"},
-            category = "advanced-crafting",
+            categories = {"advanced-crafting"},
             energy_required = 2,
             enabled = false,
             ingredients = {
@@ -108,7 +108,7 @@ data:extend(
             type = "recipe",
             name = "wood-pulp-recipe",
 			localised_name = {"item-name.wood-pulp"},
-            category = "chemistry",
+            categories = {"chemistry"},
             energy_required = 4,
             enabled = false,
             ingredients = {
@@ -123,7 +123,7 @@ data:extend(
             type = "recipe",
             name = "wood-paper-recipe",
 			localised_name = {"item-name.paper"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             energy_required = 20,
 			group = "wood",
 			subgroup = "wood",
@@ -143,7 +143,7 @@ data:extend(
             type = "recipe",
             name = "paper-wrapper-recipe",
 			localised_name = {"item-name.paper-wrapper"},
-            category = "crafting",
+            categories = {"crafting"},
             energy_required = 0.5,
             enabled = false,
             ingredients = {

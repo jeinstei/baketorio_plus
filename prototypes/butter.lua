@@ -55,6 +55,23 @@ butterizer_entity.graphics_set.animation.layers =
 		emissions_per_minute = { pollution = 0 }
 	}
 	]]--
+	
+local a2p = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures
+local pcp = require("__base__.prototypes.entity.assembler-pictures").pipecoverspictures
+
+butterizer_entity.fluid_boxes =
+  {
+    {
+      volume = 500,
+      pipe_picture = a2p,
+      pipe_covers = pcp,
+      pipe_connections =
+      {
+        { flow_direction="output", direction = defines.direction.north, position = {0, -1}}
+      },
+      production_type = "output",
+    }
+  }
 butterizer_entity.crafting_categories = {"butterize"}
 
 

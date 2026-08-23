@@ -146,7 +146,7 @@ data:extend(
 			type = "recipe",
 			name = "pie-tin-recipe",
 			localised_name = {"item-name.pie-tin"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 1,
 			ingredients = {{type = "item", name = "iron-plate", amount = 1}},
@@ -156,10 +156,12 @@ data:extend(
 			type = "recipe",
 			name = "bushel-basket-recipe",
 			localised_name = {"item-name.bushel-basket"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 1,
-			ingredients = {{type = "item", name = "wood", amount = 1}},
+			ingredients = {
+				{type = "item", name = "wood", amount = 1},
+				{type = "item", name = "iron-stick", amount = 1}},
 			results = {{type="item", name="bushel-basket", amount=1}}
 		},
 		
@@ -265,11 +267,11 @@ data:extend(
 			type = "recipe",
 			name = "peanut-butter-recipe",
 			localised_name = {"item-name.peanut-butter"},
-			category = "butterize",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
-				{type = "item", name = "peanuts", amount = 10}, 
+				{type = "fluid", name = "peanut-butter-fluid", amount = 100}, 
 				{type="item",name="metal-bucket",amount=1}
 			},
 			results = {{type="item", name="peanut-butter", amount=1}}
@@ -278,11 +280,11 @@ data:extend(
 			type = "recipe",
 			name = "almond-butter-recipe",
 			localised_name = {"item-name.almond-butter"},
-			category = "butterize",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
-				{type = "item", name = "almonds", amount = 10}, 
+				{type = "fluid", name = "almond-butter-fluid", amount = 100}, 
 				{type="item",name="metal-bucket",amount=1}
 			},
 			results = {{type="item", name="almond-butter", amount=1}}
@@ -294,7 +296,7 @@ data:extend(
 			name = "pumpkin-pulp-recipe",
 			localised_name = {"item-name.pumpkin-pulp"},
 			order="h",
-			category = "advanced-crafting",
+			categories = {"advanced-crafting"},
 			subgroup = "ingredient",
 			energy_required = 10,
 			enabled = false,
@@ -304,7 +306,7 @@ data:extend(
 			},
 			results = {
 				{type="item",name="pumpkin-pulp",amount=4},
-				{type="item",name="pumpkin-seeds",amount=1,probability = 0.01},
+				{type="item",name="pumpkin-seeds",amount=1,independent_probability = 0.01},
 				{type="item",name="pumpkin-seeds",amount=1},
 			},
 			icon = "__baketorio_plus__/graphics/pumpkin-pulp.png",
@@ -315,7 +317,7 @@ data:extend(
 			type = "recipe",
 			name = "buttered-dough-1-recipe",
 			localised_name = {"item-name.slightly-buttered-dough"},
-			category = "butterize",
+			categories = {"butterize"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {{type = "item", name = "basic-dough", amount = 1}},
@@ -325,7 +327,7 @@ data:extend(
 			type = "recipe",
 			name = "buttered-dough-2-recipe",
 			localised_name = {"item-name.pretty-buttered-dough"},
-			category = "butterize",
+			categories = {"butterize"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {{type = "item", name = "buttered-dough-1", amount = 1}},
@@ -335,7 +337,7 @@ data:extend(
 			type = "recipe",
 			name = "buttered-dough-3-recipe",
 			localised_name = {"item-name.fairly-buttered-dough"},
-			category = "butterize",
+			categories = {"butterize"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {{type = "item", name = "buttered-dough-2", amount = 1}},
@@ -345,7 +347,7 @@ data:extend(
 			type = "recipe",
 			name = "buttered-dough-4-recipe",
 			localised_name = {"item-name.very-buttered-dough"},
-			category = "butterize",
+			categories = {"butterize"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {{type = "item", name = "buttered-dough-3", amount = 1}},
@@ -355,7 +357,7 @@ data:extend(
 			type = "recipe",
 			name = "buttered-dough-5-recipe",
 			localised_name = {"item-name.incredibly-buttered-dough"},
-			category = "butterize",
+			categories = {"butterize"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {{type = "item", name = "buttered-dough-4", amount = 1}},
@@ -365,7 +367,7 @@ data:extend(
 			type = "recipe",
 			name = "buttered-dough-6-recipe",
 			localised_name = {"item-name.extremely-buttered-dough"},
-			category = "butterize",
+			categories = {"butterize"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {{type = "item", name = "buttered-dough-5", amount = 1}},
@@ -375,7 +377,7 @@ data:extend(
 			type = "recipe",
 			name = "buttered-dough-7-recipe",
 			localised_name = {"item-name.fully-buttered-dough"},
-			category = "butterize",
+			categories = {"butterize"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {{type = "item", name = "buttered-dough-6", amount = 1}},
@@ -389,7 +391,7 @@ data:extend(
             type = "recipe",
             name = "chocolate-chips-recipe",
             localised_name = {"item-name.chocolate-chips"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             subgroup = "chocolate",
             energy_required = 15,
             enabled = false,
@@ -407,7 +409,7 @@ data:extend(
             type = "recipe",
             name = "croissant-recipe",
 			localised_name = {"item-name.croissant"},
-            category = "crafting",
+            categories = {"crafting"},
             subgroup = "croissant",
             energy_required = 5,
             enabled = false,
@@ -422,7 +424,7 @@ data:extend(
             type = "recipe",
             name = "croissant-cooked-recipe",
 			localised_name = {"item-name.croissant-cooked"},
-            category = "smelting",
+            categories = {"smelting"},
             subgroup = "croissant",
             energy_required = 10,
             enabled = false,
@@ -437,7 +439,7 @@ data:extend(
             type = "recipe",
             name = "chocolate-chip-buttered-dough-recipe",
 			localised_name = {"item-name.chocolate-chip-buttered-dough"},
-            category = "crafting",
+            categories = {"crafting"},
             subgroup = "croissant",
             energy_required = 10,
             enabled = false,
@@ -453,7 +455,7 @@ data:extend(
             type = "recipe",
             name = "chocolate-chip-croissant-recipe",
 			localised_name = {"item-name.chocolate-chip-croissant"},
-            category = "crafting",
+            categories = {"crafting"},
             subgroup = "croissant",
             energy_required = 5,
             enabled = false,
@@ -468,7 +470,7 @@ data:extend(
             type = "recipe",
             name = "chocolate-chip-croissant-cooked-recipe",
 			localised_name = {"item-name.chocolate-chip-croissant-cooked"},
-            category = "smelting",
+            categories = {"smelting"},
             subgroup = "croissant",
             energy_required = 10,
             enabled = false,
@@ -483,7 +485,7 @@ data:extend(
             type = "recipe",
             name = "chocolate-chip-croissant-cooked-white-drizzle-recipe",
 			localised_name = {"item-name.chocolate-chip-croissant-cooked-white-drizzle"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             subgroup = "croissant",
             energy_required = 10,
             enabled = false,
@@ -502,11 +504,11 @@ data:extend(
 			type = "recipe",
 			name = "cocoa-butter-recipe",
 			localised_name = {"item-name.cocoa-butter"},
-			category = "butterize",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
-				{type = "item", name = "cocoa-beans", amount = 4},
+				{type = "fluid", name = "cocoa-butter-fluid", amount = 40},
 				{type = "item", name = "metal-bucket", amount = 1}
 			},
 			results = {{type="item", name="cocoa-butter", amount=5}}
@@ -517,7 +519,7 @@ data:extend(
             type = "recipe",
             name = "chocolate-ice-cream-recipe",
             localised_name = {"item-name.chocolate-ice-cream"},
-            category = "advanced-crafting",
+            categories = {"advanced-crafting"},
             subgroup = "milk",
             order="ec",
             energy_required = 20,
@@ -534,7 +536,7 @@ data:extend(
             type = "recipe",
             name = "strawberry-ice-cream-recipe",
             localised_name = {"item-name.strawberry-ice-cream"},
-            category = "advanced-crafting",
+            categories = {"advanced-crafting"},
             subgroup = "milk",
             order="ec",
             energy_required = 20,
@@ -545,7 +547,7 @@ data:extend(
             },
             results = {
                 {type="item",name="strawberry-ice-cream",amount=1},
-                {type="item",name="plastic-basket",amount=1}
+                {type="item",name="plastic-basket",amount=1,independent_probability=0.9, ignored_by_productivity = 10}
             },
             icon = "__baketorio_plus__/graphics/strawberry-ice-cream.png",
 			icon_size = 32,
@@ -554,7 +556,7 @@ data:extend(
             type = "recipe",
             name = "neapolitan-ice-cream-recipe",
             localised_name = {"item-name.neapolitan-ice-cream"},
-            category = "advanced-crafting",
+            categories = {"advanced-crafting"},
             subgroup = "milk",
             order="ec",
             energy_required = 30,
@@ -572,7 +574,7 @@ data:extend(
             type = "recipe",
             name = "ice-cream-sundae-recipe",
             localised_name = {"item-name.ice-cream-sundae"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             subgroup = "milk",
             order="ec",
             energy_required = 30,
@@ -584,7 +586,7 @@ data:extend(
             },
             results = {
                 {type="item",name="ice-cream-sundae",amount=1},
-                {type="item",name="plastic-bin",amount=1, probability=0.9}
+                {type="item",name="plastic-bin",amount=1, independent_probability=0.9, ignored_by_productivity = 10}
             },
             icon = "__baketorio_plus__/graphics/ice-cream-sundae.png",
 			icon_size = 32,
@@ -595,14 +597,14 @@ data:extend(
             type = "recipe",
             name = "pancake-batter-recipe",
 			localised_name = {"item-name.pancake-batter"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             subgroup = "basic",
             order="ec",
             energy_required = 10,
             enabled = false,
             ingredients ={
 				{type="item", name="flour", amount=3},
-				{type="fluid", name="milk", amount=5},
+				{type="fluid", name="buttermilk", amount=10},
 				{type="item", name="egg", amount=1},
 				{type="item", name="cinnamon-sugar", amount=1}
             },
@@ -615,7 +617,7 @@ data:extend(
             type = "recipe",
             name = "pancake-cooked-recipe",
 			localised_name = {"item-name.pancake-cooked"},
-            category = "smelting",
+            categories = {"smelting"},
             subgroup = "basic",
             order="ec",
             energy_required = 5,
@@ -624,14 +626,14 @@ data:extend(
                 {type="item",name="pancake-batter",amount=1}
             },
             results = {
-                {type="item",name="pancake-cooked",amount=1}
+                {type="item",name="pancake-cooked",amount=2}
             }
         },
         {
             type = "recipe",
-            name = "pancake-with-syrup-recipe",
-			localised_name = {"item-name.pancake-with-syrup"},
-            category = "crafting-with-fluid",
+            name = "pancakes-with-syrup-recipe",
+			localised_name = {"item-name.pancakes-with-syrup"},
+            categories = {"crafting-with-fluid"},
             subgroup = "basic",
             order="ec",
             energy_required = 10,
@@ -645,15 +647,18 @@ data:extend(
 				{type="item", name="frosting", amount=2}
             },
             results = {
-                {type="item",name="pancakes-with-syrup",amount=2}
-            }
+                {type="item",name="pancakes-with-syrup",amount=2},
+                {type="item",name="plastic-basket",amount=1, extra_count_fraction=0.8, ignored_by_productivity = 10}
+            },
+            icon = "__baketorio_plus__/graphics/pancakes-with-syrup.png",
+			icon_size = 32,
         },
 		
 		{
 			type = "recipe",
 			name = "filo-dough-recipe",
 			localised_name = {"item-name.filo-dough"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {
@@ -666,7 +671,7 @@ data:extend(
 			type = "recipe",
 			name = "baklava-recipe",
 			localised_name = {"item-name.baklava"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
@@ -681,7 +686,7 @@ data:extend(
 			type = "recipe",
 			name = "baklava-cooked-recipe",
 			localised_name = {"item-name.baklava-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 5,
 			ingredients = {{type="item", name="baklava", amount=1}},
@@ -693,7 +698,7 @@ data:extend(
 			type = "recipe",
 			name = "pumpkin-pie-recipe",
             localised_name = {"item-name.pumpkin-pie"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 20,
 			ingredients = {
@@ -705,7 +710,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="pumpkin-pie", amount=1},
-                {type="item",name="metal-bucket",amount=1,probability=0.9}
+                {type="item",name="metal-bucket",amount=1,independent_probability=0.9, ignored_by_productivity = 10}
             },
 			icon = "__baketorio_plus__/graphics/pumpkin-pie.png",
 			icon_size = 32,
@@ -716,7 +721,7 @@ data:extend(
 			type = "recipe",
 			name = "pumpkin-pie-cooked-recipe",
 			localised_name = {"item-name.pumpkin-pie-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 30,
 			ingredients = {{type="item", name="pumpkin-pie", amount=1}},
@@ -726,7 +731,7 @@ data:extend(
 			type = "recipe",
 			name = "pumpkin-pie-cooked-with-ice-cream-recipe",
 			localised_name = {"item-name.pumpkin-pie-cooked-with-ice-cream"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 2,
             ingredients ={
@@ -740,7 +745,7 @@ data:extend(
 			type = "recipe",
 			name = "pumpkin-batter-recipe",
             localised_name = {"item-name.pumpkin-batter"},
-			category = "advanced-crafting",
+			categories = {"advanced-crafting"},
 			enabled = false,
 			energy_required = 1,
 			ingredients = {
@@ -752,7 +757,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="pumpkin-batter", amount=1},
-                {type="item",name="metal-bucket",amount=1,probability=0.9}
+                {type="item",name="metal-bucket",amount=1,independent_probability=0.9, ignored_by_productivity = 10}
             },
             icon = "__baketorio_plus__/graphics/pumpkin-batter.png",
 			icon_size = 32,
@@ -763,7 +768,7 @@ data:extend(
 			type = "recipe",
 			name = "pumpkin-cookie-recipe",
 			localised_name = {"item-name.pumpkin-cookie"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 1,
 			ingredients = {
@@ -775,7 +780,7 @@ data:extend(
 			type = "recipe",
 			name = "pumpkin-cookie-cooked-recipe",
 			localised_name = {"item-name.pumpkin-cookie-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 3,
 			ingredients = {{type="item", name="pumpkin-cookie", amount=1}},
@@ -785,7 +790,7 @@ data:extend(
 			type = "recipe",
 			name = "pumpkin-cookie-glazed-recipe",
 			localised_name = {"item-name.pumpkin-cookie-glazed"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 1,
 			ingredients = {
@@ -800,7 +805,7 @@ data:extend(
 			type = "recipe",
 			name = "pecan-pie-recipe",
 			localised_name = {"item-name.pecan-pie"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 20,
 			ingredients = {
@@ -815,7 +820,7 @@ data:extend(
 			type = "recipe",
 			name = "pecan-pie-cooked-recipe",
 			localised_name = {"item-name.pecan-pie-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 30,
 			ingredients = {{type="item", name="pecan-pie", amount=1}},
@@ -829,7 +834,7 @@ data:extend(
             name = "pig-recipe",
             localised_name = {"item-name.pig"},
             order = "e",
-            category = "organic-synth-recipes",
+            categories = {"organic-synth-recipes"},
             subgroup = "seeds",
             energy_required = 20,
             enabled = false,
@@ -846,7 +851,7 @@ data:extend(
             type = "recipe",
             name = "breed-pig-recipe",
             order = "f",
-            category = "organic-synth-recipes",
+            categories = {"organic-synth-recipes"},
             subgroup = "seeds",
             energy_required = 100,
             enabled = false,
@@ -866,7 +871,7 @@ data:extend(
 			type = "recipe",
 			name = "beef-recipe",
 			localised_name = {"item-name.beef"},
-			category = "butcher",
+			categories = {"butcher"},
 			enabled = false,
 			energy_required = 30,
 			ingredients = {
@@ -879,7 +884,7 @@ data:extend(
 			type = "recipe",
 			name = "pork-recipe",
 			localised_name = {"item-name.pork"},
-			category = "butcher",
+			categories = {"butcher"},
 			enabled = false,
 			energy_required = 30,
 			ingredients = {
@@ -899,7 +904,7 @@ data:extend(
 			type = "recipe",
 			name = "chicken-meat-recipe",
 			localised_name = {"item-name.chicken-meat"},
-			category = "butcher",
+			categories = {"butcher"},
 			enabled = false,
 			energy_required = 30,
 			ingredients = {
@@ -912,7 +917,7 @@ data:extend(
 			type = "recipe",
 			name = "mutton-recipe",
 			localised_name = {"item-name.mutton"},
-			category = "butcher",
+			categories = {"butcher"},
 			enabled = false,
 			energy_required = 30,
 			ingredients = {
@@ -927,7 +932,7 @@ data:extend(
 			type = "recipe",
 			name = "meat-pie-beef-recipe",
 			localised_name = {"recipe-name.meat-pie-beef"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {
@@ -938,7 +943,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="meat-pie", amount=1},
-                {type="item",name="plastic-bin",amount_min=2,amount_max=3}
+                {type="item",name="plastic-bin",amount=2,extra_count_fraction=0.7, ignored_by_productivity = 10}
 			},
             icon="__baketorio_plus__/graphics/meat-pie.png",
             icon_size = 32,
@@ -949,7 +954,7 @@ data:extend(
 			type = "recipe",
 			name = "meat-pie-mutton-recipe",
 			localised_name = {"recipe-name.meat-pie-mutton"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {
@@ -960,7 +965,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="meat-pie", amount=1},
-                {type="item",name="plastic-bin",amount_min=3,amount_max=4}
+                {type="item",name="plastic-bin",amount=3,extra_count_fraction=0.6, ignored_by_productivity = 10}
 			},
             icon="__baketorio_plus__/graphics/meat-pie.png",
             icon_size = 32,
@@ -971,7 +976,7 @@ data:extend(
 			type = "recipe",
 			name = "meat-pie-cooked-recipe",
 			localised_name = {"item-name.meat-pie-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 30,
 			ingredients = {{type="item", name="meat-pie", amount=1}},
@@ -981,7 +986,7 @@ data:extend(
 			type = "recipe",
 			name = "chicken-pot-pie-recipe",
 			localised_name = {"item-name.chicken-pot-pie"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {
@@ -992,7 +997,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="chicken-pot-pie", amount=1},
-                {type="item",name="plastic-bin",amount=1,probability=0.9}
+                {type="item",name="plastic-bin",amount=1,independent_probability=0.9, ignored_by_productivity = 10}
 			},
             icon="__baketorio_plus__/graphics/chicken-pot-pie.png",
             icon_size = 32,
@@ -1003,7 +1008,7 @@ data:extend(
 			type = "recipe",
 			name = "chicken-pot-pie-cooked-recipe",
 			localised_name = {"item-name.chicken-pot-pie-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 30,
 			ingredients = {{type="item", name="chicken-pot-pie", amount=1}},
@@ -1013,16 +1018,16 @@ data:extend(
 			type = "recipe",
 			name = "sausage-roll-recipe",
 			localised_name = {"item-name.sausage-roll"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {
-                {type="item",name="buttered-dough-1",amount=1},
-                {type="item",name="pork",amount=5},
+                {type="item",name="buttered-dough-1",amount=2},
+                {type="item",name="pork",amount=3},
 			},
 			results = {
-				{type="item", name="sausage-roll", amount=1},
-                {type="item",name="plastic-bin",amount_min=4,amount_max=5}
+				{type="item", name="sausage-roll", amount=6},
+                {type="item",name="plastic-bin",amount=2,extra_count_fraction=0.7, ignored_by_productivity = 10}
 			},
             icon="__baketorio_plus__/graphics/sausage-roll.png",
             icon_size = 32,
@@ -1033,11 +1038,11 @@ data:extend(
 			type = "recipe",
 			name = "sausage-roll-cooked-recipe",
 			localised_name = {"item-name.sausage-roll-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 20,
 			ingredients = {{type="item", name="sausage-roll", amount=1}},
-			results = {{type="item", name="sausage-roll-cooked", amount=2}}
+			results = {{type="item", name="sausage-roll-cooked", amount=1}}
 		},
 		
 			
@@ -1054,7 +1059,7 @@ data:extend(
 			type = "recipe",
 			name = "meringue-recipe",
 			localised_name = {"item-name.meringue"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 5,
 			ingredients = {
@@ -1070,7 +1075,7 @@ data:extend(
 			type = "recipe",
 			name = "meringue-cookies-recipe",
 			localised_name = {"item-name.meringue-cookies"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 15,
 			ingredients = {{type="item", name="meringue", amount=1}},
@@ -1083,7 +1088,7 @@ data:extend(
 			type = "recipe",
 			name = "apple-fritter-recipe",
 			localised_name = {"item-name.apple-fritter"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
@@ -1093,7 +1098,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="apple-fritter", amount=2},
-				{type="item", name="bushel-basket", amount=1, probability=0.5}
+				{type="item", name="bushel-basket", amount=1, independent_probability=0.6, ignored_by_productivity = 10}
 			},
             icon="__baketorio_plus__/graphics/apple-fritter.png",
             icon_size = 32,
@@ -1104,7 +1109,7 @@ data:extend(
 			type = "recipe",
 			name = "apple-fritter-cooked-recipe",
 			localised_name = {"item-name.apple-fritter-cooked"},
-			category = "chemistry",
+			categories = {"chemistry"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
@@ -1124,7 +1129,7 @@ data:extend(
 			type = "recipe",
 			name = "apple-fritter-glazed-recipe",
 			localised_name = {"item-name.apple-fritter-glazed"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 1,
 			ingredients = {
@@ -1138,7 +1143,7 @@ data:extend(
 			type = "recipe",
 			name = "apple-pie-recipe",
 			localised_name = {"item-name.apple-pie"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
@@ -1149,7 +1154,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="apple-pie", amount=2},
-				{type="item", name="bushel-basket", amount_min=1, amount_max=2}
+				{type="item", name="bushel-basket", amount=1, extra_count_fraction=0.2, ignored_by_productivity = 10}
 			},
             icon="__baketorio_plus__/graphics/apple-pie.png",
             icon_size = 32,
@@ -1160,7 +1165,7 @@ data:extend(
 			type = "recipe",
 			name = "apple-pie-cooked-recipe",
 			localised_name = {"item-name.apple-pie-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {{type="item", name="apple-pie", amount=1}},
@@ -1170,7 +1175,7 @@ data:extend(
 			type = "recipe",
 			name = "apple-pie-cooked-with-ice-cream-recipe",
 			localised_name = {"item-name.apple-pie-cooked-with-ice-cream"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 2,
 			ingredients = {
@@ -1184,7 +1189,7 @@ data:extend(
 			type = "recipe",
 			name = "peach-cobbler-recipe",
 			localised_name = {"item-name.peach-cobbler"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
@@ -1195,7 +1200,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="peach-cobbler", amount=2},
-				{type="item", name="bushel-basket", amount=1, probability=0.5}
+				{type="item", name="bushel-basket", amount=1, independent_probability=0.6, ignored_by_productivity = 10}
 			},
             icon="__baketorio_plus__/graphics/peach-cobbler.png",
             icon_size = 32,
@@ -1206,7 +1211,7 @@ data:extend(
 			type = "recipe",
 			name = "peach-cobbler-cooked-recipe",
 			localised_name = {"item-name.peach-cobbler-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {{type="item", name="peach-cobbler", amount=1}},
@@ -1216,7 +1221,7 @@ data:extend(
 			type = "recipe",
 			name = "peach-cobbler-cooked-with-ice-cream-recipe",
 			localised_name = {"item-name.peach-cobbler-cooked-with-ice-cream"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 2,
 			ingredients = {
@@ -1230,7 +1235,7 @@ data:extend(
 			type = "recipe",
 			name = "lemon-curd-recipe",
 			localised_name = {"item-name.lemon-curd"},
-			category = "chemistry",
+			categories = {"chemistry"},
 			enabled = false,
 			energy_required = 5,
 			ingredients = {
@@ -1247,7 +1252,7 @@ data:extend(
 			type = "recipe",
 			name = "lemon-tart-recipe",
 			localised_name = {"item-name.lemon-tart"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {
@@ -1256,7 +1261,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="lemon-tart", amount=2},
-				{type="item", name="plastic-bin", amount=1, probability=0.9}
+				{type="item", name="plastic-bin", amount=1, independent_probability=0.9, ignored_by_productivity = 10}
 			},
             icon="__baketorio_plus__/graphics/lemon-tart.png",
             icon_size = 32,
@@ -1267,7 +1272,7 @@ data:extend(
 			type = "recipe",
 			name = "lemon-tart-cooked-recipe",
 			localised_name = {"item-name.lemon-tart-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {{type="item", name="lemon-tart", amount=1}},
@@ -1278,7 +1283,7 @@ data:extend(
 			type = "recipe",
 			name = "lemon-meringue-pie-recipe",
 			localised_name = {"item-name.lemon-meringue-pie"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 20,
 			ingredients = {
@@ -1289,7 +1294,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="lemon-meringue-pie", amount=1},
-				{type="item", name="plastic-bin", amount=1, probability=0.9}
+				{type="item", name="plastic-bin", amount=1, independent_probability=0.9, ignored_by_productivity = 10}
 			},
             icon="__baketorio_plus__/graphics/lemon-meringue-pie.png",
             icon_size = 32,
@@ -1300,7 +1305,7 @@ data:extend(
 			type = "recipe",
 			name = "lemon-meringue-pie-cooked-recipe",
 			localised_name = {"item-name.lemon-meringue-pie-cooked"},
-			category = "smelting",
+			categories = {"smelting"},
 			enabled = false,
 			energy_required = 10,
 			ingredients = {{type="item", name="lemon-meringue-pie", amount=1}},
@@ -1313,7 +1318,7 @@ data:extend(
 			type = "recipe",
 			name = "fruit-baking-science-pack",
 			localised_name = {"item-name.fruit-baking-science-pack"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 20,
 			ingredients = {
@@ -1329,7 +1334,7 @@ data:extend(
 			type = "recipe",
 			name = "fruit-baking-science-pack-2",
 			localised_name = {"item-name.fruit-baking-science-pack"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 20,
 			ingredients = {
@@ -1345,7 +1350,7 @@ data:extend(
 			type = "recipe",
 			name = "meat-baking-science-pack",
 			localised_name = {"item-name.meat-baking-science-pack"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			energy_required = 20,
 			ingredients = {
@@ -1365,7 +1370,7 @@ data:extend(
             name = "sheep-recipe",
             localised_name = {"item-name.sheep"},
             order = "e",
-            category = "organic-synth-recipes",
+            categories = {"organic-synth-recipes"},
             subgroup = "seeds",
             energy_required = 20,
             enabled = false,
@@ -1382,7 +1387,7 @@ data:extend(
             type = "recipe",
             name = "breed-sheep-recipe",
             order = "f",
-            category = "organic-synth-recipes",
+            categories = {"organic-synth-recipes"},
             subgroup = "seeds",
             energy_required = 100,
             enabled = false,
@@ -1402,7 +1407,7 @@ data:extend(
 			type = "recipe",
 			name = "flour-box-recipe",
 			localised_name = {"item-name.flour-box"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = true,
 			energy_required = 2,
 			ingredients = {
@@ -1417,7 +1422,7 @@ data:extend(
             type = "recipe",
             name = "hardtack-box-recipe",
             localised_name = {"recipe-name.hardtack-box"},
-            category = "smelting",
+            categories = {"smelting"},
             subgroup = "bread",
             energy_required = 2,
             enabled = true,
@@ -1426,7 +1431,7 @@ data:extend(
             },
             results = {
                 {type="item",name="hardtack",amount=2},
-				{type="item", name="wooden-chest", amount=1, probability=0.75}
+				{type="item", name="wooden-chest", amount=1, independent_probability=0.75, ignored_by_productivity = 10}
             },
             icon = "__baketorio__/graphics/hardtack.png",
             icon_size = 32,
@@ -1437,7 +1442,7 @@ data:extend(
 			type = "recipe",
 			name = "basic-dough-box-recipe",
 			localised_name = {"recipe-name.dough-box"},
-			category = "crafting-with-fluid",
+			categories = {"crafting-with-fluid"},
 			enabled = false,
 			energy_required = 2,
 			ingredients = {
@@ -1446,7 +1451,7 @@ data:extend(
 			},
 			results = {
 				{type="item", name="basic-dough", amount=1},
-				{type="item", name="wooden-chest", amount=1, probability=0.75}
+				{type="item", name="wooden-chest", amount=1, independent_probability=0.75, ignored_by_productivity = 10}
 			},
             icon="__baketorio__/graphics/dough.png",
             icon_size = 32,
@@ -1458,7 +1463,7 @@ data:extend(
 			type = "recipe",
 			name = "yarn-recipe",
 			localised_name = {"item-name.yarn"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			allow_productivity = true,
 			energy_required = 3,
@@ -1473,7 +1478,7 @@ data:extend(
 			type = "recipe",
 			name = "fabric-recipe",
 			localised_name = {"item-name.fabric"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			allow_productivity = true,
 			energy_required = 2,
@@ -1488,7 +1493,7 @@ data:extend(
 			type = "recipe",
 			name = "bag-recipe",
 			localised_name = {"item-name.bag"},
-			category = "crafting",
+			categories = {"crafting"},
 			enabled = false,
 			allow_productivity = true,
 			energy_required = 2,
@@ -1520,6 +1525,11 @@ data.raw["recipe"]["plain-ice-cream"].ingredients ={
                 {type="item",name="plastic-bin",amount=1}}
 ]]--
 
+--  add buttermilk
+table.insert(data.raw["recipe"]["butter-solidification"].results, {type="fluid",name="buttermilk",amount=2} )
+data.raw["recipe"]["butter-solidification"].icon = "__baketorio__/graphics/butter.png"
+data.raw["recipe"]["butter-solidification"].icon_size = 32
+
 
 --  add wrappers/bins
 table.insert(data.raw["recipe"]["butter-solidification"].ingredients, {type="item",name="paper-wrapper",amount=1} )
@@ -1537,17 +1547,17 @@ data.raw["recipe"]["advanced-cake-batter-cupcake-recipe"].results = {{type="item
 --  fry donuts now
 table.insert(data.raw["recipe"]["fryer-dough-doughnut-cooked-recipe"].ingredients, {type="fluid",name="light-oil",amount=8} )
 table.insert(data.raw["recipe"]["fryer-dough-doughnut-cooked-recipe"].results, {type="fluid",name="light-oil",amount=5} )
-data.raw["recipe"]["fryer-dough-doughnut-cooked-recipe"].category = "chemistry"
+data.raw["recipe"]["fryer-dough-doughnut-cooked-recipe"].categories = {"chemistry"}
 data.raw["recipe"]["fryer-dough-doughnut-cooked-recipe"].icon = "__baketorio__/graphics/fryer-dough-doughnut-cooked.png"
 data.raw["recipe"]["fryer-dough-doughnut-cooked-recipe"].icon_size = 32
 table.insert(data.raw["recipe"]["chocolate-batter-doughnut-cooked-recipe"].ingredients, {type="fluid",name="light-oil",amount=8} )
 table.insert(data.raw["recipe"]["chocolate-batter-doughnut-cooked-recipe"].results, {type="fluid",name="light-oil",amount=5} )
-data.raw["recipe"]["chocolate-batter-doughnut-cooked-recipe"].category = "chemistry"
+data.raw["recipe"]["chocolate-batter-doughnut-cooked-recipe"].categories = {"chemistry"}
 data.raw["recipe"]["chocolate-batter-doughnut-cooked-recipe"].icon = "__baketorio__/graphics/chocolate-batter-doughnut-cooked.png"
 data.raw["recipe"]["chocolate-batter-doughnut-cooked-recipe"].icon_size = 32
 table.insert(data.raw["recipe"]["blueberry-batter-doughnut-cooked-recipe"].ingredients, {type="fluid",name="light-oil",amount=8} )
 table.insert(data.raw["recipe"]["blueberry-batter-doughnut-cooked-recipe"].results, {type="fluid",name="light-oil",amount=5} )
-data.raw["recipe"]["blueberry-batter-doughnut-cooked-recipe"].category = "chemistry"
+data.raw["recipe"]["blueberry-batter-doughnut-cooked-recipe"].categories = {"chemistry"}
 data.raw["recipe"]["blueberry-batter-doughnut-cooked-recipe"].icon = "__baketorio__/graphics/blueberry-batter-doughnut-cooked.png"
 data.raw["recipe"]["blueberry-batter-doughnut-cooked-recipe"].icon_size = 32
 
@@ -1569,21 +1579,21 @@ data.raw["recipe"]["basic-recipe"].ingredients = {
 ]]--
 
 table.insert(data.raw["recipe"]["blueberry-pie-recipe"].ingredients, {type="item",name="pie-tin",amount=1} )
-table.insert(data.raw["recipe"]["blueberry-pie-recipe"].results, {type="item",name="plastic-basket",amount_min=7,amount_max=10} )
+table.insert(data.raw["recipe"]["blueberry-pie-recipe"].results, {type="item",name="plastic-basket",amount_min=8,amount_max=10, ignored_by_productivity = 10} )
 data.raw["recipe"]["blueberry-pie-recipe"].icon = "__baketorio__/graphics/blueberry-pie.png"
 data.raw["recipe"]["blueberry-pie-recipe"].icon_size = 32
 data.raw["recipe"]["blueberry-pie-recipe"].localised_name = {"item-name.blueberry-pie"}
 
 table.insert(data.raw["recipe"]["strawberry-pie-recipe"].ingredients, {type="item",name="pie-tin",amount=1} )
-table.insert(data.raw["recipe"]["strawberry-pie-recipe"].results, {type="item",name="plastic-basket",amount_min=2,amount_max=3} )
+table.insert(data.raw["recipe"]["strawberry-pie-recipe"].results, {type="item",name="plastic-basket",amount=2,extra_count_fraction=0.7, ignored_by_productivity = 10} )
 data.raw["recipe"]["strawberry-pie-recipe"].icon = "__baketorio__/graphics/strawberry-pie.png"
 data.raw["recipe"]["strawberry-pie-recipe"].icon_size = 32
 data.raw["recipe"]["strawberry-pie-recipe"].localised_name = {"item-name.strawberry-pie"}
 
-table.insert(data.raw["recipe"]["blueberry-batter-recipe"].results, {type="item",name="plastic-basket",amount=1,probability=0.9} )
+table.insert(data.raw["recipe"]["blueberry-batter-recipe"].results, {type="item",name="plastic-basket",amount=1,independent_probability=0.9, ignored_by_productivity = 10} )
 data.raw["recipe"]["blueberry-batter-recipe"].localised_name = {"item-name.blueberry-batter"}
 
-table.insert(data.raw["recipe"]["advanced-cake-batter-recipe"].results, {type="item",name="plastic-basket",amount=1,probability=0.9} )
+table.insert(data.raw["recipe"]["advanced-cake-batter-recipe"].results, {type="item",name="plastic-basket",amount=1,independent_probability=0.9, ignored_by_productivity = 10} )
 data.raw["recipe"]["advanced-cake-batter-recipe"].icon = "__baketorio__/graphics/advanced-cake-batter.png"
 data.raw["recipe"]["advanced-cake-batter-recipe"].icon_size = 32
 data.raw["recipe"]["advanced-cake-batter-recipe"].localised_name = {"item-name.advanced-cake-batter"}
@@ -1621,34 +1631,34 @@ table.insert(data.raw["recipe"]["sugar-recipe"].ingredients, {type="item",name="
 table.insert(data.raw["recipe"]["cinnamon-sugar-recipe"].ingredients, {type="item",name="bag",amount=1} )
 table.insert(data.raw["recipe"]["cocoa-powder-recipe"].ingredients, {type="item",name="bag",amount=2} )
 --  add bags to recipe results
-table.insert(data.raw["recipe"]["hardtack-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
-table.insert(data.raw["recipe"]["cobbler-mixture-recipe"].results, {type="item",name="bag",amount_min=4,amount_max=5} )
-table.insert(data.raw["recipe"]["gravy-beef-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["gravy-pork-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["gravy-chicken-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["gravy-mutton-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["filo-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
-table.insert(data.raw["recipe"]["pumpkin-batter-recipe"].results, {type="item",name="bag",amount_min=3,amount_max=5} )
-table.insert(data.raw["recipe"]["basic-batter-recipe"].results, {type="item",name="bag",amount=3,extra_count_fraction=0.2} )
-table.insert(data.raw["recipe"]["basic-dough-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
-table.insert(data.raw["recipe"]["sugar-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
-table.insert(data.raw["recipe"]["egg-dough-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
-table.insert(data.raw["recipe"]["fryer-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
-table.insert(data.raw["recipe"]["cinnamon-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
-table.insert(data.raw["recipe"]["pancake-batter-recipe"].results, {type="item",name="bag",amount=3,extra_count_fraction=0.2} )
-table.insert(data.raw["recipe"]["sugar-water-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
-table.insert(data.raw["recipe"]["white-chocolate-sauce-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
-table.insert(data.raw["recipe"]["meringue-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["frosting-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["plain-ice-cream"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["apple-fritter-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["pumpkin-pie-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
-table.insert(data.raw["recipe"]["fryer-dough-bun-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["cinnamon-sugar-doughnut-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
-table.insert(data.raw["recipe"]["chocolate-sauce-recipe"].results, {type="item",name="bag",amount_min=18,amount_max=30} )
-table.insert(data.raw["recipe"]["chocolate-batter-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6} )
-table.insert(data.raw["recipe"]["chocolate-ice-cream-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4} )
-table.insert(data.raw["recipe"]["chocolate-chips-recipe"].results, {type="item",name="bag",amount=1,probability=0.8} )
+table.insert(data.raw["recipe"]["hardtack-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["cobbler-mixture-recipe"].results, {type="item",name="bag",amount=4,extra_count_fraction=0.5, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["gravy-beef-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["gravy-pork-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["gravy-chicken-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["gravy-mutton-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["filo-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["pumpkin-batter-recipe"].results, {type="item",name="bag",amount_min=3,amount_max=5, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["basic-batter-recipe"].results, {type="item",name="bag",amount=3,extra_count_fraction=0.2, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["basic-dough-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["sugar-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["egg-dough-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["fryer-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["cinnamon-dough-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["pancake-batter-recipe"].results, {type="item",name="bag",amount=3,extra_count_fraction=0.2, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["sugar-water-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["white-chocolate-sauce-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["meringue-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["frosting-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["plain-ice-cream"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["apple-fritter-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["pumpkin-pie-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["fryer-dough-bun-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["cinnamon-sugar-doughnut-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["chocolate-sauce-recipe"].results, {type="item",name="bag",amount_min=18,amount_max=30, ignored_by_productivity = 100} )
+table.insert(data.raw["recipe"]["chocolate-batter-recipe"].results, {type="item",name="bag",amount=1,extra_count_fraction=0.6, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["chocolate-ice-cream-recipe"].results, {type="item",name="bag",amount=2,extra_count_fraction=0.4, ignored_by_productivity = 10} )
+table.insert(data.raw["recipe"]["chocolate-chips-recipe"].results, {type="item",name="bag",amount=1,independent_probability=0.8, ignored_by_productivity = 10} )
 		
 
 data.raw["recipe"]["cobbler-mixture-recipe"].icon="__baketorio_plus__/graphics/cobbler-mixture.png"
@@ -1708,6 +1718,8 @@ end
 --  double speed for milk filtering
 data.raw["recipe"]["milk-filtering"].energy_required = data.raw["recipe"]["milk-filtering"].energy_required/2
 
+--  add wood to rail recipe
+table.insert(data.raw["recipe"]["rail"].ingredients, {type="item",name="wood",amount=1} )
 
 
 

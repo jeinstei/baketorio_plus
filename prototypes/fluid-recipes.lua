@@ -22,7 +22,7 @@ data:extend(
             type = "recipe",
             name = "fertilized-water-recipe",
 			localised_name = {"fluid-name.fertilized-water"},
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "fluid-recipes",
             energy_required = 10,
             enabled = false,
@@ -39,7 +39,7 @@ data:extend(
             type = "recipe",
             name = "sugar-water-recipe",
 			localised_name = {"fluid-name.sugar-water"},
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "fluid-ingredient",
             energy_required = 5,
             enabled = false,
@@ -55,7 +55,7 @@ data:extend(
             type = "recipe",
             name = "syrup-recipe",
 			localised_name = {"fluid-name.syrup"},
-            category = "bake-boiling",
+            categories = {"bake-boiling"},
             subgroup = "fluid-ingredient",
             energy_required = 10,
             enabled = false,
@@ -72,7 +72,7 @@ data:extend(
             type = "recipe",
             name = "vegetable-oil-wheat-recipe",
 			localised_name = {"recipe-name.vegetable-oil-wheat-recipe"},  --do for each variation
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
             energy_required = 10,
             enabled = false,
@@ -91,7 +91,7 @@ data:extend(
             type = "recipe",
             name = "vegetable-oil-sugarcane-recipe",
 			localised_name = {"recipe-name.vegetable-oil-sugarcane-recipe"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
             energy_required = 10,
             enabled = false,
@@ -110,7 +110,7 @@ data:extend(
             type = "recipe",
             name = "vegetable-oil-cocoa-bean-recipe",
 			localised_name = {"recipe-name.vegetable-oil-cocoa-bean-recipe"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
             energy_required = 10,
             enabled = false,
@@ -129,7 +129,7 @@ data:extend(
             type = "recipe",
             name = "vegetable-oil-pumpkin-recipe",
 			localised_name = {"recipe-name.vegetable-oil-pumpkin-recipe"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
             energy_required = 10,
             enabled = false,
@@ -148,7 +148,7 @@ data:extend(
             type = "recipe",
             name = "vegetable-oil-nuts-recipe",
 			localised_name = {"recipe-name.vegetable-oil-nuts-recipe"},
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
             energy_required = 20,
             enabled = false,
@@ -169,7 +169,7 @@ data:extend(
             type = "recipe",
             name = "chocolate-sauce-recipe",
 			localised_name = {"fluid-name.chocolate-sauce"},
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "fluid-ingredient",
             energy_required = 60,
             enabled = false,
@@ -186,7 +186,7 @@ data:extend(
             type = "recipe",
             name = "white-chocolate-sauce-recipe",
 			localised_name = {"fluid-name.white-chocolate-sauce"},
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "fluid-ingredient",
             energy_required = 60,
             enabled = false,
@@ -197,7 +197,7 @@ data:extend(
             },
             results = {
                 {type="fluid", name="white-chocolate-sauce", amount=35},
-				{type = "item", name = "plastic-bin", amount = 1, probability=0.9}
+				{type = "item", name = "metal-bucket", amount = 1, independent_probability=0.9, ignored_by_productivity = 10}
             },
             icon = "__baketorio_plus__/graphics/white-chocolate-sauce.png",
             icon_size = 32,
@@ -208,7 +208,7 @@ data:extend(
             type = "recipe",
             name = "gravy-beef-recipe",
 			localised_name = {"recipe-name.gravy-beef-recipe"},
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "fluid-ingredient",
             energy_required = 20,
             enabled = false,
@@ -219,7 +219,7 @@ data:extend(
             },
             results = {
                 {type="fluid", name="gravy", amount=100},
-				{type = "item", name = "plastic-bin", amount = 1, probability=0.9}
+				{type = "item", name = "plastic-bin", amount = 1, independent_probability=0.9, ignored_by_productivity = 10}
             },
             icon = "__baketorio_plus__/graphics/gravy.png",
             icon_size = 32,
@@ -228,7 +228,7 @@ data:extend(
             type = "recipe",
             name = "gravy-pork-recipe",
 			localised_name = {"recipe-name.gravy-pork-recipe"},
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "fluid-ingredient",
             energy_required = 20,
             enabled = false,
@@ -239,7 +239,7 @@ data:extend(
             },
             results = {
                 {type="fluid", name="gravy", amount=100},
-				{type = "item", name = "plastic-bin", amount = 1, probability=0.9}
+				{type = "item", name = "plastic-bin", amount = 1, independent_probability=0.9, ignored_by_productivity = 10}
             },
             icon = "__baketorio_plus__/graphics/gravy.png",
             icon_size = 32,
@@ -248,7 +248,7 @@ data:extend(
             type = "recipe",
             name = "gravy-chicken-recipe",
 			localised_name = {"recipe-name.gravy-chicken-recipe"},
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "fluid-ingredient",
             energy_required = 20,
             enabled = false,
@@ -259,7 +259,7 @@ data:extend(
             },
             results = {
                 {type="fluid", name="gravy", amount=100},
-				{type = "item", name = "plastic-bin", amount = 1, probability=0.9}
+				{type = "item", name = "plastic-bin", amount = 1, independent_probability=0.9, ignored_by_productivity = 10}
             },
             icon = "__baketorio_plus__/graphics/gravy.png",
             icon_size = 32,
@@ -268,7 +268,7 @@ data:extend(
             type = "recipe",
             name = "gravy-mutton-recipe",
 			localised_name = {"recipe-name.gravy-mutton-recipe"},
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "fluid-ingredient",
             energy_required = 20,
             enabled = false,
@@ -279,7 +279,7 @@ data:extend(
             },
             results = {
                 {type="fluid", name="gravy", amount=100},
-				{type = "item", name = "plastic-bin", amount = 1, probability=0.9}
+				{type = "item", name = "plastic-bin", amount = 1, independent_probability=0.9, ignored_by_productivity = 10}
             },
             icon = "__baketorio_plus__/graphics/gravy.png",
             icon_size = 32,
@@ -288,7 +288,7 @@ data:extend(
             type = "recipe",
             name = "cobbler-mixture-recipe",
 			localised_name = {"fluid-name.cobbler-mixture"},
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "fluid-ingredient",
             energy_required = 10,
             enabled = false,
@@ -302,8 +302,8 @@ data:extend(
         {
             type = "recipe",
             name = "lemon-juice-recipe",
-			localised_name = {"liquid-name.lemon-juice"},
-            category = "chemistry",
+			localised_name = {"fluid-name.lemon-juice"},
+            categories = {"chemistry"},
             subgroup = "fluid-ingredient",
             energy_required = 10,
             enabled = false,
@@ -312,10 +312,73 @@ data:extend(
             },
             results = {
                 {type="fluid", name="lemon-juice", amount=50},
-				{type = "item", name = "bushel-basket", amount = 1, probability=0.5}
+				{type = "item", name = "bushel-basket", amount = 1, independent_probability=0.6}
             },
             icon = "__baketorio_plus__/graphics/lemon-juice.png",
             icon_size = 32,
+        },
+		
+        {
+            type = "recipe",
+            name = "buttermilk-recipe",
+			localised_name = {"fluid-name.buttermilk"},
+            categories = {"chemistry"},
+            subgroup = "fluid-ingredient",
+            energy_required = 60,
+            enabled = false,
+            ingredients ={
+                {type="fluid",name="lemon-juice",amount=50},
+                {type="fluid",name="milk",amount=250},
+            },
+            results = {
+                {type="fluid", name="buttermilk", amount=300},
+            }
+        },
+		
+        {
+            type = "recipe",
+            name = "cocoa-butter-fluid-recipe",
+			localised_name = {"fluid-name.cocoa-butter-fluid"},
+            categories = {"butterize"},
+            subgroup = "fluid-ingredient",
+            energy_required = 10,
+            enabled = false,
+            ingredients ={
+                {type="item",name="cocoa-beans",amount=10},
+            },
+            results = {
+                {type="fluid", name="cocoa-butter-fluid", amount=100},
+            }
+        },
+        {
+            type = "recipe",
+            name = "peanut-butter-fluid-recipe",
+			localised_name = {"fluid-name.peanut-butter-fluid"},
+            categories = {"butterize"},
+            subgroup = "fluid-ingredient",
+            energy_required = 10,
+            enabled = false,
+            ingredients ={
+                {type="item",name="peanuts",amount=10},
+            },
+            results = {
+                {type="fluid", name="peanut-butter-fluid", amount=100},
+            }
+        },
+        {
+            type = "recipe",
+            name = "almond-butter-fluid-recipe",
+			localised_name = {"fluid-name.almond-butter-fluid"},
+            categories = {"butterize"},
+            subgroup = "fluid-ingredient",
+            energy_required = 10,
+            enabled = false,
+            ingredients ={
+                {type="item",name="almonds",amount=10},
+            },
+            results = {
+                {type="fluid", name="almond-butter-fluid", amount=100},
+            }
         },
     }
 )

@@ -1,3 +1,7 @@
+
+local pcp = require("__base__.prototypes.entity.assembler-pictures").pipecoverspictures
+
+
 data:extend({
 	{
   type = "furnace",
@@ -42,7 +46,7 @@ data:extend({
   {
     {
       volume = 500,
-      pipe_covers = pipecoverspictures(),
+      pipe_covers = pcp,
       pipe_connections =
       {
         {flow_direction = "input-output", direction = defines.direction.west--[[@as int]], position = {-1, 0.5}},
@@ -52,7 +56,7 @@ data:extend({
     },
     {
       volume = 500,
-      pipe_covers = pipecoverspictures(),
+      pipe_covers = pcp,
       pipe_connections =
       {
         {flow_direction = "output", direction = defines.direction.north--[[@as int]], position = {0, -0.5}}
@@ -256,7 +260,7 @@ data:extend({
   {
     {
       volume = 500,
-      pipe_covers = pipecoverspictures(),
+      pipe_covers = pcp,
       pipe_connections =
       {
 		{flow_direction = "input-output", direction = defines.direction.west--[[@as int]], position = {-1, 0.5}},
@@ -268,7 +272,7 @@ data:extend({
     },
     {
       volume = 500,
-      pipe_covers = pipecoverspictures(),
+      pipe_covers = pcp,
       pipe_connections =
       {
         {flow_direction = "output", direction = defines.direction.north--[[@as int]], position = {0, -0.5}}

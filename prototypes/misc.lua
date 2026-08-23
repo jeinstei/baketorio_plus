@@ -28,6 +28,11 @@ data:extend(
 		},
 		
 		{
+			type = "fuel-category",
+			name = "wheat"
+		},
+		
+		{
 			type = "item-subgroup",
 			name = "croissant",
 			group = "food",

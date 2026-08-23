@@ -1040,104 +1040,118 @@ data.raw["unit"]["small-biter"].dying_trigger_effect = {
 ]]
 data.raw["unit"]["small-biter"].loot = {
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment",
-    probability = 0.9
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
+    independent_probability = 0.9
   }
 }
 
 data.raw["unit"]["medium-biter"].loot = {
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment"
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
   },
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment",
-    probability = 0.8
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
+    independent_probability = 0.8
   }
 }
 
 data.raw["unit"]["big-biter"].loot = {
   {
-    count_max = 2,
-    count_min = 2,
-    item = "chitinous-shell-fragment"
+    amount_max = 2,
+    amount_min = 2,
+    type = "item",
+	name = "chitinous-shell-fragment",
   },
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment",
-    probability = 0.7
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
+    independent_probability = 0.7
   }
 }
 
 data.raw["unit"]["behemoth-biter"].loot = {
   {
-    count_max = 3,
-    count_min = 3,
-    item = "chitinous-shell-fragment"
+    amount_max = 3,
+    amount_min = 3,
+    type = "item",
+	name = "chitinous-shell-fragment",
   },
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment",
-    probability = 0.6
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
+    independent_probability = 0.6
   }
 }
 
 
 data.raw["unit"]["small-spitter"].loot = {
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment",
-    probability = 0.9
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
+    independent_probability = 0.9
   }
 }
 
 data.raw["unit"]["medium-spitter"].loot = {
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment"
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
   },
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment",
-    probability = 0.8
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
+    independent_probability = 0.8
   }
 }
 
 data.raw["unit"]["big-spitter"].loot = {
   {
-    count_max = 2,
-    count_min = 2,
-    item = "chitinous-shell-fragment"
+    amount_max = 2,
+    amount_min = 2,
+    type = "item",
+	name = "chitinous-shell-fragment",
   },
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment",
-    probability = 0.7
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
+    independent_probability = 0.7
   }
 }
 
 data.raw["unit"]["behemoth-spitter"].loot = {
   {
-    count_max = 3,
-    count_min = 3,
-    item = "chitinous-shell-fragment"
+    amount_max = 3,
+    amount_min = 3,
+    type = "item",
+	name = "chitinous-shell-fragment",
   },
   {
-    count_max = 1,
-    count_min = 1,
-    item = "chitinous-shell-fragment",
-    probability = 0.6
+    amount_max = 1,
+    amount_min = 1,
+    type = "item",
+	name = "chitinous-shell-fragment",
+    independent_probability = 0.6
   }
 }
 

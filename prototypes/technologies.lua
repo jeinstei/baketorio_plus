@@ -587,12 +587,12 @@ data:extend {
 	localised_name = {"technology-name.pancakes"},
     icon_size = 128,
     icon = "__baketorio_plus__/graphics/pancakes_tech.png",
-    prerequisites = {"strawberries", "blueberries", "syrup"},
+    prerequisites = {"strawberries", "blueberries", "syrup", "cinnamon"},
     effects =
     {
       {type = "unlock-recipe",recipe = "pancake-batter-recipe"},
       {type = "unlock-recipe",recipe = "pancake-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "pancake-with-syrup-recipe"}
+      {type = "unlock-recipe",recipe = "pancakes-with-syrup-recipe"}
     },
     unit =
     {
@@ -787,6 +787,7 @@ data:extend {
     {
       {type = "unlock-recipe",recipe = "chocolate-sauce-recipe"},
       {type = "unlock-recipe",recipe = "metal-bucket-recipe"},
+      {type = "unlock-recipe",recipe = "cocoa-butter-fluid-recipe"},
       {type = "unlock-recipe",recipe = "cocoa-butter-recipe"},
       {type = "unlock-recipe",recipe = "white-chocolate-sauce-recipe"},
     },
@@ -892,7 +893,11 @@ data:extend {
     effects =
     {
       {type = "unlock-recipe",recipe = "metal-bucket-recipe"},
+      {type = "unlock-recipe",recipe = "cocoa-butter-fluid-recipe"},
+      {type = "unlock-recipe",recipe = "cocoa-butter-recipe"},
+      {type = "unlock-recipe",recipe = "peanut-butter-fluid-recipe"},
       {type = "unlock-recipe",recipe = "peanut-butter-recipe"},
+      {type = "unlock-recipe",recipe = "almond-butter-fluid-recipe"},
       {type = "unlock-recipe",recipe = "almond-butter-recipe"},
     },
     unit =
@@ -1129,6 +1134,7 @@ data:extend {
       {type = "unlock-recipe",recipe = "peaches-recipe-water"},
       {type = "unlock-recipe",recipe = "peaches-recipe-fertilizer"},
       {type = "unlock-recipe",recipe = "peach-cobbler-recipe"},
+      {type = "unlock-recipe",recipe = "cobbler-mixture-recipe"},
       {type = "unlock-recipe",recipe = "peach-cobbler-cooked-recipe"},
       {type = "unlock-recipe",recipe = "peach-cobbler-cooked-with-ice-cream-recipe"},
     },
@@ -1161,6 +1167,7 @@ data:extend {
       {type = "unlock-recipe",recipe = "lemon-curd-recipe"},
       {type = "unlock-recipe",recipe = "lemon-tart-recipe"},
       {type = "unlock-recipe",recipe = "lemon-tart-cooked-recipe"},
+      {type = "unlock-recipe",recipe = "buttermilk-recipe"},
     },
     unit =
     {
@@ -1684,19 +1691,22 @@ end
 --table.insert(data.raw["technology"]["animal-husbandry"].effects, 3, {type="unlock-recipe", recipe="egg-water-food-recipe"})
 --table.insert(data.raw["technology"]["animal-husbandry"].effects, 8, {type="unlock-recipe", recipe="u-milk-water-recipe"})
 --table.insert(data.raw["technology"]["animal-husbandry"].effects, 9, {type="unlock-recipe", recipe="u-milk-water-food-recipe"})
-data.raw["technology"]["animal-husbandry"].effects =
+
+
+	data.raw["technology"]["animal-husbandry"].effects =
     {
+	    {type="unlock-recipe", recipe= "iron-stick"},
 	    {type="unlock-recipe", recipe= "chemical-plant"},
 	    {type="unlock-recipe", recipe= "barn-recipe"},
       {type = "unlock-recipe",recipe = "egg-recipe"},
-		{type = "unlock-recipe",recipe = "egg-water-recipe"},
-		{type = "unlock-recipe",recipe = "egg-water-food-recipe"},
+		--{type = "unlock-recipe",recipe = "egg-water-recipe"},
+		--{type = "unlock-recipe",recipe = "egg-water-food-recipe"},
       {type = "unlock-recipe",recipe = "chicken-recipe"},
       {type = "unlock-recipe",recipe = "chicken-recipe-egg"},
       {type = "unlock-recipe",recipe = "cow-recipe"},
       {type = "unlock-recipe",recipe = "u-milk-recipe"},
-		{type = "unlock-recipe",recipe = "u-milk-water-recipe"},
-		{type = "unlock-recipe",recipe = "u-milk-water-food-recipe"},
+		--{type = "unlock-recipe",recipe = "u-milk-water-recipe"},
+		--{type = "unlock-recipe",recipe = "u-milk-water-food-recipe"},
       {type = "unlock-recipe",recipe = "milk-pasteurization"},
       --{type = "unlock-recipe",recipe = "milk-filtering"},
       --{type = "unlock-recipe",recipe = "frosting-recipe"},
@@ -1709,11 +1719,16 @@ data.raw["technology"]["animal-husbandry"].effects =
 		{type = "unlock-recipe",recipe = "sheep-recipe"},
 		{type = "unlock-recipe",recipe = "breed-sheep-recipe"},
 		{type = "unlock-recipe",recipe = "wool-recipe"},
-		{type = "unlock-recipe",recipe = "wool-water-recipe"},
-		{type = "unlock-recipe",recipe = "wool-water-food-recipe"},
+		--{type = "unlock-recipe",recipe = "wool-water-recipe"},
+		--{type = "unlock-recipe",recipe = "wool-water-food-recipe"},
       {type = "unlock-recipe",recipe = "egg-dough-recipe"},
       {type = "unlock-recipe",recipe = "egg-bread-recipe"}
 	}
+	
+	print(serpent.block(data.raw["technology"]["animal-husbandry"].effects))
+	
+--  add steel as a prereq for animal husbandry (due to steel for chem plant)
+table.insert(data.raw["technology"]["animal-husbandry"].prerequisites, "steel-processing")
 
 
 --  add boar and bull meat processing recipes if they are here as well as ram shearing (spoilage is enabled)
@@ -1721,11 +1736,11 @@ if feature_flags["spoiling"] then
 	table.insert(data.raw["technology"]["animal-processing"].effects, 4, {type="unlock-recipe", recipe="beef-bull-recipe"})
 	table.insert(data.raw["technology"]["animal-processing"].effects, 6, {type="unlock-recipe", recipe="pork-boar-recipe"})
 	table.insert(data.raw["technology"]["animal-processing"].effects, 9, {type="unlock-recipe", recipe="mutton-ram-recipe"})
-	table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water-food-recipe"})
-	table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water-recipe"})
-	table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-recipe"})
+	--table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water-food-recipe"})
+	--table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water-recipe"})
+	--table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-recipe"})
+	table.insert(data.raw["technology"]["animal-husbandry"].effects, 13, {type="unlock-recipe", recipe="wool-ram-recipe"})
 end
-
 
 --  add electric boiler to the electric furnace tech (already made syrup a prereq for it above)
 table.insert(data.raw["technology"]["advanced-material-processing-2"].effects, {type="unlock-recipe", recipe="bake-electric-boiler-recipe"})
@@ -1770,7 +1785,31 @@ data.raw["technology"]["chocolate-chips"].unit.ingredients = {
 data.raw["technology"]["advanced-baking"].prerequisites = {"strawberries"}
 data.raw["technology"]["chocolate-chips"].prerequisites = {"chemical-science-pack"}
 	
-	
+--  remove iron stick from its original techs (as it's now in Animal Husbandry)
+for key,value in pairs(data.raw["technology"]["circuit-network"].effects) do
+	if value.recipe == "iron-stick" then
+		table.remove(data.raw["technology"]["circuit-network"].effects, key)
+		break
+	end
+end
+for key,value in pairs(data.raw["technology"]["concrete"].effects) do
+	if value.recipe == "iron-stick" then
+		table.remove(data.raw["technology"]["concrete"].effects, key)
+		break
+	end
+end
+for key,value in pairs(data.raw["technology"]["electric-energy-distribution-1"].effects) do
+	if value.recipe == "iron-stick" then
+		table.remove(data.raw["technology"]["electric-energy-distribution-1"].effects, key)
+		break
+	end
+end
+for key,value in pairs(data.raw["technology"]["railway"].effects) do
+	if value.recipe == "iron-stick" then
+		table.remove(data.raw["technology"]["railway"].effects, key)
+		break
+	end
+end
 	
 
 

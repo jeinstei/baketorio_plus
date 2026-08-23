@@ -1,4 +1,75 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 2026-8-22
+  Changes:
+    - Updated to 2.1
+    - Male/female offspring probability of animal breeding is now a shared probability so the result will always be a single animal of either male or female variety
+    - Animal breeding recipes now have a 5% chance to have twins; just a fun thing
+    - Removed the "baby" animals that previously appeared for a split second since 2.1 offers a way to reset freshness per result rather than only per recipe of 2.0
+    - Yeast Packet spoilage is now salt rather than nothing
+---------------------------------------------------------------------------------------------------
+Version: 0.4.8
+Date: 2026-8-22
+  Bug Fixes:
+    - Fixed ram shearing time not being the same as ewe shearing time
+---------------------------------------------------------------------------------------------------
+Version: 0.4.7
+Date: 2026-1-17
+  Balancing:
+    - Fixed sugar water recipe to not give more bags than it takes
+    - Adjusted the following recipes to give the proper likelihood of containers back:
+    - pancakes with syrup, meat pie(s), chicken pot pie, sausage roll, blueberry pie, strawberry pie
+    - apple fritter, apple pie, peach cobbler, cobbler mixture, lemon juice
+---------------------------------------------------------------------------------------------------
+Version: 0.4.6
+Date: 2026-1-17
+  Balancing:
+    - Cut down how powerful wheat is as a fuel
+---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+Date: 2026-1-17
+  Features:
+    - Butter solidification now gives a little bit of buttermilk, used in pancakes
+    - Buttermilk can also be made with lemon juice and milk
+  Changes:
+    - Strawberry Ice Cream returns the basket 90% of the time
+    - Pancakes give out 1-2 baskets back
+    - Made wheat a fuel source for barns
+    - Only 1 of each of the animal product recipes, all requiring water and wheat fuel (2 wool, due to both rams and ewes)
+    - Pancakes take 10 buttermilk rather than 5 milk
+  Balancing:
+    - Rebalanced Sausage Roll numbers
+    - Made steel a prerequisite for animal husbandry (as it was already needed for the chemical plant)
+    - Made cinnamon a prerequisite for pancakes (as it was a needed ingredient)
+    - Doubled pancake output from pancake batter
+  Bug Fixes:
+    - Fixed "Pancakes with syrup" name
+---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+Date: 2026-1-14
+  Changes:
+    - Set container byproducts to be ignored_by_productivity so yeast productivity does not increase their output
+    - Bushel baskets now require 1 iron stick
+  Bug Fixes:
+    - Fixed white chocolate sauce recipe to return the metal bucket rather than the plastic bin
+    - Yeast module only modifies quality if the quality mod is enabled (so no longer crash for those without the expansion)
+    - Added cobbler mixture to Peaches technology (was not unlocked before)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+Date: 2025-10-25
+  Changes:
+    - Added cocoa butter to nut butters technology
+    - Added intermediary liquid step to cocoa, peanut, and almond butters (and fluid output for butterizer
+  Bug Fixes:
+    - Above change due to furnace based butterizer recipe broken due to requiring 2 inputs
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 2025-07-17
+  Changes:
+    - Added 1 Wood as an ingredient for rails
+  Bug Fixes:
+    - Added Iron Stick to Animal Husbandry so the Barn can be built. Removed it from all 4 of its following recipes
+---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 2025-07-15
   Changes:
