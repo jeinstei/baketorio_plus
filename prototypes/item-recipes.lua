@@ -33,7 +33,7 @@ local prod_recipes = {
   "ice-cream-sundae",
   "pancake-batter",
   "pancake-cooked",
-  "pancake-with-syrup",
+  "pancakes-with-syrup",
   "pie-tin",
   "filo-dough",
   "baklava",
@@ -49,17 +49,14 @@ local prod_recipes = {
   "beef",
   "pork",
   "chicken",
-  "meat-pie",
+  "meat-pie-beef",
+  "meat-pie-mutton",
   "meat-pie-cooked",
   "chicken-pot-pie",
   "chicken-pot-pie-cooked",
   "sausage-roll",
   "sausage-roll-cooked",
 }
-
-for _, v in ipairs(prod_recipes) do
-	baketorio.add_to_prod_mod(v)
-end
 
 data:extend(
     {
@@ -1721,7 +1718,6 @@ data.raw["recipe"]["milk-filtering"].energy_required = data.raw["recipe"]["milk-
 --  add wood to rail recipe
 table.insert(data.raw["recipe"]["rail"].ingredients, {type="item",name="wood",amount=1} )
 
-
-
-
-
+for _, v in ipairs(prod_recipes) do
+    data.raw["recipe"][v].allow_productivity = true
+end

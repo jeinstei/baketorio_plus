@@ -95,9 +95,9 @@ end
 data.raw["recipe"]["egg"].categories = {"barn"}
 --data.raw["recipe"]["egg-water"].category = "barn"
 --data.raw["recipe"]["egg-water-food"].category = "barn"
-data.raw["recipe"]["u-milk"].categories = {"barn"}
---data.raw["recipe"]["u-milk-water"].category = "barn"
---data.raw["recipe"]["u-milk-water-food"].category = "barn"
+data.raw["recipe"]["unpasteurized-milk"].categories = {"barn"}
+--data.raw["recipe"]["unpasteurized-milk-water"].category = "barn"
+--data.raw["recipe"]["unpasteurized-milk-water-food"].category = "barn"
 data.raw["recipe"]["wool"].categories = {"barn"}
 --data.raw["recipe"]["wool-water"].category = "barn"
 --data.raw["recipe"]["wool-water-food"].category = "barn"

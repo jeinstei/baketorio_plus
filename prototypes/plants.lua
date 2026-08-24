@@ -26,32 +26,27 @@ local prod_recipes = {
   "strawberries-recipe-water",
   "strawberries-recipe-fertilizer",
   
-  "egg-water",
-  "egg-water-food",
-  "u-milk-water",
-  "u-milk-water-food",
+--   "egg-water",
+--   "egg-water-food",
+--   "unpasteurized-milk-water",
+--   "unpasteurized-milk-water-food",
   "wool",
-  "wool-water",
-  "wool-water-food",
+--   "wool-water",
+--   "wool-water-food",
   
   "apple-seeds",
-  "apple",
-  "apple-recipe-water",
-  "apple-recipe-fertilizer",
+  "apples",
+  "apples-recipe-water",
+  "apples-recipe-fertilizer",
   "lemon-seeds",
-  "lemon",
-  "lemon-recipe-water",
-  "lemon-recipe-fertilizer",
+  "lemons",
+  "lemons-recipe-water",
+  "lemons-recipe-fertilizer",
   "peach-seeds",
-  "peach",
-  "peach-recipe-water",
-  "peach-recipe-fertilizer",
+  "peaches",
+  "peaches-recipe-water",
+  "peaches-recipe-fertilizer",
 }
-
-for _, v in ipairs(prod_recipes) do
-	baketorio.add_to_prod_mod(v)
-end
-
 
 local wheatEnergy = data.raw["recipe"]["wheat"].energy_required
 local sugarcaneEnergy = data.raw["recipe"]["sugarcane"].energy_required
@@ -61,7 +56,7 @@ local blueberriesEnergy = data.raw["recipe"]["blueberries"].energy_required
 local strawberryEnergy = data.raw["recipe"]["strawberries"].energy_required
 
 local eggEnergy = data.raw["recipe"]["egg"].energy_required
-local milkEnergy = data.raw["recipe"]["u-milk"].energy_required
+local milkEnergy = data.raw["recipe"]["unpasteurized-milk"].energy_required
 local woolEnergy = 20;
 
 local nutsEnergy = 120
@@ -841,7 +836,7 @@ data.raw["recipe"]["strawberries"].energy_required = strawberryEnergy * 3
 --  data.raw["recipe"]["strawberries"].energy_required /= 3
 --  data.raw["recipe"]["strawberries"].energy_required = data.raw["recipe"]["strawberries"].energy_required / 3
 
-data.raw["recipe"]["u-milk"].energy_required = milkEnergy * 3
+data.raw["recipe"]["unpasteurized-milk"].energy_required = milkEnergy * 3
 data.raw["recipe"]["egg"].energy_required = eggEnergy * 3
 
 --  cinnamon gives wood back
@@ -855,17 +850,13 @@ table.insert(data.raw["recipe"]["blueberries"].ingredients, {type="item",name="p
 
 
 --  mod base recipes
-data.raw["recipe"]["u-milk"].ingredients ={ {type="item",name="cow",amount=1}, {type="item",name="nutrient2",amount=1}, {type="fluid",name="water",amount=20} }
-data.raw["recipe"]["u-milk"].results ={ {type="item",name="cow",amount=1}, {type="fluid", name="unpasteurized-milk", amount=450}, }
+data.raw["recipe"]["unpasteurized-milk"].ingredients ={ {type="item",name="cow",amount=1}, {type="item",name="nutrient2",amount=1}, {type="fluid",name="water",amount=20} }
+data.raw["recipe"]["unpasteurized-milk"].results ={ {type="item",name="cow",amount=1}, {type="fluid", name="unpasteurized-milk", amount=450}, }
 data.raw["recipe"]["egg"].ingredients ={ {type="item",name="chicken",amount=1}, {type="item",name="nutrient1",amount=10}, {type="fluid",name="water",amount=5} }
 data.raw["recipe"]["egg"].results ={ {type="item",name="chicken",amount=1}, {type="item", name="egg", amount=3}, }
 
-
-
-
-
-
-
-
-
+for _, v in ipairs(prod_recipes) do
+	print(v)
+    data.raw["recipe"][v].allow_productivity = true
+end
 

@@ -117,7 +117,7 @@ data:extend {
       },
       {
         type = "unlock-recipe",
-        recipe = "u-milk"
+        recipe = "unpasteurized-milk"
       },
       {
         type = "unlock-recipe",
@@ -1689,8 +1689,8 @@ end
 --  add animal recipes to animal husbandry
 --table.insert(data.raw["technology"]["animal-husbandry"].effects, 2, {type="unlock-recipe", recipe="egg-water"})
 --table.insert(data.raw["technology"]["animal-husbandry"].effects, 3, {type="unlock-recipe", recipe="egg-water-food"})
---table.insert(data.raw["technology"]["animal-husbandry"].effects, 8, {type="unlock-recipe", recipe="u-milk-water"})
---table.insert(data.raw["technology"]["animal-husbandry"].effects, 9, {type="unlock-recipe", recipe="u-milk-water-food"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 8, {type="unlock-recipe", recipe="unpasteurized-milk-water"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 9, {type="unlock-recipe", recipe="unpasteurized-milk-water-food"})
 
 
 	data.raw["technology"]["animal-husbandry"].effects =
@@ -1704,9 +1704,9 @@ end
       {type = "unlock-recipe",recipe = "chicken"},
       {type = "unlock-recipe",recipe = "chicken-recipe-egg"},
       {type = "unlock-recipe",recipe = "cow"},
-      {type = "unlock-recipe",recipe = "u-milk"},
-		--{type = "unlock-recipe",recipe = "u-milk-water"},
-		--{type = "unlock-recipe",recipe = "u-milk-water-food"},
+      {type = "unlock-recipe",recipe = "unpasteurized-milk"},
+		--{type = "unlock-recipe",recipe = "unpasteurized-milk-water"},
+		--{type = "unlock-recipe",recipe = "unpasteurized-milk-water-food"},
       {type = "unlock-recipe",recipe = "milk-pasteurization"},
       --{type = "unlock-recipe",recipe = "milk-filtering"},
       --{type = "unlock-recipe",recipe = "frosting"},

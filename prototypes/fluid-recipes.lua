@@ -380,7 +380,7 @@ data:extend(
 )
 
 
-data.raw["recipe"]["u-milk"].subgroup = "fluid-ingredient"
+data.raw["recipe"]["unpasteurized-milk"].subgroup = "fluid-ingredient"
 data.raw["recipe"]["milk-pasteurization"].subgroup = "fluid-ingredient"
 data.raw["recipe"]["milk-filtering"].subgroup = "fluid-ingredient"
 data.raw["recipe"]["butter-churning"].subgroup = "fluid-ingredient"
