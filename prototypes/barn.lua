@@ -107,7 +107,7 @@ if feature_flags["spoiling"] then
 --	data.raw["recipe"]["wool-ram-water-food"].category = "barn"
 end
 
-data.raw["recipe"]["chicken-recipe-egg"].categories = {"barn"}
+data.raw["recipe"]["chicken-egg"].categories = {"barn"}
 data.raw["recipe"]["breed-cow"].categories = {"barn"}
 data.raw["recipe"]["breed-pig"].categories = {"barn"}
 data.raw["recipe"]["breed-sheep"].categories = {"barn"}

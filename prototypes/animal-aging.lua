@@ -190,7 +190,7 @@ data.raw["recipe"]["breed-cow"].results = {
                 {type="item",name="calf-cow",amount=1, always_fresh = true, shared_probability = {min = 0, max = 0.9}},
                 {type="item",name="calf-bull",amount=1, always_fresh = true, shared_probability = {min = 0.85, max = 1}}  --  5% overlap of both
 			}
-data.raw["recipe"]["chicken-recipe-egg"].results = {
+data.raw["recipe"]["chicken-egg"].results = {
                 {type="item",name="chick",amount=1,independent_probability=0.25}  --  no need for baby-chick because eggs don't have spoilage (will need to add back if that is added)
 			}
 

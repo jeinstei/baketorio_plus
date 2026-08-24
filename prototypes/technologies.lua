@@ -109,7 +109,7 @@ data:extend {
       },
       {
         type = "unlock-recipe",
-        recipe = "chicken-recipe-egg"
+        recipe = "chicken-egg"
       },
       {
         type = "unlock-recipe",
@@ -1702,7 +1702,7 @@ end
 		--{type = "unlock-recipe",recipe = "egg-water"},
 		--{type = "unlock-recipe",recipe = "egg-water-food"},
       {type = "unlock-recipe",recipe = "chicken"},
-      {type = "unlock-recipe",recipe = "chicken-recipe-egg"},
+      {type = "unlock-recipe",recipe = "chicken-egg"},
       {type = "unlock-recipe",recipe = "cow"},
       {type = "unlock-recipe",recipe = "unpasteurized-milk"},
 		--{type = "unlock-recipe",recipe = "unpasteurized-milk-water"},
