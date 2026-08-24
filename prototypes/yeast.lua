@@ -58,7 +58,7 @@ data:extend(
 		  
 		{
 			type = "recipe",
-			name = "yeast-propagation-recipe",
+			name = "yeast-propagation",
 			localised_name = {"recipe-name.yeast-propagation"},
             categories = {"crafting-with-fluid"},
 			enabled = false,
@@ -73,7 +73,7 @@ data:extend(
 		},
 		{
 			type = "recipe",
-			name = "yeast-module-2-recipe",
+			name = "yeast-module-2",
 			localised_name = {"item-name.yeast-packet"},
             categories = {"crafting"},
 			enabled = false,
@@ -89,7 +89,7 @@ data:extend(
 		},
 		{
 			type = "recipe",
-			name = "yeast-module-3-recipe",
+			name = "yeast-module-3",
 			localised_name = {"item-name.bakers-flour"},
             categories = {"crafting"},
 			enabled = false,
@@ -127,7 +127,7 @@ data:extend(
 		--  yeast fruit scrubbing (50% chance to obtain, 90% chance to return fruit)
 		{
 			type = "recipe",
-			name = "yeast-apple-recipe",
+			name = "yeast-apple",
 			localised_name = {"recipe-name.yeast-apple"},
             categories = {"crafting"},
 			enabled = false,
@@ -145,7 +145,7 @@ data:extend(
 		},
 		{
 			type = "recipe",
-			name = "yeast-peach-recipe",
+			name = "yeast-peach",
 			localised_name = {"recipe-name.yeast-peach"},
             categories = {"crafting"},
 			enabled = false,
@@ -163,7 +163,7 @@ data:extend(
 		},
 		{
 			type = "recipe",
-			name = "yeast-lemon-recipe",
+			name = "yeast-lemon",
 			localised_name = {"recipe-name.yeast-lemon"},
             categories = {"crafting"},
 			enabled = false,
@@ -183,7 +183,7 @@ data:extend(
 )
 
 if feature_flags["spoiling"] then
-	for key,value in pairs(data.raw["recipe"]["yeast-propagation-recipe"].results) do
+	for key,value in pairs(data.raw["recipe"]["yeast-propagation"].results) do
 		value.reset_freshness_on_craft = true
 	end
 	data.raw["module"]["yeast-module"].spoil_ticks = 30*minute
@@ -245,30 +245,30 @@ for key,value in pairs(data.raw["recipe"]) do
 end
 
 --  list of recipes to use yeast and allow for productivity boost
-local yeast_productivity_recipes = {"apple-fritter-recipe", "basic-dough-box-recipe", "filo-dough-recipe", "hardtack-box-recipe",
-		"baklava-recipe", "pumpkin-batter-recipe", "advanced-cake-batter-recipe", "basic-batter-recipe", "blueberry-batter-recipe",
-		"cheese-batter-recipe", "chocolate-batter-recipe", "hardtack-recipe", "advanced-cake-batter-cake-recipe",
-		"basic-batter-cupcake-recipe", "blueberry-batter-scone-recipe", "cheese-batter-cake-recipe", "chocolate-batter-cupcake-recipe",
-		"basic-dough-recipe", "advanced-cake-batter-cupcake-recipe", "basic-batter-cake-recipe", "blueberry-batter-doughnut-recipe",
-		"chocolate-batter-cake-recipe", "sugar-dough-recipe", "pancake-batter-recipe", "blueberry-batter-muffin-recipe",
-		"egg-dough-recipe", "chocolate-batter-doughnut-recipe", "fryer-dough-recipe", "fryer-dough-doughnut-recipe",
-		"chocolate-chip-batter-recipe", "cinnamon-dough-recipe", "fryer-dough-bun-recipe", "basic-bread-recipe",
-		"sugar-bread-recipe", "egg-bread-recipe", "cinnamon-bread-recipe", "chocolate-chip-buttered-dough-recipe", "brownie-recipe"}
+local yeast_productivity_recipes = {"apple-fritter", "basic-dough-box", "filo-dough", "hardtack-box",
+		"baklava", "pumpkin-batter", "advanced-cake-batter", "basic-batter", "blueberry-batter",
+		"cheese-batter", "chocolate-batter", "hardtack", "advanced-cake-batter-cake",
+		"basic-batter-cupcake", "blueberry-batter-scone", "cheese-batter-cake", "chocolate-batter-cupcake",
+		"basic-dough", "advanced-cake-batter-cupcake", "basic-batter-cake", "blueberry-batter-doughnut",
+		"chocolate-batter-cake", "sugar-dough", "pancake-batter", "blueberry-batter-muffin",
+		"egg-dough", "chocolate-batter-doughnut", "fryer-dough", "fryer-dough-doughnut",
+		"chocolate-chip-batter", "cinnamon-dough", "fryer-dough-bun", "basic-bread",
+		"sugar-bread", "egg-bread", "cinnamon-bread", "chocolate-chip-buttered-dough", "brownie"}
 --  list of recipes to use yeast and only allow for speed (non-productivity) boost (only yeast and yeast packets)
-local yeast_speed_recipes = {"apple-pie-recipe", "buttered-dough-1-recipe", "buttered-dough-2-recipe", "buttered-dough-3-recipe",
-		"buttered-dough-4-recipe", "buttered-dough-5-recipe", "buttered-dough-6-recipe", "buttered-dough-7-recipe",
-		"chicken-pot-pie-recipe", "lemon-meringue-pie-recipe", "lemon-tart-recipe", "meat-pie-beef-recipe", "meat-pie-mutton-recipe",
-		"peach-cobbler-recipe", "pecan-pie-recipe", "pumpkin-cookie-recipe", "pumpkin-pie-recipe", "sausage-roll-recipe",
-		"blueberry-pie-recipe", "strawberry-pie-recipe", "apple-fritter-cooked-recipe", "fryer-dough-doughnut-cooked-recipe",
-		"fryer-dough-bun-cooked-recipe", "baklava-cooked-recipe", "pecan-pie-cooked-recipe", "pumpkin-cookie-cooked-recipe",
-		"pumpkin-pie-cooked-recipe", "basic-batter-cupcake-cooked-recipe", "pancake-cooked-recipe", "basic-batter-cake-cooked-recipe",
-		"chocolate-chip-croissant-cooked-recipe", "croissant-cooked-recipe",
-		"cheese-batter-cake-recipe", "chocolate-batter-cupcake-cooked-recipe", "chocolate-batter-cake-cooked-recipe",
-		"chocolate-batter-doughnut-cooked-recipe", "chocolate-chip-cookie-recipe", "apple-pie-cooked-recipe", "lemon-meringue-pie-cooked-recipe",
-		"lemon-tart-cooked-recipe", "peach-cobbler-cooked-recipe", "blueberry-batter-scone-cooked-recipe", "blueberry-batter-doughnut-cooked-recipe",
-		"blueberry-batter-muffin-cooked-recipe", "blueberry-pie-cooked-recipe", "strawberry-pie-cooked-recipe", "chocolate-chip-croissant-recipe",
-		"croissant-recipe", "advanced-cake-batter-cake-cooked-recipe", "advanced-cake-batter-cupcake-cooked-recipe", "chicken-pot-pie-cooked-recipe",
-		"meat-pie-cooked-recipe", "sausage-roll-recipe"}
+local yeast_speed_recipes = {"apple-pie", "buttered-dough-1", "buttered-dough-2", "buttered-dough-3",
+		"buttered-dough-4", "buttered-dough-5", "buttered-dough-6", "buttered-dough-7",
+		"chicken-pot-pie", "lemon-meringue-pie", "lemon-tart", "meat-pie-beef", "meat-pie-mutton",
+		"peach-cobbler", "pecan-pie", "pumpkin-cookie", "pumpkin-pie", "sausage-roll",
+		"blueberry-pie", "strawberry-pie", "apple-fritter-cooked", "fryer-dough-doughnut-cooked",
+		"fryer-dough-bun-cooked", "baklava-cooked", "pecan-pie-cooked", "pumpkin-cookie-cooked",
+		"pumpkin-pie-cooked", "basic-batter-cupcake-cooked", "pancake-cooked", "basic-batter-cake-cooked",
+		"chocolate-chip-croissant-cooked", "croissant-cooked",
+		"cheese-batter-cake", "chocolate-batter-cupcake-cooked", "chocolate-batter-cake-cooked",
+		"chocolate-batter-doughnut-cooked", "chocolate-chip-cookie", "apple-pie-cooked", "lemon-meringue-pie-cooked",
+		"lemon-tart-cooked", "peach-cobbler-cooked", "blueberry-batter-scone-cooked", "blueberry-batter-doughnut-cooked",
+		"blueberry-batter-muffin-cooked", "blueberry-pie-cooked", "strawberry-pie-cooked", "chocolate-chip-croissant",
+		"croissant", "advanced-cake-batter-cake-cooked", "advanced-cake-batter-cupcake-cooked", "chicken-pot-pie-cooked",
+		"meat-pie-cooked", "sausage-roll"}
 
 --  now that it's been removed from everything, set list of recipes that can use yeast, and loop through it (using same logic as above)
 for key,value in pairs(yeast_productivity_recipes) do

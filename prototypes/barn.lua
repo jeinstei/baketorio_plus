@@ -65,7 +65,7 @@ data:extend(
 		
     {
         type = "recipe",
-        name = "barn-recipe",
+        name = "barn",
         localised_name = {"item-name.barn"},
         categories = {"crafting"},
         subgroup = "production-machine",
@@ -92,25 +92,25 @@ end
 
 
 --  change to barn recipes
-data.raw["recipe"]["egg-recipe"].categories = {"barn"}
---data.raw["recipe"]["egg-water-recipe"].category = "barn"
---data.raw["recipe"]["egg-water-food-recipe"].category = "barn"
-data.raw["recipe"]["u-milk-recipe"].categories = {"barn"}
---data.raw["recipe"]["u-milk-water-recipe"].category = "barn"
---data.raw["recipe"]["u-milk-water-food-recipe"].category = "barn"
-data.raw["recipe"]["wool-recipe"].categories = {"barn"}
---data.raw["recipe"]["wool-water-recipe"].category = "barn"
---data.raw["recipe"]["wool-water-food-recipe"].category = "barn"
+data.raw["recipe"]["egg"].categories = {"barn"}
+--data.raw["recipe"]["egg-water"].category = "barn"
+--data.raw["recipe"]["egg-water-food"].category = "barn"
+data.raw["recipe"]["u-milk"].categories = {"barn"}
+--data.raw["recipe"]["u-milk-water"].category = "barn"
+--data.raw["recipe"]["u-milk-water-food"].category = "barn"
+data.raw["recipe"]["wool"].categories = {"barn"}
+--data.raw["recipe"]["wool-water"].category = "barn"
+--data.raw["recipe"]["wool-water-food"].category = "barn"
 if feature_flags["spoiling"] then
-	data.raw["recipe"]["wool-ram-recipe"].categories = {"barn"}
---	data.raw["recipe"]["wool-ram-water-recipe"].category = "barn"
---	data.raw["recipe"]["wool-ram-water-food-recipe"].category = "barn"
+	data.raw["recipe"]["wool-ram"].categories = {"barn"}
+--	data.raw["recipe"]["wool-ram-water"].category = "barn"
+--	data.raw["recipe"]["wool-ram-water-food"].category = "barn"
 end
 
 data.raw["recipe"]["chicken-recipe-egg"].categories = {"barn"}
-data.raw["recipe"]["breed-cow-recipe"].categories = {"barn"}
-data.raw["recipe"]["breed-pig-recipe"].categories = {"barn"}
-data.raw["recipe"]["breed-sheep-recipe"].categories = {"barn"}
+data.raw["recipe"]["breed-cow"].categories = {"barn"}
+data.raw["recipe"]["breed-pig"].categories = {"barn"}
+data.raw["recipe"]["breed-sheep"].categories = {"barn"}
 
 
 

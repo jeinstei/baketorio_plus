@@ -1,9 +1,9 @@
 local prod_recipes = {
-  "wood-frame-recipe",
-  "wood-ground-recipe",
-  "wood-pulp-recipe",
-  "wood-paper-recipe",
-  "paper-wrapper-recipe",
+  "wood-frame",
+  "wood-ground",
+  "wood-pulp",
+  "wood-paper",
+  "paper-wrapper",
 }
 
 for _, v in ipairs(prod_recipes) do
@@ -77,7 +77,7 @@ data:extend(
 		
         {
             type = "recipe",
-            name = "wood-frame-recipe",
+            name = "wood-frame",
 			localised_name = {"item-name.wood-frame"},
             categories = {"crafting"},
             energy_required = 3,
@@ -92,7 +92,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "wood-ground-recipe",
+            name = "wood-ground",
 			localised_name = {"item-name.wood-ground"},
             categories = {"advanced-crafting"},
             energy_required = 2,
@@ -106,7 +106,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "wood-pulp-recipe",
+            name = "wood-pulp",
 			localised_name = {"item-name.wood-pulp"},
             categories = {"chemistry"},
             energy_required = 4,
@@ -121,7 +121,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "wood-paper-recipe",
+            name = "wood-paper",
 			localised_name = {"item-name.paper"},
             categories = {"crafting-with-fluid"},
             energy_required = 20,
@@ -141,7 +141,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "paper-wrapper-recipe",
+            name = "paper-wrapper",
 			localised_name = {"item-name.paper-wrapper"},
             categories = {"crafting"},
             energy_required = 0.5,

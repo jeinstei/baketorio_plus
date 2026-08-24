@@ -8,8 +8,8 @@ data.raw["item"]["butter"].fuel_value = "8.11MJ"
 
 
 
---local old_strawberry_recipe = table.deepcopy(data.raw["recipe"]["strawberry-recipe"])
---new_strawberry_recipe.name="expensive-strawberry-recipe"
+--local old_strawberry_recipe = table.deepcopy(data.raw["recipe"]["strawberry"])
+--new_strawberry_recipe.name="expensive-strawberry"
 --new_strawberry_recipe.energy_require = old_straberry_recipe.energy_require*3
 --data:extend({expensive-straberry-recipe})
 

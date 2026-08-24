@@ -8,8 +8,8 @@ data:extend {
     prerequisites = {"automation"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "basic-dough-recipe"},
-      {type = "unlock-recipe",recipe = "basic-bread-recipe"},
+      {type = "unlock-recipe",recipe = "basic-dough"},
+      {type = "unlock-recipe",recipe = "basic-bread"},
     },
     unit =
     {
@@ -28,11 +28,11 @@ data:extend {
     prerequisites = {"leavening"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "sugarcane-recipe"},
+      {type = "unlock-recipe",recipe = "sugarcane"},
       {type = "unlock-recipe",recipe = "sugarcane-seeds"},
-      {type = "unlock-recipe",recipe = "sugar-recipe"},
-      {type = "unlock-recipe",recipe = "sugar-dough-recipe"},
-      {type = "unlock-recipe",recipe = "sugar-bread-recipe"},
+      {type = "unlock-recipe",recipe = "sugar"},
+      {type = "unlock-recipe",recipe = "sugar-dough"},
+      {type = "unlock-recipe",recipe = "sugar-bread"},
     },
     unit =
     {
@@ -51,13 +51,13 @@ data:extend {
     prerequisites = {"animal-husbandry","sugar"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "basic-batter-recipe"},
-      {type = "unlock-recipe",recipe = "basic-batter-cake-recipe"},
-      {type = "unlock-recipe",recipe = "basic-batter-cake-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "basic-batter-cake-cooked-frosted-recipe"},
-      {type = "unlock-recipe",recipe = "basic-batter-cupcake-recipe"},
-      {type = "unlock-recipe",recipe = "basic-batter-cupcake-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "basic-batter-cupcake-cooked-frosted-recipe"},
+      {type = "unlock-recipe",recipe = "basic-batter"},
+      {type = "unlock-recipe",recipe = "basic-batter-cake"},
+      {type = "unlock-recipe",recipe = "basic-batter-cake-cooked"},
+      {type = "unlock-recipe",recipe = "basic-batter-cake-cooked-frosted"},
+      {type = "unlock-recipe",recipe = "basic-batter-cupcake"},
+      {type = "unlock-recipe",recipe = "basic-batter-cupcake-cooked"},
+      {type = "unlock-recipe",recipe = "basic-batter-cupcake-cooked-frosted"},
     },
     unit =
     {
@@ -77,10 +77,10 @@ data:extend {
     effects =
     {
 
-      {type = "unlock-recipe",recipe = "fryer-dough-recipe"},
-      {type = "unlock-recipe",recipe = "fryer-dough-doughnut-recipe"},
-      {type = "unlock-recipe",recipe = "fryer-dough-doughnut-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "fryer-dough-doughnut-cooked-frosted-recipe"},
+      {type = "unlock-recipe",recipe = "fryer-dough"},
+      {type = "unlock-recipe",recipe = "fryer-dough-doughnut"},
+      {type = "unlock-recipe",recipe = "fryer-dough-doughnut-cooked"},
+      {type = "unlock-recipe",recipe = "fryer-dough-doughnut-cooked-frosted"},
     },
     unit =
     {
@@ -101,11 +101,11 @@ data:extend {
     {
       {
         type = "unlock-recipe",
-        recipe = "egg-recipe"
+        recipe = "egg"
       },
       {
         type = "unlock-recipe",
-        recipe = "chicken-recipe"
+        recipe = "chicken"
       },
       {
         type = "unlock-recipe",
@@ -113,11 +113,11 @@ data:extend {
       },
       {
         type = "unlock-recipe",
-        recipe = "cow-recipe"
+        recipe = "cow"
       },
       {
         type = "unlock-recipe",
-        recipe = "u-milk-recipe"
+        recipe = "u-milk"
       },
       {
         type = "unlock-recipe",
@@ -129,7 +129,7 @@ data:extend {
       },
       {
         type = "unlock-recipe",
-        recipe = "frosting-recipe"
+        recipe = "frosting"
       },
       {
         type = "unlock-recipe",
@@ -141,10 +141,10 @@ data:extend {
       },
       {
         type = "unlock-recipe",
-        recipe = "breed-cow-recipe"
+        recipe = "breed-cow"
       },
-      {type = "unlock-recipe",recipe = "egg-dough-recipe"},
-      {type = "unlock-recipe",recipe = "egg-bread-recipe"},
+      {type = "unlock-recipe",recipe = "egg-dough"},
+      {type = "unlock-recipe",recipe = "egg-bread"},
 
     },
     unit =
@@ -170,23 +170,23 @@ data:extend {
       },
       {
         type = "unlock-recipe",
-        recipe = "cocoa-beans-recipe"
+        recipe = "cocoa-beans"
       },
       {
         type = "unlock-recipe",
-        recipe = "cocoa-powder-recipe"
+        recipe = "cocoa-powder"
       },
-      {type = "unlock-recipe",recipe = "chocolate-batter-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-batter-cake-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-batter-cake-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-batter-cake-cooked-frosted-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-batter-cupcake-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-batter-cupcake-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-batter-cupcake-cooked-frosted-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-batter-doughnut-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-batter-doughnut-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-batter-doughnut-cooked-frosted-recipe"},
-      {type = "unlock-recipe",recipe = "brownie-recipe"},
+      {type = "unlock-recipe",recipe = "chocolate-batter"},
+      {type = "unlock-recipe",recipe = "chocolate-batter-cake"},
+      {type = "unlock-recipe",recipe = "chocolate-batter-cake-cooked"},
+      {type = "unlock-recipe",recipe = "chocolate-batter-cake-cooked-frosted"},
+      {type = "unlock-recipe",recipe = "chocolate-batter-cupcake"},
+      {type = "unlock-recipe",recipe = "chocolate-batter-cupcake-cooked"},
+      {type = "unlock-recipe",recipe = "chocolate-batter-cupcake-cooked-frosted"},
+      {type = "unlock-recipe",recipe = "chocolate-batter-doughnut"},
+      {type = "unlock-recipe",recipe = "chocolate-batter-doughnut-cooked"},
+      {type = "unlock-recipe",recipe = "chocolate-batter-doughnut-cooked-frosted"},
+      {type = "unlock-recipe",recipe = "brownie"},
     },
     unit =
     {
@@ -206,10 +206,10 @@ data:extend {
     prerequisites = {"logistic-science-pack"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "cheese-recipe"},
-      {type = "unlock-recipe",recipe = "cheese-batter-recipe"},
-      {type = "unlock-recipe",recipe = "cheese-batter-cake-recipe"},
-      {type = "unlock-recipe",recipe = "cheese-batter-cake-cooked-recipe"},
+      {type = "unlock-recipe",recipe = "cheese"},
+      {type = "unlock-recipe",recipe = "cheese-batter"},
+      {type = "unlock-recipe",recipe = "cheese-batter-cake"},
+      {type = "unlock-recipe",recipe = "cheese-batter-cake-cooked"},
     },
     unit =
     {
@@ -229,15 +229,15 @@ data:extend {
     prerequisites = {"chemical-science-pack"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "cinnamon-recipe"},
+      {type = "unlock-recipe",recipe = "cinnamon"},
       {type = "unlock-recipe",recipe = "cinnamon-seeds"},
-      {type = "unlock-recipe",recipe = "cinnamon-sugar-recipe"},
-      {type = "unlock-recipe",recipe = "fryer-dough-bun-recipe"},
-      {type = "unlock-recipe",recipe = "fryer-dough-bun-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "fryer-dough-bun-cooked-frosted-recipe"},
-      {type = "unlock-recipe",recipe = "cinnamon-dough-recipe"},
-      {type = "unlock-recipe",recipe = "cinnamon-bread-recipe"},
-      {type = "unlock-recipe",recipe = "cinnamon-sugar-doughnut-recipe"},
+      {type = "unlock-recipe",recipe = "cinnamon-sugar"},
+      {type = "unlock-recipe",recipe = "fryer-dough-bun"},
+      {type = "unlock-recipe",recipe = "fryer-dough-bun-cooked"},
+      {type = "unlock-recipe",recipe = "fryer-dough-bun-cooked-frosted"},
+      {type = "unlock-recipe",recipe = "cinnamon-dough"},
+      {type = "unlock-recipe",recipe = "cinnamon-bread"},
+      {type = "unlock-recipe",recipe = "cinnamon-sugar-doughnut"},
     },
     unit =
     {
@@ -257,16 +257,16 @@ data:extend {
     prerequisites = {"nutrient5"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "blueberries-recipe"},
+      {type = "unlock-recipe",recipe = "blueberries"},
       {type = "unlock-recipe",recipe = "blueberry-seeds"},
-      {type = "unlock-recipe",recipe = "blueberry-batter-recipe"},
-      {type = "unlock-recipe",recipe = "blueberry-batter-doughnut-recipe"},
-      {type = "unlock-recipe",recipe = "blueberry-batter-doughnut-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "blueberry-batter-scone-recipe"},
-      {type = "unlock-recipe",recipe = "blueberry-batter-scone-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "blueberry-batter-scone-cooked-frosted-recipe"},
-      {type = "unlock-recipe",recipe = "blueberry-batter-muffin-recipe"},
-      {type = "unlock-recipe",recipe = "blueberry-batter-muffin-cooked-recipe"},
+      {type = "unlock-recipe",recipe = "blueberry-batter"},
+      {type = "unlock-recipe",recipe = "blueberry-batter-doughnut"},
+      {type = "unlock-recipe",recipe = "blueberry-batter-doughnut-cooked"},
+      {type = "unlock-recipe",recipe = "blueberry-batter-scone"},
+      {type = "unlock-recipe",recipe = "blueberry-batter-scone-cooked"},
+      {type = "unlock-recipe",recipe = "blueberry-batter-scone-cooked-frosted"},
+      {type = "unlock-recipe",recipe = "blueberry-batter-muffin"},
+      {type = "unlock-recipe",recipe = "blueberry-batter-muffin-cooked"},
     },
     unit =
     {
@@ -287,7 +287,7 @@ data:extend {
     prerequisites = {"utility-science-pack"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "strawberries-recipe"},
+      {type = "unlock-recipe",recipe = "strawberries"},
       {type = "unlock-recipe",recipe = "strawberry-seeds"},
     },
     unit =
@@ -309,8 +309,8 @@ data:extend {
     prerequisites = {"utility-science-pack"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "chocolate-chip-batter-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-chip-cookie-recipe"},
+      {type = "unlock-recipe",recipe = "chocolate-chip-batter"},
+      {type = "unlock-recipe",recipe = "chocolate-chip-cookie"},
     },
     unit =
     {
@@ -334,13 +334,13 @@ data:extend {
     {
       {type = "unlock-recipe",recipe = "soda-ash"},
       {type = "unlock-recipe",recipe = "baking-soda"},
-      {type = "unlock-recipe",recipe = "advanced-cake-batter-recipe"},
-      {type = "unlock-recipe",recipe = "advanced-cake-batter-cake-recipe"},
-      {type = "unlock-recipe",recipe = "advanced-cake-batter-cake-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "advanced-cake-batter-cake-cooked-frosted-recipe"},
-      {type = "unlock-recipe",recipe = "advanced-cake-batter-cupcake-recipe"},
-      {type = "unlock-recipe",recipe = "advanced-cake-batter-cupcake-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "advanced-cake-batter-cupcake-cooked-frosted-recipe"},
+      {type = "unlock-recipe",recipe = "advanced-cake-batter"},
+      {type = "unlock-recipe",recipe = "advanced-cake-batter-cake"},
+      {type = "unlock-recipe",recipe = "advanced-cake-batter-cake-cooked"},
+      {type = "unlock-recipe",recipe = "advanced-cake-batter-cake-cooked-frosted"},
+      {type = "unlock-recipe",recipe = "advanced-cake-batter-cupcake"},
+      {type = "unlock-recipe",recipe = "advanced-cake-batter-cupcake-cooked"},
+      {type = "unlock-recipe",recipe = "advanced-cake-batter-cupcake-cooked-frosted"},
     },
     unit =
     {
@@ -385,10 +385,10 @@ data:extend {
     prerequisites = {"strawberries"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "blueberry-pie-recipe"},
-      {type = "unlock-recipe",recipe = "strawberry-pie-recipe"},
-      {type = "unlock-recipe",recipe = "blueberry-pie-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "strawberry-pie-cooked-recipe"},
+      {type = "unlock-recipe",recipe = "blueberry-pie"},
+      {type = "unlock-recipe",recipe = "strawberry-pie"},
+      {type = "unlock-recipe",recipe = "blueberry-pie-cooked"},
+      {type = "unlock-recipe",recipe = "strawberry-pie-cooked"},
     },
     unit =
     {
@@ -474,7 +474,7 @@ data:extend {
     prerequisites = {"automation", "nutrient1"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "wood-recipe"},
+      {type = "unlock-recipe",recipe = "wood"},
       {type = "unlock-recipe",recipe = "wood-recipe-water"},
     },
     unit =
@@ -496,11 +496,11 @@ data:extend {
     effects =
     {
 	  {type = "unlock-recipe",recipe = "chemical-plant"},
-      {type = "unlock-recipe",recipe = "wood-frame-recipe"},
-      {type = "unlock-recipe",recipe = "wood-ground-recipe"},
-      {type = "unlock-recipe",recipe = "wood-pulp-recipe"},
-      {type = "unlock-recipe",recipe = "wood-paper-recipe"},
-      {type = "unlock-recipe",recipe = "paper-wrapper-recipe"}
+      {type = "unlock-recipe",recipe = "wood-frame"},
+      {type = "unlock-recipe",recipe = "wood-ground"},
+      {type = "unlock-recipe",recipe = "wood-pulp"},
+      {type = "unlock-recipe",recipe = "wood-paper"},
+      {type = "unlock-recipe",recipe = "paper-wrapper"}
     },
     unit =
     {
@@ -521,7 +521,7 @@ data:extend {
     prerequisites = {"wood-processing"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "fertilized-water-recipe"},
+      {type = "unlock-recipe",recipe = "fertilized-water"},
       {type = "unlock-recipe",recipe = "wheat-recipe-fertilizer"},
       {type = "unlock-recipe",recipe = "wood-recipe-fertilizer"},
     },
@@ -545,9 +545,9 @@ data:extend {
     prerequisites = {"sugar", "concrete"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "bake-burner-boiler-recipe"},
-      {type = "unlock-recipe",recipe = "sugar-water-recipe"},
-      {type = "unlock-recipe",recipe = "syrup-recipe"}
+      {type = "unlock-recipe",recipe = "bake-burner-boiler"},
+      {type = "unlock-recipe",recipe = "sugar-water"},
+      {type = "unlock-recipe",recipe = "syrup"}
     },
     unit =
     {
@@ -568,8 +568,8 @@ data:extend {
     prerequisites = {"sugar"},
     effects =
     {
-      {type = "unlock-recipe", recipe = "vegetable-oil-wheat-recipe"},
-	  {type = "unlock-recipe", recipe = "vegetable-oil-sugarcane-recipe"}
+      {type = "unlock-recipe", recipe = "vegetable-oil-wheat"},
+	  {type = "unlock-recipe", recipe = "vegetable-oil-sugarcane"}
     },
     unit =
     {
@@ -590,9 +590,9 @@ data:extend {
     prerequisites = {"strawberries", "blueberries", "syrup", "cinnamon"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "pancake-batter-recipe"},
-      {type = "unlock-recipe",recipe = "pancake-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "pancakes-with-syrup-recipe"}
+      {type = "unlock-recipe",recipe = "pancake-batter"},
+      {type = "unlock-recipe",recipe = "pancake-cooked"},
+      {type = "unlock-recipe",recipe = "pancakes-with-syrup"}
     },
     unit =
     {
@@ -615,11 +615,11 @@ data:extend {
     effects =
     {
       {type = "unlock-recipe",recipe = "nuts-seeds"},
-      {type = "unlock-recipe",recipe = "nuts-recipe"},
+      {type = "unlock-recipe",recipe = "nuts"},
       {type = "unlock-recipe",recipe = "nuts-recipe-water"},
       {type = "unlock-recipe",recipe = "nuts-recipe-fertilizer"},
       {type = "unlock-recipe",recipe = "filter-nuts"},
-      {type = "unlock-recipe",recipe = "vegetable-oil-nuts-recipe"},
+      {type = "unlock-recipe",recipe = "vegetable-oil-nuts"},
     },
     unit =
     {
@@ -673,12 +673,12 @@ data:extend {
     effects =
     {
       {type = "unlock-recipe",recipe = "pumpkin-seeds"},
-      {type = "unlock-recipe",recipe = "pumpkin-recipe"},
+      {type = "unlock-recipe",recipe = "pumpkin"},
       {type = "unlock-recipe",recipe = "pumpkin-recipe-water"},
       {type = "unlock-recipe",recipe = "pumpkin-recipe-fertilizer"},
-      {type = "unlock-recipe",recipe = "metal-bucket-recipe"},
-      {type = "unlock-recipe",recipe = "pumpkin-pulp-recipe"},
-      {type = "unlock-recipe",recipe = "vegetable-oil-pumpkin-recipe"},
+      {type = "unlock-recipe",recipe = "metal-bucket"},
+      {type = "unlock-recipe",recipe = "pumpkin-pulp"},
+      {type = "unlock-recipe",recipe = "vegetable-oil-pumpkin"},
     },
     unit =
     {
@@ -701,10 +701,10 @@ data:extend {
     prerequisites = {"pumpkins"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "pumpkin-batter-recipe"},
-      {type = "unlock-recipe",recipe = "pumpkin-cookie-recipe"},
-      {type = "unlock-recipe",recipe = "pumpkin-cookie-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "pumpkin-cookie-glazed-recipe"},
+      {type = "unlock-recipe",recipe = "pumpkin-batter"},
+      {type = "unlock-recipe",recipe = "pumpkin-cookie"},
+      {type = "unlock-recipe",recipe = "pumpkin-cookie-cooked"},
+      {type = "unlock-recipe",recipe = "pumpkin-cookie-glazed"},
     },
     unit =
     {
@@ -727,13 +727,13 @@ data:extend {
     prerequisites = {"pumpkins", "nuts", "syrup", "lemons", "meringue"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "pumpkin-pie-recipe"},
-      {type = "unlock-recipe",recipe = "pumpkin-pie-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "pumpkin-pie-cooked-with-ice-cream-recipe"},
-      {type = "unlock-recipe",recipe = "pecan-pie-recipe"},
-      {type = "unlock-recipe",recipe = "pecan-pie-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "lemon-meringue-pie-recipe"},
-      {type = "unlock-recipe",recipe = "lemon-meringue-pie-cooked-recipe"},
+      {type = "unlock-recipe",recipe = "pumpkin-pie"},
+      {type = "unlock-recipe",recipe = "pumpkin-pie-cooked"},
+      {type = "unlock-recipe",recipe = "pumpkin-pie-cooked-with-ice-cream"},
+      {type = "unlock-recipe",recipe = "pecan-pie"},
+      {type = "unlock-recipe",recipe = "pecan-pie-cooked"},
+      {type = "unlock-recipe",recipe = "lemon-meringue-pie"},
+      {type = "unlock-recipe",recipe = "lemon-meringue-pie-cooked"},
     },
     unit =
     {
@@ -752,7 +752,7 @@ data:extend {
 --butterize (with just butterizer, a prereq for croissants)
 --advanced chocolate processing (chocolate sauce, cocoa butter, and white chocolate sauce, after chocolate tech and syrup and butterizer)
 --ice cream mixing (with both ice cream flavours, after ice cream and strawberries)
---ice cream sundae (neo and sundae, after advanced chocolate processing and ice cream mixing)"butterizer-recipe"
+--ice cream sundae (neo and sundae, after advanced chocolate processing and ice cream mixing)"butterizer"
   {
     type = "technology",
     name = "butterizer",
@@ -761,8 +761,8 @@ data:extend {
     icon = "__baketorio_plus__/graphics/butterizer_tech.png",
     prerequisites = {"utility-science-pack"},
     effects = {
-	  {type = "unlock-recipe",recipe = "butterizer-recipe"},
-      {type = "unlock-recipe",recipe = "buttered-dough-1-recipe"}
+	  {type = "unlock-recipe",recipe = "butterizer"},
+      {type = "unlock-recipe",recipe = "buttered-dough-1"}
 	},
     unit =
     {
@@ -785,11 +785,11 @@ data:extend {
     prerequisites = {"syrup", "cocoa", "butterizer", "production-science-pack"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "chocolate-sauce-recipe"},
-      {type = "unlock-recipe",recipe = "metal-bucket-recipe"},
-      {type = "unlock-recipe",recipe = "cocoa-butter-fluid-recipe"},
-      {type = "unlock-recipe",recipe = "cocoa-butter-recipe"},
-      {type = "unlock-recipe",recipe = "white-chocolate-sauce-recipe"},
+      {type = "unlock-recipe",recipe = "chocolate-sauce"},
+      {type = "unlock-recipe",recipe = "metal-bucket"},
+      {type = "unlock-recipe",recipe = "cocoa-butter-fluid"},
+      {type = "unlock-recipe",recipe = "cocoa-butter"},
+      {type = "unlock-recipe",recipe = "white-chocolate-sauce"},
     },
     unit =
     {
@@ -813,9 +813,9 @@ data:extend {
     prerequisites = {"ice-cream", "strawberries", "production-science-pack"},
     effects =
     {
-	  {type="unlock-recipe", recipe="strawberry-ice-cream-recipe"},
-	  {type="unlock-recipe", recipe="chocolate-ice-cream-recipe"},
-      {type = "unlock-recipe",recipe = "neapolitan-ice-cream-recipe"},
+	  {type="unlock-recipe", recipe="strawberry-ice-cream"},
+	  {type="unlock-recipe", recipe="chocolate-ice-cream"},
+      {type = "unlock-recipe",recipe = "neapolitan-ice-cream"},
     },
     unit =
     {
@@ -838,7 +838,7 @@ data:extend {
     prerequisites = {"advanced-chocolate-processing", "ice-cream-mixing"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "ice-cream-sundae-recipe"},
+      {type = "unlock-recipe",recipe = "ice-cream-sundae"},
     },
     unit =
     {
@@ -866,9 +866,9 @@ data:extend {
     prerequisites = {"nuts", "syrup", "utility-science-pack"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "filo-dough-recipe"},
-      {type = "unlock-recipe",recipe = "baklava-recipe"},
-      {type = "unlock-recipe",recipe = "baklava-cooked-recipe"},
+      {type = "unlock-recipe",recipe = "filo-dough"},
+      {type = "unlock-recipe",recipe = "baklava"},
+      {type = "unlock-recipe",recipe = "baklava-cooked"},
     },
     unit =
     {
@@ -892,13 +892,13 @@ data:extend {
     prerequisites = {"butterizer", "nuts"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "metal-bucket-recipe"},
-      {type = "unlock-recipe",recipe = "cocoa-butter-fluid-recipe"},
-      {type = "unlock-recipe",recipe = "cocoa-butter-recipe"},
-      {type = "unlock-recipe",recipe = "peanut-butter-fluid-recipe"},
-      {type = "unlock-recipe",recipe = "peanut-butter-recipe"},
-      {type = "unlock-recipe",recipe = "almond-butter-fluid-recipe"},
-      {type = "unlock-recipe",recipe = "almond-butter-recipe"},
+      {type = "unlock-recipe",recipe = "metal-bucket"},
+      {type = "unlock-recipe",recipe = "cocoa-butter-fluid"},
+      {type = "unlock-recipe",recipe = "cocoa-butter"},
+      {type = "unlock-recipe",recipe = "peanut-butter-fluid"},
+      {type = "unlock-recipe",recipe = "peanut-butter"},
+      {type = "unlock-recipe",recipe = "almond-butter-fluid"},
+      {type = "unlock-recipe",recipe = "almond-butter"},
     },
     unit =
     {
@@ -922,18 +922,18 @@ data:extend {
     prerequisites = {"butterizer", "advanced-chocolate-processing"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "buttered-dough-2-recipe"},
-      {type = "unlock-recipe",recipe = "buttered-dough-3-recipe"},
-      {type = "unlock-recipe",recipe = "buttered-dough-4-recipe"},
-      {type = "unlock-recipe",recipe = "buttered-dough-5-recipe"},
-      {type = "unlock-recipe",recipe = "buttered-dough-6-recipe"},
-      {type = "unlock-recipe",recipe = "buttered-dough-7-recipe"},
-      {type = "unlock-recipe",recipe = "croissant-recipe"},
-      {type = "unlock-recipe",recipe = "croissant-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-chip-buttered-dough-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-chip-croissant-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-chip-croissant-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "chocolate-chip-croissant-cooked-white-drizzle-recipe"},
+      {type = "unlock-recipe",recipe = "buttered-dough-2"},
+      {type = "unlock-recipe",recipe = "buttered-dough-3"},
+      {type = "unlock-recipe",recipe = "buttered-dough-4"},
+      {type = "unlock-recipe",recipe = "buttered-dough-5"},
+      {type = "unlock-recipe",recipe = "buttered-dough-6"},
+      {type = "unlock-recipe",recipe = "buttered-dough-7"},
+      {type = "unlock-recipe",recipe = "croissant"},
+      {type = "unlock-recipe",recipe = "croissant-cooked"},
+      {type = "unlock-recipe",recipe = "chocolate-chip-buttered-dough"},
+      {type = "unlock-recipe",recipe = "chocolate-chip-croissant"},
+      {type = "unlock-recipe",recipe = "chocolate-chip-croissant-cooked"},
+      {type = "unlock-recipe",recipe = "chocolate-chip-croissant-cooked-white-drizzle"},
     },
     unit =
     {
@@ -960,12 +960,12 @@ data:extend {
     prerequisites = {"animal-husbandry", "chemical-science-pack"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "butcher-recipe"},
-	  {type = "unlock-recipe",recipe = "plastic-bin-recipe"},
-      {type = "unlock-recipe",recipe = "beef-recipe"},
-      {type = "unlock-recipe",recipe = "pork-recipe"},
-      {type = "unlock-recipe",recipe = "chicken-meat-recipe"},
-      {type = "unlock-recipe",recipe = "mutton-recipe"}
+      {type = "unlock-recipe",recipe = "butcher"},
+	  {type = "unlock-recipe",recipe = "plastic-bin"},
+      {type = "unlock-recipe",recipe = "beef"},
+      {type = "unlock-recipe",recipe = "pork"},
+      {type = "unlock-recipe",recipe = "chicken-meat"},
+      {type = "unlock-recipe",recipe = "mutton"}
     },
     unit =
     {
@@ -987,10 +987,10 @@ data:extend {
     prerequisites = {"animal-processing"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "gravy-beef-recipe"},
-      {type = "unlock-recipe",recipe = "gravy-pork-recipe"},
-      {type = "unlock-recipe",recipe = "gravy-chicken-recipe"},
-      {type = "unlock-recipe",recipe = "gravy-mutton-recipe"}
+      {type = "unlock-recipe",recipe = "gravy-beef"},
+      {type = "unlock-recipe",recipe = "gravy-pork"},
+      {type = "unlock-recipe",recipe = "gravy-chicken"},
+      {type = "unlock-recipe",recipe = "gravy-mutton"}
     },
     unit =
     {
@@ -1012,13 +1012,13 @@ data:extend {
     prerequisites = {"gravy", "pie", "butterizer"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "meat-pie-beef-recipe"},
-      {type = "unlock-recipe",recipe = "meat-pie-mutton-recipe"},
-      {type = "unlock-recipe",recipe = "meat-pie-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "chicken-pot-pie-recipe"},
-      {type = "unlock-recipe",recipe = "chicken-pot-pie-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "sausage-roll-recipe"},
-      {type = "unlock-recipe",recipe = "sausage-roll-cooked-recipe"},
+      {type = "unlock-recipe",recipe = "meat-pie-beef"},
+      {type = "unlock-recipe",recipe = "meat-pie-mutton"},
+      {type = "unlock-recipe",recipe = "meat-pie-cooked"},
+      {type = "unlock-recipe",recipe = "chicken-pot-pie"},
+      {type = "unlock-recipe",recipe = "chicken-pot-pie-cooked"},
+      {type = "unlock-recipe",recipe = "sausage-roll"},
+      {type = "unlock-recipe",recipe = "sausage-roll-cooked"},
     },
     unit =
     {
@@ -1077,8 +1077,8 @@ data:extend {
     prerequisites = {"animal-husbandry", "logistic-science-pack"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "meringue-recipe"},
-      {type = "unlock-recipe",recipe = "meringue-cookies-recipe"},
+      {type = "unlock-recipe",recipe = "meringue"},
+      {type = "unlock-recipe",recipe = "meringue-cookies"},
     },
     unit =
     {
@@ -1099,14 +1099,14 @@ data:extend {
     prerequisites = {"cinnamon", "vegetable-oil"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "bushel-basket-recipe"},
+      {type = "unlock-recipe",recipe = "bushel-basket"},
       {type = "unlock-recipe",recipe = "apple-seeds"},
-      {type = "unlock-recipe",recipe = "apples-recipe"},
+      {type = "unlock-recipe",recipe = "apples"},
       {type = "unlock-recipe",recipe = "apples-recipe-water"},
       {type = "unlock-recipe",recipe = "apples-recipe-fertilizer"},
-      {type = "unlock-recipe",recipe = "apple-fritter-recipe"},
-      {type = "unlock-recipe",recipe = "apple-fritter-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "apple-fritter-glazed-recipe"},
+      {type = "unlock-recipe",recipe = "apple-fritter"},
+      {type = "unlock-recipe",recipe = "apple-fritter-cooked"},
+      {type = "unlock-recipe",recipe = "apple-fritter-glazed"},
     },
     unit =
     {
@@ -1128,15 +1128,15 @@ data:extend {
     prerequisites = {"cinnamon"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "bushel-basket-recipe"},
+      {type = "unlock-recipe",recipe = "bushel-basket"},
       {type = "unlock-recipe",recipe = "peach-seeds"},
-      {type = "unlock-recipe",recipe = "peaches-recipe"},
+      {type = "unlock-recipe",recipe = "peaches"},
       {type = "unlock-recipe",recipe = "peaches-recipe-water"},
       {type = "unlock-recipe",recipe = "peaches-recipe-fertilizer"},
-      {type = "unlock-recipe",recipe = "peach-cobbler-recipe"},
-      {type = "unlock-recipe",recipe = "cobbler-mixture-recipe"},
-      {type = "unlock-recipe",recipe = "peach-cobbler-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "peach-cobbler-cooked-with-ice-cream-recipe"},
+      {type = "unlock-recipe",recipe = "peach-cobbler"},
+      {type = "unlock-recipe",recipe = "cobbler-mixture"},
+      {type = "unlock-recipe",recipe = "peach-cobbler-cooked"},
+      {type = "unlock-recipe",recipe = "peach-cobbler-cooked-with-ice-cream"},
     },
     unit =
     {
@@ -1158,16 +1158,16 @@ data:extend {
     prerequisites = {"animal-processing", "butterizer"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "bushel-basket-recipe"},
+      {type = "unlock-recipe",recipe = "bushel-basket"},
       {type = "unlock-recipe",recipe = "lemon-seeds"},
-      {type = "unlock-recipe",recipe = "lemons-recipe"},
+      {type = "unlock-recipe",recipe = "lemons"},
       {type = "unlock-recipe",recipe = "lemons-recipe-water"},
       {type = "unlock-recipe",recipe = "lemons-recipe-fertilizer"},
-      {type = "unlock-recipe",recipe = "lemon-juice-recipe"},
-      {type = "unlock-recipe",recipe = "lemon-curd-recipe"},
-      {type = "unlock-recipe",recipe = "lemon-tart-recipe"},
-      {type = "unlock-recipe",recipe = "lemon-tart-cooked-recipe"},
-      {type = "unlock-recipe",recipe = "buttermilk-recipe"},
+      {type = "unlock-recipe",recipe = "lemon-juice"},
+      {type = "unlock-recipe",recipe = "lemon-curd"},
+      {type = "unlock-recipe",recipe = "lemon-tart"},
+      {type = "unlock-recipe",recipe = "lemon-tart-cooked"},
+      {type = "unlock-recipe",recipe = "buttermilk"},
     },
     unit =
     {
@@ -1446,7 +1446,7 @@ data:extend {
     effects =
     {
       {type = "unlock-recipe",recipe = "milk-filtering"},
-      {type = "unlock-recipe",recipe = "frosting-recipe"},
+      {type = "unlock-recipe",recipe = "frosting"},
       {type = "unlock-recipe",recipe = "butter-churning"},
       {type = "unlock-recipe",recipe = "butter-solidification"},
     },
@@ -1469,9 +1469,9 @@ data:extend {
     prerequisites = {"animal-husbandry"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "yarn-recipe"},
-      {type = "unlock-recipe",recipe = "fabric-recipe"},
-      {type = "unlock-recipe",recipe = "bag-recipe"},
+      {type = "unlock-recipe",recipe = "yarn"},
+      {type = "unlock-recipe",recipe = "fabric"},
+      {type = "unlock-recipe",recipe = "bag"},
     },
     unit =
     {
@@ -1491,9 +1491,9 @@ data:extend {
     prerequisites = {"wool-processing", "leavening"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "flour-recipe"},
-      {type = "unlock-recipe",recipe = "hardtack-recipe"},
-      {type = "unlock-recipe",recipe = "basic-dough-recipe"},
+      {type = "unlock-recipe",recipe = "flour"},
+      {type = "unlock-recipe",recipe = "hardtack"},
+      {type = "unlock-recipe",recipe = "basic-dough"},
     },
     unit =
     {
@@ -1517,9 +1517,9 @@ data:extend {
     prerequisites = {"syrup", "chemical-science-pack"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "yeast-propagation-recipe"},
-      {type = "unlock-recipe",recipe = "yeast-module-2-recipe"},
-      {type = "unlock-recipe",recipe = "yeast-module-3-recipe"},
+      {type = "unlock-recipe",recipe = "yeast-propagation"},
+      {type = "unlock-recipe",recipe = "yeast-module-2"},
+      {type = "unlock-recipe",recipe = "yeast-module-3"},
       {type = "unlock-recipe",recipe = "yeast-module-3-recipe-2"},
     },
     unit =
@@ -1544,7 +1544,7 @@ data:extend {
     prerequisites = {"yeast", "apples"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "yeast-apple-recipe"},
+      {type = "unlock-recipe",recipe = "yeast-apple"},
     },
     research_trigger =
     {
@@ -1562,7 +1562,7 @@ data:extend {
     prerequisites = {"yeast", "lemons"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "yeast-lemon-recipe"},
+      {type = "unlock-recipe",recipe = "yeast-lemon"},
     },
     research_trigger =
     {
@@ -1580,7 +1580,7 @@ data:extend {
     prerequisites = {"yeast", "peaches"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "yeast-peach-recipe"},
+      {type = "unlock-recipe",recipe = "yeast-peach"},
     },
     research_trigger =
     {
@@ -1596,16 +1596,16 @@ data:extend {
 
 data.raw["recipe"]["chemical-plant"].enabled = false;
 
-data.raw["recipe"]["hardtack-recipe"].enabled = false;  --  start with the box flour and unlock this later
-data.raw["recipe"]["flour-recipe"].enabled = false;
+data.raw["recipe"]["hardtack"].enabled = false;  --  start with the box flour and unlock this later
+data.raw["recipe"]["flour"].enabled = false;
 --  remove dough recipe add new recipe in place to leavening
 for key,value in pairs(data.raw["technology"]["leavening"].effects) do
-	if value.recipe == "basic-dough-recipe" then
+	if value.recipe == "basic-dough" then
 		table.remove(data.raw["technology"]["leavening"].effects, key)
 		break
 	end
 end
-table.insert(data.raw["technology"]["leavening"].effects, 1, {type="unlock-recipe", recipe="basic-dough-box-recipe"})
+table.insert(data.raw["technology"]["leavening"].effects, 1, {type="unlock-recipe", recipe="basic-dough-box"})
 --  add leavening 2 as prereq for sugar (bags)
 table.insert(data.raw["technology"]["sugar"].prerequisites, "leavening-2")
 
@@ -1647,9 +1647,9 @@ table.insert(data.raw["technology"]["rocket-silo"].prerequisites, "croissants")
 
 
 --  add apple pies to pie
-table.insert(data.raw["technology"]["pie"].effects, {type="unlock-recipe", recipe="apple-pie-recipe"})
-table.insert(data.raw["technology"]["pie"].effects, {type="unlock-recipe", recipe="apple-pie-cooked-recipe"})
-table.insert(data.raw["technology"]["pie"].effects, {type="unlock-recipe", recipe="apple-pie-cooked-with-ice-cream-recipe"})
+table.insert(data.raw["technology"]["pie"].effects, {type="unlock-recipe", recipe="apple-pie"})
+table.insert(data.raw["technology"]["pie"].effects, {type="unlock-recipe", recipe="apple-pie-cooked"})
+table.insert(data.raw["technology"]["pie"].effects, {type="unlock-recipe", recipe="apple-pie-cooked-with-ice-cream"})
 --  add ice cream and apples as prereqs to pie
 table.insert(data.raw["technology"]["pie"].prerequisites, "ice-cream")
 table.insert(data.raw["technology"]["pie"].prerequisites, "apples")
@@ -1668,7 +1668,7 @@ table.insert(data.raw["technology"]["strawberries"].effects, 2, {type="unlock-re
 table.insert(data.raw["technology"]["strawberries"].effects, 3, {type="unlock-recipe", recipe="strawberries-recipe-fertilizer"})
 
 --  add pie tin to pie
-table.insert(data.raw["technology"]["pie"].effects, 1, {type="unlock-recipe", recipe="pie-tin-recipe"})
+table.insert(data.raw["technology"]["pie"].effects, 1, {type="unlock-recipe", recipe="pie-tin"})
 
 --  remove chem lab
 --for key,value in pairs(data.raw["technology"]["animal-husbandry"].effects) do
@@ -1687,42 +1687,42 @@ end
 ]]
 --table.remove(data.raw["technology"]["animal-husbandry"].effects, 1)  --  remove chem lab
 --  add animal recipes to animal husbandry
---table.insert(data.raw["technology"]["animal-husbandry"].effects, 2, {type="unlock-recipe", recipe="egg-water-recipe"})
---table.insert(data.raw["technology"]["animal-husbandry"].effects, 3, {type="unlock-recipe", recipe="egg-water-food-recipe"})
---table.insert(data.raw["technology"]["animal-husbandry"].effects, 8, {type="unlock-recipe", recipe="u-milk-water-recipe"})
---table.insert(data.raw["technology"]["animal-husbandry"].effects, 9, {type="unlock-recipe", recipe="u-milk-water-food-recipe"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 2, {type="unlock-recipe", recipe="egg-water"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 3, {type="unlock-recipe", recipe="egg-water-food"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 8, {type="unlock-recipe", recipe="u-milk-water"})
+--table.insert(data.raw["technology"]["animal-husbandry"].effects, 9, {type="unlock-recipe", recipe="u-milk-water-food"})
 
 
 	data.raw["technology"]["animal-husbandry"].effects =
     {
 	    {type="unlock-recipe", recipe= "iron-stick"},
 	    {type="unlock-recipe", recipe= "chemical-plant"},
-	    {type="unlock-recipe", recipe= "barn-recipe"},
-      {type = "unlock-recipe",recipe = "egg-recipe"},
-		--{type = "unlock-recipe",recipe = "egg-water-recipe"},
-		--{type = "unlock-recipe",recipe = "egg-water-food-recipe"},
-      {type = "unlock-recipe",recipe = "chicken-recipe"},
+	    {type="unlock-recipe", recipe= "barn"},
+      {type = "unlock-recipe",recipe = "egg"},
+		--{type = "unlock-recipe",recipe = "egg-water"},
+		--{type = "unlock-recipe",recipe = "egg-water-food"},
+      {type = "unlock-recipe",recipe = "chicken"},
       {type = "unlock-recipe",recipe = "chicken-recipe-egg"},
-      {type = "unlock-recipe",recipe = "cow-recipe"},
-      {type = "unlock-recipe",recipe = "u-milk-recipe"},
-		--{type = "unlock-recipe",recipe = "u-milk-water-recipe"},
-		--{type = "unlock-recipe",recipe = "u-milk-water-food-recipe"},
+      {type = "unlock-recipe",recipe = "cow"},
+      {type = "unlock-recipe",recipe = "u-milk"},
+		--{type = "unlock-recipe",recipe = "u-milk-water"},
+		--{type = "unlock-recipe",recipe = "u-milk-water-food"},
       {type = "unlock-recipe",recipe = "milk-pasteurization"},
       --{type = "unlock-recipe",recipe = "milk-filtering"},
-      --{type = "unlock-recipe",recipe = "frosting-recipe"},
+      --{type = "unlock-recipe",recipe = "frosting"},
       --{type = "unlock-recipe",recipe = "butter-churning"},
       --{type = "unlock-recipe",recipe = "butter-solidification"},
-      {type = "unlock-recipe",recipe = "breed-cow-recipe"},
-		{type = "unlock-recipe",recipe = "pig-recipe"},
-		{type = "unlock-recipe",recipe = "breed-pig-recipe"},
+      {type = "unlock-recipe",recipe = "breed-cow"},
+		{type = "unlock-recipe",recipe = "pig"},
+		{type = "unlock-recipe",recipe = "breed-pig"},
 		
-		{type = "unlock-recipe",recipe = "sheep-recipe"},
-		{type = "unlock-recipe",recipe = "breed-sheep-recipe"},
-		{type = "unlock-recipe",recipe = "wool-recipe"},
-		--{type = "unlock-recipe",recipe = "wool-water-recipe"},
-		--{type = "unlock-recipe",recipe = "wool-water-food-recipe"},
-      {type = "unlock-recipe",recipe = "egg-dough-recipe"},
-      {type = "unlock-recipe",recipe = "egg-bread-recipe"}
+		{type = "unlock-recipe",recipe = "sheep"},
+		{type = "unlock-recipe",recipe = "breed-sheep"},
+		{type = "unlock-recipe",recipe = "wool"},
+		--{type = "unlock-recipe",recipe = "wool-water"},
+		--{type = "unlock-recipe",recipe = "wool-water-food"},
+      {type = "unlock-recipe",recipe = "egg-dough"},
+      {type = "unlock-recipe",recipe = "egg-bread"}
 	}
 	
 	print(serpent.block(data.raw["technology"]["animal-husbandry"].effects))
@@ -1733,28 +1733,28 @@ table.insert(data.raw["technology"]["animal-husbandry"].prerequisites, "steel-pr
 
 --  add boar and bull meat processing recipes if they are here as well as ram shearing (spoilage is enabled)
 if feature_flags["spoiling"] then
-	table.insert(data.raw["technology"]["animal-processing"].effects, 4, {type="unlock-recipe", recipe="beef-bull-recipe"})
-	table.insert(data.raw["technology"]["animal-processing"].effects, 6, {type="unlock-recipe", recipe="pork-boar-recipe"})
-	table.insert(data.raw["technology"]["animal-processing"].effects, 9, {type="unlock-recipe", recipe="mutton-ram-recipe"})
-	--table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water-food-recipe"})
-	--table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water-recipe"})
-	--table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-recipe"})
-	table.insert(data.raw["technology"]["animal-husbandry"].effects, 13, {type="unlock-recipe", recipe="wool-ram-recipe"})
+	table.insert(data.raw["technology"]["animal-processing"].effects, 4, {type="unlock-recipe", recipe="beef-bull"})
+	table.insert(data.raw["technology"]["animal-processing"].effects, 6, {type="unlock-recipe", recipe="pork-boar"})
+	table.insert(data.raw["technology"]["animal-processing"].effects, 9, {type="unlock-recipe", recipe="mutton-ram"})
+	--table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water-food"})
+	--table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram-water"})
+	--table.insert(data.raw["technology"]["animal-husbandry"].effects, 19, {type="unlock-recipe", recipe="wool-ram"})
+	table.insert(data.raw["technology"]["animal-husbandry"].effects, 13, {type="unlock-recipe", recipe="wool-ram"})
 end
 
 --  add electric boiler to the electric furnace tech (already made syrup a prereq for it above)
-table.insert(data.raw["technology"]["advanced-material-processing-2"].effects, {type="unlock-recipe", recipe="bake-electric-boiler-recipe"})
+table.insert(data.raw["technology"]["advanced-material-processing-2"].effects, {type="unlock-recipe", recipe="bake-electric-boiler"})
 
 --  add respective vegetable oil recipes
-table.insert(data.raw["technology"]["cocoa"].effects, {type="unlock-recipe", recipe="vegetable-oil-cocoa-bean-recipe"})
+table.insert(data.raw["technology"]["cocoa"].effects, {type="unlock-recipe", recipe="vegetable-oil-cocoa-bean"})
 
 --  add plastic basket to both berries (as they are now simultaneous) and plastic bin to ice cream
-table.insert(data.raw["technology"]["strawberries"].effects, {type="unlock-recipe", recipe="plastic-basket-recipe"})
-table.insert(data.raw["technology"]["blueberries"].effects, {type="unlock-recipe", recipe="plastic-basket-recipe"})
-table.insert(data.raw["technology"]["ice-cream"].effects, {type="unlock-recipe", recipe="plastic-bin-recipe"})
+table.insert(data.raw["technology"]["strawberries"].effects, {type="unlock-recipe", recipe="plastic-basket"})
+table.insert(data.raw["technology"]["blueberries"].effects, {type="unlock-recipe", recipe="plastic-basket"})
+table.insert(data.raw["technology"]["ice-cream"].effects, {type="unlock-recipe", recipe="plastic-bin"})
 
 --  add real chocolate chips
-table.insert(data.raw["technology"]["chocolate-chips"].effects, {type="unlock-recipe", recipe="chocolate-chips-recipe"})
+table.insert(data.raw["technology"]["chocolate-chips"].effects, {type="unlock-recipe", recipe="chocolate-chips"})
 
 
 --  remove yellow science from ice cream and pie and set ice cream to follow blue science and pie to follow strawberries and blueberries
