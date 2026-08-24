@@ -1725,7 +1725,7 @@ end
       {type = "unlock-recipe",recipe = "egg-bread"}
 	}
 	
-	print(serpent.block(data.raw["technology"]["animal-husbandry"].effects))
+	-- print(serpent.block(data.raw["technology"]["animal-husbandry"].effects))
 	
 --  add steel as a prereq for animal husbandry (due to steel for chem plant)
 table.insert(data.raw["technology"]["animal-husbandry"].prerequisites, "steel-processing")

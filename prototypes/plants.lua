@@ -856,7 +856,6 @@ data.raw["recipe"]["egg"].ingredients ={ {type="item",name="chicken",amount=1}, 
 data.raw["recipe"]["egg"].results ={ {type="item",name="chicken",amount=1}, {type="item", name="egg", amount=3}, }
 
 for _, v in ipairs(prod_recipes) do
-	print(v)
     data.raw["recipe"][v].allow_productivity = true
 end
 
