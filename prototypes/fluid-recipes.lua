@@ -1,26 +1,22 @@
 -- Add recipe names here to add them to productivity modules
 local prod_recipes = {
-  "sugar-water-recipe",
-  "syrup-recipe",
-  "fertilized-water-recipe",
-  "vegetable-oil-wheat-recipe",
-  "vegetable-oil-sugarcane-recipe",
-  "vegetable-oil-cocoa-bean-recipe",
-  "vegetable-oil-pumpkin-recipe",
-  "vegetable-oil-nuts-recipe",
-  "chocolate-sauce-recipe",
-  "white-chocolate-sauce-recipe",
+  "sugar-water",
+  "syrup",
+  "fertilized-water",
+  "vegetable-oil-wheat",
+  "vegetable-oil-sugarcane",
+  "vegetable-oil-cocoa-bean",
+  "vegetable-oil-pumpkin",
+  "vegetable-oil-nuts",
+  "chocolate-sauce",
+  "white-chocolate-sauce",
 }
-
-for _, v in ipairs(prod_recipes) do
-	baketorio.add_to_prod_mod(v)
-end
 
 data:extend(
     {
         {
             type = "recipe",
-            name = "fertilized-water-recipe",
+            name = "fertilized-water",
 			localised_name = {"fluid-name.fertilized-water"},
             categories = {"chemistry"},
             subgroup = "fluid-recipes",
@@ -37,7 +33,7 @@ data:extend(
 		
         {
             type = "recipe",
-            name = "sugar-water-recipe",
+            name = "sugar-water",
 			localised_name = {"fluid-name.sugar-water"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -53,7 +49,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "syrup-recipe",
+            name = "syrup",
 			localised_name = {"fluid-name.syrup"},
             categories = {"bake-boiling"},
             subgroup = "fluid-ingredient",
@@ -70,7 +66,7 @@ data:extend(
 		
         {
             type = "recipe",
-            name = "vegetable-oil-wheat-recipe",
+            name = "vegetable-oil-wheat",
 			localised_name = {"recipe-name.vegetable-oil-wheat-recipe"},  --do for each variation
             categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
@@ -89,7 +85,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "vegetable-oil-sugarcane-recipe",
+            name = "vegetable-oil-sugarcane",
 			localised_name = {"recipe-name.vegetable-oil-sugarcane-recipe"},
             categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
@@ -108,7 +104,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "vegetable-oil-cocoa-bean-recipe",
+            name = "vegetable-oil-cocoa-bean",
 			localised_name = {"recipe-name.vegetable-oil-cocoa-bean-recipe"},
             categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
@@ -127,7 +123,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "vegetable-oil-pumpkin-recipe",
+            name = "vegetable-oil-pumpkin",
 			localised_name = {"recipe-name.vegetable-oil-pumpkin-recipe"},
             categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
@@ -146,7 +142,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "vegetable-oil-nuts-recipe",
+            name = "vegetable-oil-nuts",
 			localised_name = {"recipe-name.vegetable-oil-nuts-recipe"},
             categories = {"crafting-with-fluid"},
             subgroup = "fluid-recipes",
@@ -167,7 +163,7 @@ data:extend(
 		
         {
             type = "recipe",
-            name = "chocolate-sauce-recipe",
+            name = "chocolate-sauce",
 			localised_name = {"fluid-name.chocolate-sauce"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -184,7 +180,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "white-chocolate-sauce-recipe",
+            name = "white-chocolate-sauce",
 			localised_name = {"fluid-name.white-chocolate-sauce"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -206,7 +202,7 @@ data:extend(
 		--  gravy can be made with any meat
         {
             type = "recipe",
-            name = "gravy-beef-recipe",
+            name = "gravy-beef",
 			localised_name = {"recipe-name.gravy-beef-recipe"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -226,7 +222,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "gravy-pork-recipe",
+            name = "gravy-pork",
 			localised_name = {"recipe-name.gravy-pork-recipe"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -246,7 +242,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "gravy-chicken-recipe",
+            name = "gravy-chicken",
 			localised_name = {"recipe-name.gravy-chicken-recipe"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -266,7 +262,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "gravy-mutton-recipe",
+            name = "gravy-mutton",
 			localised_name = {"recipe-name.gravy-mutton-recipe"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -286,7 +282,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "cobbler-mixture-recipe",
+            name = "cobbler-mixture",
 			localised_name = {"fluid-name.cobbler-mixture"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -301,7 +297,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "lemon-juice-recipe",
+            name = "lemon-juice",
 			localised_name = {"fluid-name.lemon-juice"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -320,7 +316,7 @@ data:extend(
 		
         {
             type = "recipe",
-            name = "buttermilk-recipe",
+            name = "buttermilk",
 			localised_name = {"fluid-name.buttermilk"},
             categories = {"chemistry"},
             subgroup = "fluid-ingredient",
@@ -337,7 +333,7 @@ data:extend(
 		
         {
             type = "recipe",
-            name = "cocoa-butter-fluid-recipe",
+            name = "cocoa-butter-fluid",
 			localised_name = {"fluid-name.cocoa-butter-fluid"},
             categories = {"butterize"},
             subgroup = "fluid-ingredient",
@@ -352,7 +348,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "peanut-butter-fluid-recipe",
+            name = "peanut-butter-fluid",
 			localised_name = {"fluid-name.peanut-butter-fluid"},
             categories = {"butterize"},
             subgroup = "fluid-ingredient",
@@ -367,7 +363,7 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "almond-butter-fluid-recipe",
+            name = "almond-butter-fluid",
 			localised_name = {"fluid-name.almond-butter-fluid"},
             categories = {"butterize"},
             subgroup = "fluid-ingredient",
@@ -384,12 +380,11 @@ data:extend(
 )
 
 
-data.raw["recipe"]["u-milk-recipe"].subgroup = "fluid-ingredient"
+data.raw["recipe"]["unpasteurized-milk"].subgroup = "fluid-ingredient"
 data.raw["recipe"]["milk-pasteurization"].subgroup = "fluid-ingredient"
 data.raw["recipe"]["milk-filtering"].subgroup = "fluid-ingredient"
 data.raw["recipe"]["butter-churning"].subgroup = "fluid-ingredient"
 
-
-
-
-
+for _, v in ipairs(prod_recipes) do
+    data.raw["recipe"][v].allow_productivity = true
+end

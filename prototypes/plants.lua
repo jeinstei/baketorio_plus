@@ -1,15 +1,15 @@
 
 local prod_recipes = {
   "nuts-seeds",
-  "nuts-recipe",
+  "nuts",
   "nuts-recipe-water",
   "nuts-recipe-fertilizer",
   "pumpkin-seeds",
-  "pumpkin-recipe",
+  "pumpkin",
   "pumpkin-recipe-water",
   "pumpkin-recipe-fertilizer",
   
-  "wood-recipe",
+  "wood",
   "wood-recipe-water",
   "wood-recipe-fertilizer",
 			
@@ -26,42 +26,37 @@ local prod_recipes = {
   "strawberries-recipe-water",
   "strawberries-recipe-fertilizer",
   
-  "egg-water-recipe",
-  "egg-water-food-recipe",
-  "u-milk-water-recipe",
-  "u-milk-water-food-recipe",
-  "wool-recipe",
-  "wool-water-recipe",
-  "wool-water-food-recipe",
+--   "egg-water",
+--   "egg-water-food",
+--   "unpasteurized-milk-water",
+--   "unpasteurized-milk-water-food",
+  "wool",
+--   "wool-water",
+--   "wool-water-food",
   
   "apple-seeds",
-  "apple-recipe",
-  "apple-recipe-water",
-  "apple-recipe-fertilizer",
+  "apples",
+  "apples-recipe-water",
+  "apples-recipe-fertilizer",
   "lemon-seeds",
-  "lemon-recipe",
-  "lemon-recipe-water",
-  "lemon-recipe-fertilizer",
+  "lemons",
+  "lemons-recipe-water",
+  "lemons-recipe-fertilizer",
   "peach-seeds",
-  "peach-recipe",
-  "peach-recipe-water",
-  "peach-recipe-fertilizer",
+  "peaches",
+  "peaches-recipe-water",
+  "peaches-recipe-fertilizer",
 }
 
-for _, v in ipairs(prod_recipes) do
-	baketorio.add_to_prod_mod(v)
-end
+local wheatEnergy = data.raw["recipe"]["wheat"].energy_required
+local sugarcaneEnergy = data.raw["recipe"]["sugarcane"].energy_required
+local cocoaBeansEnergy = data.raw["recipe"]["cocoa-beans"].energy_required
+local cinnamonEnergy = data.raw["recipe"]["cinnamon"].energy_required
+local blueberriesEnergy = data.raw["recipe"]["blueberries"].energy_required
+local strawberryEnergy = data.raw["recipe"]["strawberries"].energy_required
 
-
-local wheatEnergy = data.raw["recipe"]["wheat-recipe"].energy_required
-local sugarcaneEnergy = data.raw["recipe"]["sugarcane-recipe"].energy_required
-local cocoaBeansEnergy = data.raw["recipe"]["cocoa-beans-recipe"].energy_required
-local cinnamonEnergy = data.raw["recipe"]["cinnamon-recipe"].energy_required
-local blueberriesEnergy = data.raw["recipe"]["blueberries-recipe"].energy_required
-local strawberryEnergy = data.raw["recipe"]["strawberries-recipe"].energy_required
-
-local eggEnergy = data.raw["recipe"]["egg-recipe"].energy_required
-local milkEnergy = data.raw["recipe"]["u-milk-recipe"].energy_required
+local eggEnergy = data.raw["recipe"]["egg"].energy_required
+local milkEnergy = data.raw["recipe"]["unpasteurized-milk"].energy_required
 local woolEnergy = 20;
 
 local nutsEnergy = 120
@@ -95,7 +90,7 @@ data:extend (
 		},
 		{
 			type = "recipe",
-			name = "nuts-recipe",
+			name = "nuts",
 			localised_name = {"item-name.nuts"},
 			order="h",
 			categories = {"greenhouse-recipes"},
@@ -165,7 +160,7 @@ data:extend (
 		},
 		{
 			type = "recipe",
-			name = "pumpkin-recipe",
+			name = "pumpkin",
 			localised_name = {"item-name.pumpkin"},
 			order="h",
 			categories = {"greenhouse-recipes"},
@@ -221,7 +216,7 @@ data:extend (
 		
 		{
 			type = "recipe",
-			name = "wood-recipe",
+			name = "wood",
 			localised_name = {"item-name.wood"},
 			order="h",
 			categories = {"greenhouse-recipes"},
@@ -546,7 +541,7 @@ data:extend (
 		
         {
             type = "recipe",
-            name = "wool-recipe",
+            name = "wool",
             localised_name = {"item-name.wool"},
             categories = {"greenhouse-recipes"},
             subgroup = "ingredient",
@@ -585,7 +580,7 @@ data:extend (
 		},
 		{
 			type = "recipe",
-			name = "apples-recipe",
+			name = "apples",
 			localised_name = {"item-name.apples"},
 			order="h",
 			categories = {"greenhouse-recipes"},
@@ -670,7 +665,7 @@ data:extend (
 		},
 		{
 			type = "recipe",
-			name = "peaches-recipe",
+			name = "peaches",
 			localised_name = {"item-name.peaches"},
 			order="h",
 			categories = {"greenhouse-recipes"},
@@ -755,7 +750,7 @@ data:extend (
 		},
 		{
 			type = "recipe",
-			name = "lemons-recipe",
+			name = "lemons",
 			localised_name = {"item-name.lemons"},
 			order="h",
 			categories = {"greenhouse-recipes"},
@@ -827,45 +822,40 @@ data:extend (
 	}
 )
 
---  local strawberryEnergy = data.raw["recipe"]["strawberries-recipe"].energy_required
+--  local strawberryEnergy = data.raw["recipe"]["strawberries"].energy_required
 
---local strawberryEnergy = table.deepcopy(data.raw["recipe"]["strawberries-recipe"]).energy_required
+--local strawberryEnergy = table.deepcopy(data.raw["recipe"]["strawberries"]).energy_required
 		
-data.raw["recipe"]["wheat-recipe"].energy_required = wheatEnergy * 3
-data.raw["recipe"]["sugarcane-recipe"].energy_required = sugarcaneEnergy * 3
-data.raw["recipe"]["cocoa-beans-recipe"].energy_required = cocoaBeansEnergy * 3
-data.raw["recipe"]["cinnamon-recipe"].energy_required = cinnamonEnergy * 3
-data.raw["recipe"]["blueberries-recipe"].energy_required = blueberriesEnergy * 3
-data.raw["recipe"]["strawberries-recipe"].energy_required = strawberryEnergy * 3
+data.raw["recipe"]["wheat"].energy_required = wheatEnergy * 3
+data.raw["recipe"]["sugarcane"].energy_required = sugarcaneEnergy * 3
+data.raw["recipe"]["cocoa-beans"].energy_required = cocoaBeansEnergy * 3
+data.raw["recipe"]["cinnamon"].energy_required = cinnamonEnergy * 3
+data.raw["recipe"]["blueberries"].energy_required = blueberriesEnergy * 3
+data.raw["recipe"]["strawberries"].energy_required = strawberryEnergy * 3
 
---  data.raw["recipe"]["strawberries-recipe"].energy_required /= 3
---  data.raw["recipe"]["strawberries-recipe"].energy_required = data.raw["recipe"]["strawberries-recipe"].energy_required / 3
+--  data.raw["recipe"]["strawberries"].energy_required /= 3
+--  data.raw["recipe"]["strawberries"].energy_required = data.raw["recipe"]["strawberries"].energy_required / 3
 
-data.raw["recipe"]["u-milk-recipe"].energy_required = milkEnergy * 3
-data.raw["recipe"]["egg-recipe"].energy_required = eggEnergy * 3
+data.raw["recipe"]["unpasteurized-milk"].energy_required = milkEnergy * 3
+data.raw["recipe"]["egg"].energy_required = eggEnergy * 3
 
 --  cinnamon gives wood back
-table.insert(data.raw["recipe"]["cinnamon-recipe"].results, {type="item",name="wood",amount_min=2,amount_max=4})
+table.insert(data.raw["recipe"]["cinnamon"].results, {type="item",name="wood",amount_min=2,amount_max=4})
 
 
-table.insert(data.raw["recipe"]["strawberries-recipe"].ingredients, {type="item",name="plastic-basket",amount=1} )
---  data.raw["recipe"]["strawberries-recipe"].ingredients.add{{type="item",name="plastic-basket",amount=1}}
-table.insert(data.raw["recipe"]["blueberries-recipe"].ingredients, {type="item",name="plastic-basket",amount=1} )
+table.insert(data.raw["recipe"]["strawberries"].ingredients, {type="item",name="plastic-basket",amount=1} )
+--  data.raw["recipe"]["strawberries"].ingredients.add{{type="item",name="plastic-basket",amount=1}}
+table.insert(data.raw["recipe"]["blueberries"].ingredients, {type="item",name="plastic-basket",amount=1} )
 
 
 
 --  mod base recipes
-data.raw["recipe"]["u-milk-recipe"].ingredients ={ {type="item",name="cow",amount=1}, {type="item",name="nutrient2",amount=1}, {type="fluid",name="water",amount=20} }
-data.raw["recipe"]["u-milk-recipe"].results ={ {type="item",name="cow",amount=1}, {type="fluid", name="unpasteurized-milk", amount=450}, }
-data.raw["recipe"]["egg-recipe"].ingredients ={ {type="item",name="chicken",amount=1}, {type="item",name="nutrient1",amount=10}, {type="fluid",name="water",amount=5} }
-data.raw["recipe"]["egg-recipe"].results ={ {type="item",name="chicken",amount=1}, {type="item", name="egg", amount=3}, }
+data.raw["recipe"]["unpasteurized-milk"].ingredients ={ {type="item",name="cow",amount=1}, {type="item",name="nutrient2",amount=1}, {type="fluid",name="water",amount=20} }
+data.raw["recipe"]["unpasteurized-milk"].results ={ {type="item",name="cow",amount=1}, {type="fluid", name="unpasteurized-milk", amount=450}, }
+data.raw["recipe"]["egg"].ingredients ={ {type="item",name="chicken",amount=1}, {type="item",name="nutrient1",amount=10}, {type="fluid",name="water",amount=5} }
+data.raw["recipe"]["egg"].results ={ {type="item",name="chicken",amount=1}, {type="item", name="egg", amount=3}, }
 
-
-
-
-
-
-
-
-
+for _, v in ipairs(prod_recipes) do
+    data.raw["recipe"][v].allow_productivity = true
+end
 
